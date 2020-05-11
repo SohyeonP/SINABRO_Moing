@@ -1,0 +1,118 @@
+@import url(https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css);
+
+html {
+  width: 1200px;
+  margin: 0 auto;
+  font-family: "NanumSquare", sans-serif;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  margin: 0 auto;
+}
+
+header {
+  top: 0;
+  height: 100px;
+}
+
+header > div {
+  float: left;
+  /* width: 930px; */
+  width: 830px;
+}
+
+.Logo {
+  line-height: 40px;
+  margin: 30px 55px 30px 65px;
+  float: left;
+  font-weight: 800;
+  font-size: 36px;
+}
+
+.Logo span {
+  color: #43b3c1;
+}
+
+.menu {
+  float: right;
+  padding: 0px;
+  margin: 0px;
+}
+
+.menu li {
+  float: left;
+}
+
+.menu a {
+  line-height: 40px;
+  margin: 30px 55px;
+  display: block;
+  color: black;
+  /* font-size: 22px; */
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.menu span {
+  color: #43b3c1;
+}
+
+.about {
+  /* font-size: 48px; */
+  font-size: 36px;
+  font-weight: bold;
+  text-align: center;
+  margin: 90px auto;
+}
+
+.about:after {
+  content: "";
+  display: block;
+  width: 100px;
+  border-bottom: 2px solid #170001;
+  margin: 23px auto;
+}
+
+.banner {
+  width: 1200px;
+  height: 450px;
+  position: relative;
+}
+
+.banner p {
+  color: #ffffff;
+  font-size: 36px;
+  font-weight: normal;
+  text-align: center;
+  position: absolute;
+  top: 40%;
+  left: 35%;
+}
+
+.banner p span {
+  font-weight: 800;
+}
+
+.text {
+  margin: 165px auto;
+}
+
+.text p {
+  font-weight: normal;
+  font-size: 22px;
+  text-align: center;
+  line-height: 30px;
+  margin-bottom: 118px;
+}
+
+.text p span {
+  font-weight: 800;
+}

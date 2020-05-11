@@ -2,7 +2,7 @@
 
 html {
   width: 1200px;
-  margin: auto;
+  margin: 0 auto;
   font-family: "NanumSquare", sans-serif;
 }
 
@@ -20,6 +20,7 @@ body {
 
 header {
   top: 0;
+  height: 100px;
 }
 
 header > div {
