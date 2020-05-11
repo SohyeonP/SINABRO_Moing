@@ -1,0 +1,95 @@
+@import url(https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css);
+
+html {
+  width: 1200px;
+  margin: auto;
+  font-family: "NanumSquare", sans-serif;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  margin: 0 auto;
+}
+
+header {
+  top: 0;
+}
+
+header > div {
+  float: left;
+  width: 830px; /* 로고와 메뉴 사이 간격 조정 */
+}
+
+.Logo {
+  line-height: 40px;
+  margin: 30px 55px 30px 65px; /*상하여백 60->30으로 수정*/
+  float: left;
+  font-weight: 800;
+  font-size: 36px;
+}
+
+.Logo span {
+  color: #43b3c1;
+}
+
+.menu {
+  float: right;
+  padding: 0px;
+  margin: 0px;
+}
+
+.menu li {
+  float: left;
+}
+
+.menu a {
+  line-height: 40px;
+  margin: 30px 55px; /*상하여백 60->30으로 수정*/
+  display: block;
+  color: black;
+  font-size: 16px; /*크기수정*/
+  font-weight: 400;
+}
+
+img {
+  height: 550px;
+  width: 800px;
+  margin-left: 40px;
+}
+
+.user {
+  margin-right: 40px; /*오른쪽 여백 수정*/
+  float: right;
+  height: 210px; /*유저정보 박스 크기 수정*/
+  width: 270px; /*유저정보 박스 크기 수정*/
+  border: 15px solid #d0f3f7;
+}
+
+.user div {
+  margin: 90px 0 0 5px; /*상단 정보 들어갈 자리&버튼 여백*/
+  font-size: 0px;
+}
+
+button {
+  font-size: 14px; /*크기수정 */
+  border: 0px;
+  border-radius: 10px;
+  padding: 0px;
+  display: inline-block;
+  background-color: #43b3c1;
+  color: white;
+  width: 120px;
+  height: 45px;
+  margin: 5px;
+}
+
+button a {
+  color: white;
+}
