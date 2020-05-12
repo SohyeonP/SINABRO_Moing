@@ -40,6 +40,7 @@ body {
 }
 
 .container-1 {
+    text-align: center;
     flex-direction: column
     text-align: center;
   margin: 0 auto;
@@ -47,12 +48,11 @@ body {
   padding: 50px 50px 40px 50px;
   border: solid 2px #cccccc;
   width: 500px;
-  height: 600px;
+/*  height: 600px;*/
 }
 
 .box-1 {
   
-  height: 23px;
   font-size: 24px;
   font-weight: normal;
   color: #000000;
