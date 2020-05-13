@@ -1,0 +1,190 @@
+@import url(https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css);
+
+html {
+  width: 1200px;
+  margin: 0 auto;
+  font-family: "NanumSquare", sans-serif;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  margin: 0 auto;
+}
+
+
+
+
+/*메뉴와 로고 설정*/
+header {
+  top: 0;
+  height: 100px;
+}
+
+header > div {
+  float: left;
+  width: 830px;
+}
+
+.Logo {
+  line-height: 40px;
+  margin: 30px 55px 30px 65px;
+  float: left;
+  font-weight: 800;
+  font-size: 36px;
+}
+
+.Logo span {
+  color: #43b3c1;
+}
+
+.menu {
+  float: right;
+  padding: 0px;
+  margin: 0px;
+}
+
+.menu li {
+  float: left;
+}
+
+.menu a {
+  line-height: 40px;
+  margin: 30px 55px;
+  display: block;
+  color: black;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+
+
+
+.mmr {
+  width: 1200px;
+  height: 30px;
+  line-height: 30px;
+  font-size: 14px;
+  text-align: left;
+  background-color: #eeeeee;
+  padding-left: 40px;
+}
+
+
+
+
+.st_mr {
+  font-size: 28px;
+  font-weight: normal;
+  text-align: center;
+  margin: 110px auto;
+}
+
+form {
+  margin: 0px 280px;
+  font-size: 16px;
+}
+
+form div {
+  margin-bottom: 41px
+}
+
+
+
+
+/*스터디 이름 */
+.studyname input {
+  width: 350px;
+  height: 45px;
+  margin-top: 12px;
+}
+
+
+
+
+/*상단 이미지 업로드*/
+.t_img input {
+  height: 45px;
+  margin-top: 12px;
+}
+
+
+
+
+/*분류 선택*/
+.check label {
+  margin-right: 70px;
+}
+
+.check p {
+  margin-bottom: 34px;
+}
+
+.check input {
+  margin-bottom: 20px;
+}
+
+
+label:nth-child(5) {
+  margin-right: 55px;
+}
+
+
+
+
+/*스터디 소개*/
+.st_i textarea {
+  margin-top: 12px;
+  margin-bottom: 20px;
+  width: 640px;
+  height: 150px;
+  resize: none;
+}
+
+.st_i input {
+  height: 45px;
+}
+
+
+
+
+/*커리큘럼 등록*/
+.c_f input{
+  margin-top: 12px;
+  height: 45px;
+}
+
+
+
+
+/*버튼*/
+.button {
+  margin-top: 100px;
+  text-align: center;  
+}
+
+.button input {
+  margin: 0 auto;
+  width: 150px;
+  height: 45px;
+  font-size: 16px;
+  font-weight: normal;
+  border: none;
+}
+
+.button [type=submit] {
+  color: #ffffff;
+  background-color: #43b3c1;
+  margin-right: 10px;
+}
+
+.button [type=button] {
+  color: #666666;
+  background-color: #eeeeee;
+}

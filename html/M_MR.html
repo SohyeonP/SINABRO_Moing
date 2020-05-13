@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="../css/M_MR.css" />
+  <title>Moing</title>
+</head>
+
+<body>
+  <header>
+    <div>
+      <h1 class="Logo"><span>M</span>oing</h1>
+      <nav>
+        <ul class="menu">
+          <li><a href="./About.html">ABOUT</a></li>
+          <li><a href="#">STUDY FIND</a></li>
+          <li><a href="#">내 스터디 커뮤니티</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  
+      <div class="mmr">
+        <p>스터디 수정하기</p>
+      </div>
+  
+
+  <div class="container">
+
+    <div class="st_mr">스터디 수정하기</div>
+
+    <form method="post">
+
+      <div class="studyname">
+        <label>스터디 이름<br>
+          <input type="text" name="studyname">
+        </label>
+      </div>
+
+      <div class="t_img">
+        <label>상단 이미지<br>
+          <input type="file" name="img">
+        </label>
+      </div>
+
+      <div class="check">
+        <p>분류</p>
+        <label><input type="checkbox" name="coding">코딩</label>
+        <label><input type="checkbox" name="english">영어</label><br>
+        <label><input type="checkbox" name="design">디자인</label>
+        <label><input type="checkbox" name="language">제2외국어</label><br>
+        <label><input type="checkbox" name="toeic">토익</label>
+        <label><input type="checkbox" name="any">기타</label>
+      </div>
+
+      <div class="st_i">
+        <label>스터디 소개<br>
+          <textarea cols="100" rows="10" name="study_i"></textarea>
+        </label><br>
+        <input type="file">
+      </div>
+
+      <div class="c_f">
+        <label>커리큘럼 등록<br>
+          <input type="file" name="curriculum">
+        </label>
+      </div>
+
+      <div class="button">
+        <input type="submit" name="submit" value="수정" />
+        <input type="button" name="cancle" value="취소">
+      </div>
+
+    </form>
+  </div>
+</body></html>
