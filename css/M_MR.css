@@ -1,5 +1,4 @@
 html {
-  width: 1200px;
   margin: 0 auto;
   font-family: "NanumSquareRound", sans-serif;
 }
@@ -14,7 +13,8 @@ a {
 
 }
 
-body {
+.body {
+  width: 1200px;
   margin: 0 auto;
 }
 
@@ -187,4 +187,17 @@ label:nth-child(5) {
 .button [type=button] {
   color: #666666;
   background-color: #eeeeee;
+}
+
+
+
+
+
+/*footer*/
+.footer {
+  margin-top: 100px;
+  width: auto;
+  height: 150px;
+  background-color: #202020;
+  color: #ffffff;
 }

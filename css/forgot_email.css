@@ -1,14 +1,18 @@
 html {
-  width: 1200px;
   margin: 0 auto;
   font-family: "NanumSquareRound", sans-serif;
 }
 
-body {
+.body {
+  width: 1200px;
     margin: 0 auto;
 }
 
-.Moing {
+a {
+  text-decoration: none;
+  color: #000000;
+}
+.Logo {
     margin-top: 60px;
 
     height: 58px;
@@ -19,7 +23,7 @@ body {
     color: #000000;
 }
 
-.Moing span {
+.Logo span {
     color: #43b3c1;
 }
 
@@ -81,3 +85,16 @@ body {
     /*높이수정*/
  
 } 
+
+
+
+
+
+/*footer*/
+.footer {
+  margin-top: 100px;
+  width: auto;
+  height: 150px;
+  background-color: #202020;
+  color: #ffffff;
+}

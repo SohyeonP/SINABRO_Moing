@@ -1,5 +1,4 @@
 html {
-  width: 1200px;
   margin: 0 auto;
   font-family: "NanumSquareRound", sans-serif;
 }
@@ -13,7 +12,8 @@ a {
   color: black;
 }
 
-body {
+.body {
+  width: 1200px;
   margin: 0 auto;
 }
 
@@ -273,4 +273,19 @@ input[id="tabtwo"]:checked ~ .QnA {
 
 .A p{
   margin: 20px 0px 31px 21px;
+}
+
+
+
+
+
+
+
+/*footer*/
+.footer {
+  margin-top: 100px;
+  width: auto;
+  height: 150px;
+  background-color: #202020;
+  color: #ffffff;
 }

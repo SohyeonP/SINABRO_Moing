@@ -1,5 +1,4 @@
 html {
-  width: 1200px;
   margin: 0 auto;
   font-family: "NanumSquareRound", sans-serif;
 }
@@ -14,7 +13,8 @@ a {
 
 }
 
-body {
+.body {
+  width: 1200px;
   margin: 0 auto;
 }
 
@@ -177,4 +177,19 @@ header > div {
 .page ul .num {
   color: #ffffff;
   background-color: #43b3c1;
+}
+
+
+
+
+
+
+
+/*footer*/
+.footer {
+  margin-top: 100px;
+  width: auto;
+  height: 150px;
+  background-color: #202020;
+  color: #ffffff;
 }

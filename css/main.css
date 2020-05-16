@@ -1,5 +1,4 @@
 html {
-  width: 1200px;
   margin: 0 auto;
   font-family: "NanumSquareRound", sans-serif;
 }
@@ -14,7 +13,8 @@ a {
 
 }
 
-body {
+.body {
+  width: 1200px;
   margin: 0 auto;
 }
 
@@ -121,4 +121,19 @@ form div {
 .register {
   margin-left: 10px;
   /*버튼 사이 간격 조절*/
+}
+
+
+
+
+
+
+
+/*footer*/
+.footer {
+  margin-top: 100px;
+  width: auto;
+  height: 150px;
+  background-color: #202020;
+  color: #ffffff;
 }
