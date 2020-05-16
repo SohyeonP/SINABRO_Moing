@@ -1,12 +1,11 @@
 html {
-    width: 1200px;
-    margin: 0 auto;
-    font-family: "NanumSquare", sans-serif;
+  width: 1200px;
+  margin: 0 auto;
+  font-family: "NanumSquareRound", sans-serif;
 }
 
 body {
     margin: 0 auto;
-
 }
 
 .Moing {
@@ -26,7 +25,8 @@ body {
 
 .container-1 {
     text-align: center;
-    flex-direction: column text-align: center;
+    flex-direction: column;
+    text-align: center;
     margin: 0 auto;
     justify-content: space-around;
     padding: 50px 50px 40px 50px;

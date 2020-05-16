@@ -1,7 +1,7 @@
 html {
   width: 1200px;
   margin: 0 auto;
-  font-family: "NanumSquare", sans-serif;
+  font-family: "NanumSquareRound", sans-serif;
 }
 
 li {
@@ -10,6 +10,8 @@ li {
 
 a {
   text-decoration: none;
+  color: black;
+
 }
 
 body {
@@ -64,7 +66,7 @@ header > div {
 
 
 
-.study_find{
+.study_find {
   font-size: 36px;
   text-align: center;
   font-weight: bold;
@@ -99,12 +101,13 @@ header > div {
 
 /*스터디*/
 .list {
-  margin: 40px 53px;  
+  margin: 40px 53px;
   clear: both;
 
 }
+
 .study {
-  margin: 25px 40px; 
+  margin: 25px 40px;
   width: 280px;
   height: 350px;
   display: inline-block;

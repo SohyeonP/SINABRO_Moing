@@ -1,7 +1,7 @@
 html {
   width: 1200px;
   margin: 0 auto;
-  font-family: "NanumSquare", sans-serif;
+  font-family: "NanumSquareRound", sans-serif;
 }
 
 li {
@@ -10,6 +10,8 @@ li {
 
 a {
   text-decoration: none;
+  color: black;
+
 }
 
 body {
@@ -153,7 +155,7 @@ label:nth-child(5) {
 
 
 /*커리큘럼 등록*/
-.c_f input{
+.c_f input {
   margin-top: 12px;
   height: 45px;
 }
@@ -164,7 +166,7 @@ label:nth-child(5) {
 /*버튼*/
 .button {
   margin-top: 100px;
-  text-align: center;  
+  text-align: center;
 }
 
 .button input {
