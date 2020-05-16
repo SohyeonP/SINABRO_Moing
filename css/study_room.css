@@ -1,0 +1,237 @@
+html {
+  width: 1200px;
+  margin: 0 auto;
+  font-family: "NanumSquare", sans-serif;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  margin: 0 auto;
+}
+
+header {
+  top: 0;
+  height: 100px;
+}
+
+header > div {
+  float: left;
+  width: 830px;
+}
+
+.Logo {
+  line-height: 40px;
+  margin: 30px 55px 30px 65px;
+  float: left;
+  font-weight: 800;
+  font-size: 36px;
+}
+
+.Logo span {
+  color: #43b3c1;
+}
+
+.menu {
+  float: right;
+  padding: 0px;
+  margin: 0px;
+}
+
+.menu li {
+  float: left;
+}
+
+.menu a {
+  line-height: 40px;
+  margin: 30px 55px;
+  display: block;
+  color: black;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.menu span {
+  color: #43b3c1;
+}
+
+.study_img {
+  margin-top: 34px;
+  width: 1200px;
+  height: 400px;
+}
+
+.study_title {
+  font-size: 36px;
+  font-weight: bold;
+  margin: 39px 0px 56px 40px;
+}
+
+
+/*그룹 정보*/
+
+.group_in {
+  margin-left: 37px;
+  float: left;
+  width: 272px;
+  height: 362px;
+  border: solid 2px #43b3c1;
+  text-align: center;
+}
+
+.info {
+  font-size: 20px;
+  font-weight: normal;
+  border-bottom: solid 1px #b6e1e7;
+  padding: 15px;
+}
+
+.founder {
+  font-size: 18px;
+  font-weight: normal;
+  border-bottom: solid 1px #b6e1e7;
+  padding: 20px;
+}
+
+.founder img {
+  width: 30px;
+  height: 30px;
+  margin: 0px 9px 0px 34px;
+}
+
+.message {
+  font-size: 18px;
+  margin: 20px 30px;
+  line-height: 1.67;
+}
+
+.room_info {
+  font-size: 16px;
+  /*  float: left;*/
+  /*  margin-left: 25px;*/
+}
+
+.room_info div {
+  margin-bottom: 10px;
+}
+
+.room_info div span {
+  color: #696969;
+}
+
+.checked span {
+  margin-left: 29px;
+}
+
+.c_date span {
+  margin-left: 30px;
+}
+
+.p span {
+  margin-left: 15px;
+}
+
+.p .join {
+  font-size: 12px;
+  margin-left: 6px;
+  color: #43b3c1;
+}
+
+.button input {
+  margin: 15px 20px;
+  width: 230px;
+  height: 50px;
+  background-color: #43b3c1;
+  color: #ffffff;
+  font-size: 18px;
+  border: none;
+}
+
+
+
+
+
+
+/*탭 메뉴*/
+.tab {
+  border: solid 1px #43b3c1;
+  text-align: center;
+  width: 800px;
+  float: right;
+  margin-bottom: 50px;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+.tab input[type="radio"] + label {
+  font-size: 20px;
+  cursor: pointer;
+  padding: 15px;
+  background: #43b3c1;
+  color: #ffffff;
+  display: inline-block;
+  border: none;
+  width: 368px;
+}
+
+.tab input:checked + label {
+  background: #ffffff;
+  color: #43b3c1;
+}
+
+.con {
+  width: 100%;
+  display: none;
+}
+
+input[id="tabone"]:checked ~ .group {
+  display: block;
+}
+
+input[id="tabtwo"]:checked ~ .QnA {
+  display: block;
+}
+
+.group {
+  margin-top: 95px;
+  font-size: 24px;
+}
+
+.group span {
+  font-size: 18px;
+}
+
+.curriculum {
+  font-size: 30px;
+  font-weight: bold;
+  margin-top: 92px;
+}
+
+.QnA {
+  background-color: #d0f3f7;
+  margin: 10px;
+  display: block;
+  width: 780px;
+}
+
+.Q {
+  float: left;
+  width: 600px;
+  height: 130px;
+  border-radius: 10px;
+  background-color: #ffffff;
+  display: inline-block;
+}
+
+.Q p {
+  font-size: 20px;
+  margin-top: 10px;
+}
