@@ -81,6 +81,8 @@ header > div {
 /*그룹 정보*/
 
 .group_in {
+  position: sticky;
+  top: 30px;
   margin-left: 39px;
   float: left;
   width: 272px;
@@ -119,7 +121,6 @@ header > div {
 .room_info {
   font-size: 14px;
   float: left;
-/*  margin-left: 25px;*/
 }
 
 .room_info div {
@@ -181,7 +182,8 @@ header > div {
   border: solid 1px #43b3c1;
   text-align: center;
   width: 800px;
-  float: right;
+  height: 1200px;
+  margin-left: 360px;
   margin-bottom: 50px;
 }
 
