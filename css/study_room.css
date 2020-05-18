@@ -1,0 +1,291 @@
+html {
+  margin: 0 auto;
+  font-family: "NanumSquareRound", sans-serif;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.body {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+header {
+  top: 0;
+  height: 100px;
+}
+
+header > div {
+  float: left;
+  width: 830px;
+}
+
+.Logo {
+  line-height: 40px;
+  margin: 30px 55px 30px 65px;
+  float: left;
+  font-weight: 800;
+  font-size: 36px;
+}
+
+.Logo span {
+  color: #43b3c1;
+}
+
+.menu {
+  float: right;
+  padding: 0px;
+  margin: 0px;
+}
+
+.menu li {
+  float: left;
+}
+
+.menu a {
+  line-height: 40px;
+  margin: 30px 55px;
+  display: block;
+  color: black;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.menu span {
+  color: #43b3c1;
+}
+
+.study_img {
+  margin-top: 34px;
+  width: 1200px;
+  height: 300px;
+}
+
+.study_title {
+  font-size: 32px;
+  font-weight: bold;
+  margin: 39px 0px 56px 40px;
+}
+
+
+
+
+
+/*그룹 정보*/
+
+.group_in {
+  position: sticky;
+  top: 30px;
+  margin-left: 39px;
+  float: left;
+  width: 272px;
+  height: 362px;
+  border: solid 2px #43b3c1;
+  text-align: center;
+}
+
+.info {
+  font-size: 16px;
+  font-weight: normal;
+  border-bottom: solid 1px #b6e1e7;
+  padding: 15px;
+}
+
+.founder {
+  font-size: 16px;
+  font-weight: normal;
+  border-bottom: solid 1px #b6e1e7;
+  padding: 20px;
+/*  text-align: center;*/
+}
+
+.founder img {
+  width: 30px;
+  height: 30px;
+  margin: 0px 9px -9px 34px;
+}
+
+.message {
+  font-size: 16px;
+  margin: 20px 30px;
+  line-height: 1.67;
+}
+
+.room_info {
+  font-size: 14px;
+  float: left;
+}
+
+.room_info div {
+  margin-bottom: 10px;
+}
+
+.room_info div span {
+  color: #696969;
+}
+
+.checked {
+  margin-left: 22px;
+}
+
+.checked span {
+  margin-left: 50px;
+}
+
+.c_date {
+  margin-left: 15px;
+}
+
+.c_date span {
+  margin-left: 36px;
+}
+
+.p {
+  margin-left: 51px;
+}
+.p span {
+  margin-left: 34px;
+}
+
+.p .join {
+  font-size: 12px;
+  margin-left: 6px;
+  color: #43b3c1;
+}
+
+.button input {
+  margin: 15px 20px;
+  width: 230px;
+  height: 50px;
+  background-color: #43b3c1;
+  color: #ffffff;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+
+
+
+
+
+/*탭 메뉴*/
+.tab {
+  font-size: 16px;
+  border: solid 1px #43b3c1;
+  text-align: center;
+  width: 800px;
+  height: 1200px;
+  margin-left: 360px;
+  margin-bottom: 50px;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+.tab input[type="radio"] + label {
+  cursor: pointer;
+  padding: 15px;
+  background: #43b3c1;
+  color: #ffffff;
+  display: inline-block;
+  border: none;
+  width: 368px;
+}
+
+.tab input:checked + label {
+  background: #ffffff;
+  color: #43b3c1;
+}
+
+.con {
+  display: none;
+}
+
+input[id="tabone"]:checked ~ .group {
+  display: block;
+}
+
+input[id="tabtwo"]:checked ~ .QnA {
+  display: block;
+}
+
+.group {
+  margin-top: 95px;
+}
+
+.group span {
+  font-size: 14px;
+}
+
+.curriculum {
+  font-size: 30px;
+  font-weight: bold;
+  margin-top: 92px;
+}
+
+.QnA {
+  background-color: #d0f3f7;
+  margin: 10px;
+  width: 780px;
+  height: 900px;
+}
+
+.Q {
+  float: left;
+  margin: 30px 0px 10px 20px;
+  text-align: left;
+  width: 600px;
+  height: 120px;
+  border-radius: 10px;
+  background-color: #ffffff;
+}
+
+.Q p {
+  margin: 20px 51px 31px 22px;
+  line-height: 1.5;
+}
+
+.QnA span {
+  font-size: 14px;
+  float: right;
+  margin-right: 20px;
+}
+
+.A {
+  float: right;
+  text-align: left;
+  width: 600px;
+  height: 120px;
+  border-radius: 10px;
+  background-color: #ffffff;
+  margin: 10px 40px;
+  line-height: 1.5;
+}
+
+.A p{
+  margin: 20px 0px 31px 21px;
+}
+
+
+
+
+
+
+
+/*footer*/
+.footer {
+  margin-top: 100px;
+  width: auto;
+  height: 150px;
+  background-color: #202020;
+  color: #ffffff;
+}

@@ -1,179 +1,166 @@
-@import url(https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css);
-
 html {
-    width: 1200px;
-    margin: 0 auto;
-    font-family: "NanumSquare", sans-serif;
+  margin: 0 auto;
+  font-family: "NanumSquareRound", sans-serif;
 }
 
-body {
-    margin: 0 auto;
-    /* align-content: center;
-  width: 200px;
-  left: 0;
-  right: 0;
-  margin-left: auto;
-  margin-right: auto;
-  height: 40px;
-  top: 0;
-  bottom: 0;
-  margin-top: auto;
-  margin-bottom: auto; */
+.body {
+  width: 1200px;
+  margin: 0 auto;
 }
 
 .Moing {
-    margin-top: 60px;
-    /* width: 169px; */
-    height: 58px;
-    font-size: 60px;
-    font-weight: 800;
-    /* font-stretch: normal;
+  margin-top: 60px;
+  /* width: 169px; */
+  height: 58px;
+  font-size: 60px;
+  font-weight: 800;
+  /* font-stretch: normal;
   font-style: normal;
   line-height: 0.33;
   letter-spacing: normal; */
-    text-align: center;
-    color: #000000;
+  text-align: center;
+  color: #000000;
 }
 
 .Moing span {
-    color: #43b3c1;
+  color: #43b3c1;
 }
 
 .container-1 {
-    margin: 0 auto;
-    justify-content: space-around;
-    padding: 50px 50px 40px 50px;
-    border: solid 2px #cccccc;
-    width: 500px;
-    height: 450px;
+  margin: 0 auto;
+  justify-content: space-around;
+  padding: 50px 50px 40px 50px;
+  border: solid 2px #cccccc;
+  width: 500px;
+  height: 450px;
 }
 
 .box-1 {
-    width: 300px;
-    height: 23px;
-    font-size: 24px;
-    font-weight: normal;
-    /* font-stretch: normal;
+  width: 300px;
+  height: 23px;
+  font-size: 24px;
+  font-weight: normal;
+  /* font-stretch: normal;
   font-style: normal;
   line-height: 0.83;
   letter-spacing: normal; */
-    text-align: left;
-    color: #000000;
+  text-align: left;
+  color: #000000;
 }
 
 .box-2 {
-    margin-top: 60px;
-    font-weight: bold;
+  margin-top: 60px;
+  font-weight: bold;
 }
 
 .box-3 {
-    width: 60px;
-    height: 18px;
-    font-size: 18px;
-    font-weight: normal;
-    /* font-stretch: normal;
+  width: 60px;
+  height: 18px;
+  font-size: 18px;
+  font-weight: normal;
+  /* font-stretch: normal;
   font-style: normal;
   line-height: 1.11;
   letter-spacing: normal; */
-    text-align: left;
-    color: #000000;
+  text-align: left;
+  color: #000000;
 }
 
 .form-email {
-    display: flex;
-    /* width: 600px;
+  display: flex;
+  /* width: 600px;
   height: 18px; */
-    font-size: 18px;
-    font-weight: normal;
-    /* font-stretch: normal;
+  font-size: 18px;
+  font-weight: normal;
+  /* font-stretch: normal;
   font-style: normal;
   line-height: 1.11;
   letter-spacing: normal; */
-    text-align: left;
-    color: #000000;
+  text-align: left;
+  color: #000000;
 }
 
 .form-email input {
-    margin-top: 10px;
-    width: 350px;
-    height: 45px;
+  margin-top: 10px;
+  width: 350px;
+  height: 45px;
 }
 
 .form-email button {
-    font-family: "NanumSquare", sans-serif;
-    margin-top: 9px;
-    margin-left: 10px;
-    width: 140px;
-    height: 52px;
-    font-size: 18px;
-    font-weight: normal;
-    /* font-stretch: normal;
+  font-family: "NanumSquare", sans-serif;
+  margin-top: 9px;
+  margin-left: 10px;
+  width: 140px;
+  height: 52px;
+  font-size: 18px;
+  font-weight: normal;
+  /* font-stretch: normal;
   font-style: normal;
   line-height: 1.11;
   letter-spacing: normal; */
-    text-align: center;
-    color: #ffffff;
-    background-color: #43b3c1;
+  text-align: center;
+  color: #ffffff;
+  background-color: #43b3c1;
 }
 
 .box-4 {
-    margin-top: 40px;
-    width: 80px;
-    height: 18px;
-    font-size: 18px;
-    font-weight: normal;
-    /* font-stretch: normal;
+  margin-top: 40px;
+  width: 80px;
+  height: 18px;
+  font-size: 18px;
+  font-weight: normal;
+  /* font-stretch: normal;
   font-style: normal;
   line-height: 1.11;
   letter-spacing: normal; */
-    text-align: left;
-    color: #000000;
+  text-align: left;
+  color: #000000;
 }
 
 .form-password {
-    margin-top: 10px;
+  margin-top: 10px;
 }
 
 .form-password input {
-    width: 500px;
-    height: 45px;
+  width: 500px;
+  height: 45px;
 }
 
 .box-5 {
-    margin-top: 25px;
-    font-size: 18px;
-    font-weight: normal;
-    /* font-stretch: normal;
+  margin-top: 25px;
+  font-size: 18px;
+  font-weight: normal;
+  /* font-stretch: normal;
   font-style: normal;
   line-height: 1.11;
   letter-spacing: normal; */
-    text-align: left;
-    color: #000000;
+  text-align: left;
+  color: #000000;
 }
 
 .form-repassword input {
-    margin-top: 10px;
-    width: 500px;
-    height: 45px;
+  margin-top: 10px;
+  width: 500px;
+  height: 45px;
 }
 
 .box-6 {
-    margin-top: 25px;
+  margin-top: 25px;
 }
 
 .box-6 input {
-    font-family: "NanumSquare", sans-serif;
-    margin: 0 auto;
-    display: block;
-    width: 150px;
-    height: 45px;
-    font-size: 18px;
-    font-weight: normal;
-    /* font-stretch: normal;
+  font-family: "NanumSquare", sans-serif;
+  margin: 0 auto;
+  display: block;
+  width: 150px;
+  height: 45px;
+  font-size: 18px;
+  font-weight: normal;
+  /* font-stretch: normal;
   font-style: normal;*/
-    line-height: 45px;
-    /* letter-spacing: normal; */
-    text-align: center;
-    color: #ffffff;
-    background-color: #43b3c1;
+  line-height: 45px;
+  /* letter-spacing: normal; */
+  text-align: center;
+  color: #ffffff;
+  background-color: #43b3c1;
 }

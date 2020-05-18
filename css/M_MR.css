@@ -1,9 +1,6 @@
-@import url(https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css);
-
 html {
-  width: 1200px;
   margin: 0 auto;
-  font-family: "NanumSquare", sans-serif;
+  font-family: "NanumSquareRound", sans-serif;
 }
 
 li {
@@ -12,9 +9,12 @@ li {
 
 a {
   text-decoration: none;
+  color: black;
+
 }
 
-body {
+.body {
+  width: 1200px;
   margin: 0 auto;
 }
 
@@ -155,7 +155,7 @@ label:nth-child(5) {
 
 
 /*커리큘럼 등록*/
-.c_f input{
+.c_f input {
   margin-top: 12px;
   height: 45px;
 }
@@ -166,7 +166,7 @@ label:nth-child(5) {
 /*버튼*/
 .button {
   margin-top: 100px;
-  text-align: center;  
+  text-align: center;
 }
 
 .button input {
@@ -187,4 +187,17 @@ label:nth-child(5) {
 .button [type=button] {
   color: #666666;
   background-color: #eeeeee;
+}
+
+
+
+
+
+/*footer*/
+.footer {
+  margin-top: 100px;
+  width: auto;
+  height: 150px;
+  background-color: #202020;
+  color: #ffffff;
 }

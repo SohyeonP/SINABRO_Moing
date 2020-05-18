@@ -1,9 +1,6 @@
-@import url(https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css);
-
 html {
-  width: 1200px;
   margin: 0 auto;
-  font-family: "NanumSquare", sans-serif;
+  font-family: "NanumSquareRound", sans-serif;
 }
 
 li {
@@ -12,9 +9,11 @@ li {
 
 a {
   text-decoration: none;
+  color: black;
 }
 
-body {
+.body {
+  width: 1200px;
   margin: 0 auto;
 }
 
@@ -63,11 +62,17 @@ header > div {
   color: #43b3c1;
 }
 
+
+
+
+
+
+
 .about {
-  font-size: 36px;
+  font-size: 32px;
   font-weight: bold;
   text-align: center;
-  margin: 90px auto;
+  margin: 95px auto;
 }
 
 .about:after {
@@ -86,12 +91,16 @@ header > div {
 
 .banner p {
   color: #ffffff;
-  font-size: 36px;
+  font-size: 24px;
   font-weight: normal;
   text-align: center;
   position: absolute;
   top: 40%;
-  left: 35%;
+  left: 38%;
+}
+
+.banner .bold {
+  font-size: 30px;
 }
 
 .banner p span {
@@ -104,7 +113,7 @@ header > div {
 
 .text p {
   font-weight: normal;
-  font-size: 22px;
+  font-size: 18px;
   text-align: center;
   line-height: 30px;
   margin-bottom: 118px;
@@ -112,4 +121,19 @@ header > div {
 
 .text p span {
   font-weight: 800;
+}
+
+
+
+
+
+
+
+/*footer*/
+.footer {
+  margin-top: 100px;
+  width: auto;
+  height: 150px;
+  background-color: #202020;
+  color: #ffffff;
 }
