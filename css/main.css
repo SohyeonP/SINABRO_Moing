@@ -107,3 +107,10 @@ form div {
 .register {
   margin-left: 10px; /*버튼 사이 간격 조절*/
 }
+.footer img{
+    width: 1200px;
+    height: 200px;
+    position: fixed;
+    bottom: 0;
+
+}
