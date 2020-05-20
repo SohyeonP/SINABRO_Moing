@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="../css/class_CR.css" />
+  <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/innks/NanumSquareRound/master/nanumsquareround.min.css">
+  
+  
+  <title>Moing</title>
+</head>
+
+<body>
+  <header>
+    <div>
+      <h1 class="Logo"><a href="#"><span>M</span>oing</a></h1>
+      <nav>
+        <ul class="menu">
+          <li><a href="#">ABOUT</a></li>
+          <li><a href="#">STUDY FIND</a></li>
+          <li><a href="#">내 스터디 커뮤니티</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="cr">
+    <p>마이페이지 &gt; 스터디 관리 &gt; 수업 등록</p>
+  </div>
+  
+  <div class="main">
+    <h2>수업 등록</h2>
+
+    <div class="mypage">
+      <div class="page">마이페이지</div>    
+      <div class="my_info"><a href="#">내 정보</a></div>
+      <div class="alram"><a href="#">알림 설정</a></div>
+      <div class="study"><a href="#"><span>스터디 관리</span></a></div>
+    </div>
+
+
+    <div class="class_CR">
+      <div class="class_name">자바가 어려운 사람들 드루와 드루와</div>
+      <div class="list"></div>
+      <div id="add">+ 수업 추가하기</div>
+    </div>
+
+    <div class="study_add">
+      <div class="week">주차</div>
+
+      <form method="post">
+
+        <div class="studyname">
+          <label>수업 이름<br>
+            <input type="text" name="studyname">
+          </label>
+        </div>
+
+        <div class="studycontent">
+          <label>수업 내용<br>
+            <textarea type="text" name="studycontent"></textarea>
+          </label>
+        </div> 
+
+        <div class="studyfile">
+          <label>수업 자료<br>
+            <input type="file" name="studyfile">
+          </label>
+        </div>  
+
+        <div class="button">
+          <input type="submit" name="submit" value="저장" />
+        </div>
+
+      </form>
+    </div>
+  </div>
+  
+  
+  <footer>
+    <div class="footer_f">
+     <div class="f_logo">
+        <span>M</span>oing
+      </div> 
+      <div class="info">
+        개인정보처리방침<span>|</span>이용약관<span>|</span>위치정보 이용약관<span>|</span>고객센터<span>|</span>공지사항
+      </div>
+      <address>모잉<span>|</span>경기도 안양시 동안구 비산동</address>
+      <p>Copyright © Moing. All Rights Reserved.</p>
+    </div>
+  </footer>
+  
+</body>
+<script type="text/javascript">
+  var add = document.getElementById("add");
+    add.addEventListener("click",  function(e){
+      var target = document.querySelector(".study_add").cloneNode(true);
+      document.querySelector(".list").innerHTML += target.innerHTML;
+});
+  </script>
+
+</html>

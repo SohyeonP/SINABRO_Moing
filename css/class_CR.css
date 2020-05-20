@@ -1,0 +1,258 @@
+html {
+  margin: 0 auto;
+  font-family: "NanumSquareRound", sans-serif;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+body {
+  margin: 0 auto;
+  padding: 0 auto;
+}
+
+
+.main {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+/*메뉴와 로고 설정*/
+header {
+  width: 1200px;
+  margin: 0 auto;
+  top: 0;
+  height: 100px;
+}
+
+header > div {
+  float: left;
+  width: 830px;
+}
+
+.Logo {
+  line-height: 40px;
+  margin: 30px 55px 30px 65px;
+  float: left;
+  font-weight: 800;
+  font-size: 36px;
+}
+
+.Logo span {
+  color: #43b3c1;
+}
+
+.menu {
+  float: right;
+  padding: 0px;
+  margin: 0px;
+}
+
+.menu li {
+  float: left;
+}
+
+.menu a {
+  line-height: 40px;
+  margin: 30px 55px;
+  display: block;
+  color: black;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+
+
+
+.cr {
+  min-width: 1200px;
+  height: 30px;
+  line-height: 30px;
+  font-size: 14px;
+  text-align: left;
+  border: solid 2px #eeeeee;
+  margin: 0px;
+}
+
+.cr p {
+  margin: 0px 0px 0px 150px;
+}
+
+
+h2 {
+  text-align: center;
+  font-size: 28px;
+  font-weight: normal;
+  margin: 60px 35px 60px 210px;
+}
+
+.mypage {
+  position: sticky;
+  float: left;
+  top: 20px;
+  margin-left: 40px;
+  border-radius: 3px;
+  border: solid 2px #39bde7;
+  width: 140px;
+  height: 190px;
+  text-align: center;
+  font-size: 16px;
+  border-radius: 3px;
+}
+
+.page {
+  font-weight: bold;
+  margin: 29px 0px;
+}
+
+.my_info, .alram, .study {
+  margin-bottom: 20px;
+  font-weight: normal;
+}
+.mypage span {
+  color: #43b3c1;
+}
+
+
+
+
+
+.class_CR {
+  border: solid 1px #cccccc;
+  margin-left: 230px;
+  margin-right: 40px;
+  font-size: 16px;
+  font-weight: normal;
+}
+
+.class_name {
+  margin-bottom: 60px;
+  padding: 18px;
+  border-bottom: solid 1px #cccccc;  
+  text-align: center;
+}
+
+#add {
+  padding: 32px;
+  border: solid 1px #cccccc;
+  margin: 40px 80px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.list {
+  margin: 20px 80px;
+}
+
+
+
+.study_add {
+  display: none;
+  text-align: left;
+}
+
+.week {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 10px;
+}
+
+form {
+  font-size: 16px;
+  font-weight: normal;
+  border: solid 1px #cccccc;
+  padding: 40px 50px;
+  height: 500px;
+}
+
+form input, textarea {
+  margin-top: 10px;
+  margin-bottom: 40px;
+}
+
+.studyname input{
+  width: 300px;
+  height: 30px;
+}
+
+.studycontent textarea{
+  width: 550px;
+  height: 150px;
+  resize: none;
+}
+
+.button {
+  float: right;
+  margin-bottom: 20px;
+}
+.button input{
+  text-align: center;
+  color: #ffffff;
+  width: 100px;
+  height: 40px;
+  background-color: #43b3c1;
+  border: none;
+}
+
+
+
+
+
+
+
+footer {
+  margin-top: 100px;
+  min-width: 1180px;
+  background-color: #666666;
+  padding: 20px; 
+  color: #ffffff;
+}
+
+.footer_f {
+  width: 1200px;
+  margin: 0 auto;
+  padding-left: 50px;
+}
+
+.info {
+  font-weight: normal;
+  font-size: 11px;
+  padding: 0;
+}
+
+.info span {
+  margin: 10px;
+}
+
+address {
+  font-size: 10px;
+  font-style: normal;
+  margin-top: 25px;
+}
+
+address span {
+  margin: 10px;
+}
+
+footer p {
+  font-size: 10px;
+  margin-top: 10px;
+}
+
+.f_logo {
+  margin-top: 10px;
+  margin-right: 100px;
+  float: right;
+  font-size: 50px;
+  font-weight: bolder;
+}
+
+.f_logo span {
+  color: #43b3c1;
+}
