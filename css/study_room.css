@@ -1,4 +1,5 @@
 html {
+  height: 100%;
   margin: 0 auto;
   font-family: "NanumSquareRound", sans-serif;
 }
@@ -12,7 +13,15 @@ a {
   color: black;
 }
 
+body {
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 auto;
+}
+
 .body {
+  position: relative;
+  min-height: 100%;
   width: 1200px;
   margin: 0 auto;
 }
@@ -91,7 +100,7 @@ header > div {
   text-align: center;
 }
 
-.info {
+.g_info {
   font-size: 16px;
   font-weight: normal;
   border-bottom: solid 1px #b6e1e7;
@@ -280,12 +289,56 @@ input[id="tabtwo"]:checked ~ .QnA {
 
 
 
-
-/*footer*/
-.footer {
+footer {
+  right: 0;
+  left: 0;
+  position: absolute;
   margin-top: 100px;
-  width: auto;
-  height: 150px;
-  background-color: #202020;
+  min-width: 1200px;
+  background-color: #666666;
+  padding: 20px;
   color: #ffffff;
+}
+
+.footer_f {
+  width: 1200px;
+  margin: 0 auto;
+  padding-left: 50px;
+}
+
+.info {
+  font-weight: normal;
+  font-size: 11px;
+  padding: 0;
+}
+
+.info span {
+  margin: 10px;
+}
+
+address {
+  font-size: 10px;
+  font-style: normal;
+  margin-top: 25px;
+}
+
+address span {
+  margin: 10px;
+}
+
+footer p {
+  font-size: 10px;
+  margin-top: 10px;
+}
+
+.f_logo {
+  margin-top: 10px;
+  margin-right: 100px;
+  float: right;
+  font-size: 50px;
+  font-weight: bolder;
+}
+
+.f_logo span {
+  color: #43b3c1;
 }

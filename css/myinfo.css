@@ -80,8 +80,7 @@ header > div {
   line-height: 30px;
   font-size: 14px;
   text-align: left;
-  border-top: solid 2px #eeeeee;
-  border-bottom: solid 2px #eeeeee;
+  border: solid 2px #eeeeee;
   margin: 0px;
 }
 
@@ -100,7 +99,7 @@ h2 {
   text-align: center;
   font-size: 28px;
   font-weight: normal;
-  margin: 60px 35px 60px 210px;
+  margin: 60px 35px 60px;
 }
 
 .mypage {
@@ -134,82 +133,27 @@ h2 {
 
 
 
-.class_CR {
-  border: solid 1px #cccccc;
-  margin-left: 230px;
-  margin-right: 40px;
-  font-size: 16px;
-  font-weight: normal;
-}
-
-.class_name {
-  margin-bottom: 60px;
-  padding: 18px;
-  border-bottom: solid 1px #cccccc;  
-  text-align: center;
-}
-
-#add {
-  padding: 32px;
-  border: solid 1px #cccccc;
-  margin: 40px 80px;
-  cursor: pointer;
-  text-align: center;
-}
-
-.list {
-  margin: 20px 80px;
-}
 
 
-
-.study_add {
-  display: none;
-  text-align: left;
-}
-
-.week {
-  font-size: 20px;
-  font-weight: bold;
-  margin: 10px;
-}
-
-form {
-  font-size: 16px;
-  font-weight: normal;
-  border: solid 1px #cccccc;
-  padding: 40px 50px;
-  height: 500px;
-}
-
-form input, textarea {
-  margin-top: 10px;
-  margin-bottom: 40px;
-}
-
-.studyname input{
-  width: 300px;
-  height: 30px;
-}
-
-.studycontent textarea{
-  width: 550px;
-  height: 150px;
-  resize: none;
-}
-
-.button {
+.m_info {
   float: right;
-  margin-bottom: 20px;
+  margin-right: 40px;
+  border: solid 1px #cccccc;
+  width: 860px;
+  height: 485px;
+  padding: 40px;
 }
-.button input{
-  text-align: center;
-  color: #ffffff;
-  width: 100px;
-  height: 40px;
-  background-color: #43b3c1;
-  border: none;
+
+img {
+  width: 150px;
+  height: 150px;
+  margin: 20px 40px;
 }
+
+table {
+  float: right;
+}
+
 
 
 
@@ -221,7 +165,6 @@ footer {
   right: 0;
   left: 0;
   position: absolute;
-  margin-top: 100px;
   min-width: 1180px;
   background-color: #666666;
   padding: 20px; 

@@ -1,4 +1,5 @@
 html {
+  height: 100%;
   margin: 0 auto;
   font-family: "NanumSquareRound", sans-serif;
 }
@@ -13,12 +14,20 @@ a {
 
 }
 
+body {
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 auto;
+}
+
 .body {
+  position: relative;
   width: 1200px;
   margin: 0 auto;
 }
 
 header {
+  min-height: 100%;
   top: 0;
   height: 100px;
 }
@@ -122,28 +131,62 @@ form div {
   margin-left: 10px;
   /*버튼 사이 간격 조절*/
 }
-<<<<<<< HEAD
-.footer img{
-    width: 1200px;
-    height: 200px;
-    position: fixed;
-    bottom: 0;
-
-}
-=======
 
 
 
 
 
 
-
-/*footer*/
-.footer {
+footer {
+  right: 0;
+  left: 0;
+  position: absolute;
   margin-top: 100px;
-  width: auto;
-  height: 150px;
-  background-color: #202020;
+  min-width: 1200px;
+  background-color: #666666;
+  padding: 20px;
   color: #ffffff;
 }
->>>>>>> 4ee8af6064ce72ebb733b3ceb1c98c6736596cbb
+
+.footer_f {
+  width: 1200px;
+  margin: 0 auto;
+  padding-left: 50px;
+}
+
+.info {
+  font-weight: normal;
+  font-size: 11px;
+  padding: 0;
+}
+
+.info span {
+  margin: 10px;
+}
+
+address {
+  font-size: 10px;
+  font-style: normal;
+  margin-top: 25px;
+}
+
+address span {
+  margin: 10px;
+}
+
+footer p {
+  font-size: 10px;
+  margin-top: 10px;
+}
+
+.f_logo {
+  margin-top: 10px;
+  margin-right: 100px;
+  float: right;
+  font-size: 50px;
+  font-weight: bolder;
+}
+
+.f_logo span {
+  color: #43b3c1;
+}
