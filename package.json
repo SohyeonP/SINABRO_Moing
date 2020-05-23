@@ -1,0 +1,23 @@
+{
+  "name": "sinabro_moing",
+  "version": "1.0.0",
+  "description": "모잉 웹페이지 졸작 저장소 입니다.\r 팀원: 김아람/박소현",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SohyeonP/SINABRO_Moing.git"
+  },
+  "author": "moing",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SohyeonP/SINABRO_Moing/issues"
+  },
+  "homepage": "https://github.com/SohyeonP/SINABRO_Moing#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
