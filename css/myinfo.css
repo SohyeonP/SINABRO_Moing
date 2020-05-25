@@ -80,7 +80,8 @@ header > div {
   line-height: 30px;
   font-size: 14px;
   text-align: left;
-  border: solid 2px #eeeeee;
+  border-bottom: solid 2px #eeeeee;
+  border-top: solid 2px #eeeeee;
   margin: 0px;
 }
 
@@ -121,10 +122,13 @@ h2 {
   margin: 29px 0px;
 }
 
-.my_info, .alram, .study {
+.my_info,
+.alram,
+.study {
   margin-bottom: 20px;
   font-weight: normal;
 }
+
 .mypage span {
   color: #43b3c1;
 }
@@ -145,16 +149,44 @@ h2 {
 }
 
 img {
+  float: left;
   width: 150px;
   height: 150px;
   margin: 20px 40px;
 }
 
 table {
-  float: right;
+  font-size: 14px;
+  margin-top: 10px;
+  float: left;
+  border-spacing: 0 11px;
 }
 
 
+td:nth-child(2n-1) {
+  font-weight: bold;
+  width: 100px;
+}
+
+tr:last-child td:nth-child(2) {
+  width: 450px;
+  height: 100px;
+  border: solid 1px #000000;
+  padding: 10px;
+  vertical-align: top;
+}
+
+button {
+  cursor: pointer;
+  width: 150px;
+  height: 45px;
+  background-color: #43b3c1;
+  border: none;
+  outline: none;
+  color: #ffffff;
+  font-size: 16px;
+  margin: 100px 0px 0px 340px;
+}
 
 
 
@@ -167,7 +199,7 @@ footer {
   position: absolute;
   min-width: 1180px;
   background-color: #666666;
-  padding: 20px; 
+  padding: 20px;
   color: #ffffff;
 }
 
