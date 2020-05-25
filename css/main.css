@@ -27,6 +27,7 @@ body {
 }
 
 header {
+  width: 1200px;
   min-height: 100%;
   top: 0;
   height: 100px;
@@ -34,8 +35,7 @@ header {
 
 header > div {
   float: left;
-  width: 595px;
-  /* 로고와 메뉴 사이 간격 조정 */
+  width: 1200px;
 }
 
 .Logo {
@@ -52,8 +52,11 @@ header > div {
   color: #43b3c1;
 }
 
+nav {
+  margin-left: 300px;
+}
+
 .menu {
-  float: right;
   padding: 0px;
   margin: 0px;
 }
@@ -66,71 +69,165 @@ header > div {
   line-height: 40px;
   margin: 30px 55px;
   /*상하여백 60->30으로 수정*/
-  display: block;
+  display: inline-block;
   color: black;
   font-size: 16px;
   /*크기수정*/
   font-weight: 400;
 }
 
-img {
-  height: 550px;
-  width: 800px;
-  margin-left: 40px;
-}
-
-form {
+.login {
   float: right;
-  margin-right: 40px;
-  /* 30->40으로 수정*/
-  width: 270px;
-  height: 160px;
-  /*로그인 박스 전체 높이 조절*/
-  padding: 10px 10px 10px 20px;
-  background-color: #d0f3f7;
-  /*로그인 박스 색 수정*/
+  margin-right: 80px;
 }
 
-form input {
-  width: 250px;
-  height: 35px;
-  margin: 10px 0 0 5px;
-  /*여백 조정*/
-  border: solid 1px #cccccc;
-  /*입력칸 테두리 추가*/
-  padding: 0px;
+.login li {
+  float: left;
 }
 
-button {
-  font-size: 14px;
-  /*크기수정 */
-  border: 0px;
-  border-radius: 10px;
-  padding: 0px;
+.login a {
+  line-height: 30px;
+  margin: 20px 11px;
   display: inline-block;
-  background-color: #43b3c1;
-  color: white;
-  width: 120px;
-  height: 45px;
-  /*높이수정*/
-  margin: 11px 0;
-  /*여백 조정*/
+  color: #696969;
+  font-size: 14px;
+  font-weight: normal;
 }
 
-button a {
-  color: white;
+
+
+
+
+
+
+.swiper-container {
+  width: 1200px;
+  height: 400px;
+  margin-bottom: 50px;
 }
 
-form div {
-  font-size: 0;
-  margin-left: 6px;
-  /*위의 input 창과 간격 조절*/
+
+.img {
+  background-image: url(../img/marvin-meyer-SYTO3xs06fU-unsplash.jpg);
+  width: 1200px;
+  height: 400px
 }
 
-.register {
-  margin-left: 10px;
-  /*버튼 사이 간격 조절*/
+.c_info {
+  z-index: 10;
+  padding: 65px 100px;
+  color: #ffffff;
 }
+
+.best {
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.name {
+  font-size: 40px;
+  font-weight: 800;
+  margin: 13px 0px;
+}
+
+.sub {
+  font-size: 18px;
+  font-weight: normal;
+  width: 230px;
+  line-height: 24px;
+}
+
+h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  margin-left: 125px;
+}
+
+.slider {
+  margin-left: 125px;
+  width: 1000px;
+}
+.study {
+  margin: 0 auto;
+  width: 280px;
+}
+
+.study img {
+  width: 280px;
+  height: 200px;
+}
+
+.study_title {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.study p {
+  margin: 5px 0px;
+}
+
+.checked {
+  font-size: 13px;
+  color: #808080;
+  font-weight: lighter;
+}
+
+.p {
+  margin-right: 80px;
+  margin-top: 12px;
+  float: right;
+  color: #43b3c1;
+  font-size: 14px;
+  font-weight: normal;
+}
+
+.founder {
+  margin-top: 20px;
+  font-size: 16px;
+}
+
+.founder span {
+  font-weight: bold;
+
+}
+
+.slick-next {
+  background: url(../img/iconfinder_arrow-left-01_186410.png);
+  display: hidden;
+  position: absolute;
+  background-size: cover;
+  width: 60px;
+  height: 60px;
+  text-indent: -9999px;
+  border: none;
+  left: -110px;
+  top: 80px;
+  outline: none;
+  cursor: pointer;
+}
+
+.slick-prev {
+  background: url(../img/iconfinder_arrow-right-01_186409.png);
+  display: hidden;
+  position: absolute;
+  background-size: cover;
+  width: 60px;
+  height: 60px;
+  text-indent: -9999px;
+  border: none;
+  right: -60px;
+  top: 70px;
+  outline: none;
+  cursor: pointer;
+}
+
+
+
+
+
 
 
 

@@ -3,7 +3,6 @@
 	html {
         height: 100%;
         margin: 0 auto;
-        
         }
         
         body {
@@ -41,9 +40,6 @@
       }
       .Login{
         font-size: 9px;
-      }
-      .logo{
-    
       }
       .card-title text-center{
         color: #43b3c1;
