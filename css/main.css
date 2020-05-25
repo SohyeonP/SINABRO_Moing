@@ -83,15 +83,16 @@ nav {
 
 .login li {
   float: left;
-}
-
-.login a {
   line-height: 30px;
   margin: 20px 11px;
   display: inline-block;
   color: #696969;
   font-size: 14px;
   font-weight: normal;
+}
+
+.login a {
+  color: #696969;
 }
 
 
