@@ -2,9 +2,9 @@
   "name": "sinabro_moing",
   "version": "1.0.0",
   "description": "모잉 웹페이지 졸작 저장소 입니다.\r 팀원: 김아람/박소현",
-  "main": "view/html/main.ejs",
+  "main": "main.js",
   "scripts": {
-    "start": "node index.js",
+    "start": "node main.js",
     "backend": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -24,6 +24,7 @@
     "bootstrap": "^4.5.0",
     "ejs": "^3.1.3",
     "express": "^4.17.1",
+    "express-generator": "^4.16.1",
     "mariadb": "^2.3.1",
     "nodemon": "^2.0.4",
     "sequelize": "^5.21.11"
