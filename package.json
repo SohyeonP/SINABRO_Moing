@@ -2,7 +2,7 @@
   "name": "sinabro_moing",
   "version": "1.0.0",
   "description": "모잉 웹페이지 졸작 저장소 입니다.\r 팀원: 김아람/박소현",
-  "main": "index.js",
+  "main": "view/html/main.ejs",
   "scripts": {
     "start": "node index.js",
     "backend": "nodemon index.js",
