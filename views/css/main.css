@@ -109,9 +109,10 @@ nav {
 
 
 .img {
-  background-image: url(../img/marvin-meyer-SYTO3xs06fU-unsplash.jpg);
+  background-image: url(../img/main.png);
   width: 1200px;
-  height: 400px
+  height: 400px;
+
 }
 
 .c_info {
