@@ -5,7 +5,7 @@
   "main": "main.js",
   "scripts": {
     "start": "node main.js",
-    "backend": "nodemon index.js",
+    "backend": "nodemon main.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -26,7 +26,10 @@
     "express": "^4.17.1",
     "express-generator": "^4.16.1",
     "mariadb": "^2.3.1",
-    "nodemon": "^2.0.4",
     "sequelize": "^5.21.11"
+  },
+  "devDependencies": {
+    "dotenv": "^8.2.0",
+    "nodemon": "^2.0.4"
   }
 }

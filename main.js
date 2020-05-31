@@ -4,6 +4,7 @@ const app = express();
 const PORT  = process.env.PORT || 3000;
 
 
+
 app.set('view engine','ejs');
 app.use(express.static(__dirname+'/'));
 
@@ -11,10 +12,16 @@ app.get("/",function(req,res){
     console.log("메인페이지");
     res.render("main",{});
 })
+
 // const mainRoute = require("./views/html/main");
-app.get("/sign",function(req,res){
+app.get("/login",function(req,res){
     console.log("로그인 페이지 요청");
-    res.render("sign",{});
+    res.render("login.ejs",{});
+
+})
+app.get("/register",function(req,res){
+    console.log("회원가입 페이지 요청");
+    res.render("register",{});
 
 })
 app.get("/study_find",function(req,res){
@@ -25,6 +32,19 @@ app.get("/study_find",function(req,res){
 app.get("/about",function(req,res){
     console.log("About 페이지 요청");
     res.render("about",{});
+
+})
+app.get("/L_main",function(req,res){
+    console.log("로그인 메인  페이지 요청");
+    res.render("L_main",{});
+
+})
+app.get("/myinfo",function(req,res){
+    console.log("마이페이지");
+    res.render("myinfo",{});
+
+})
+app.post('/register',(req,res) =>{
 
 })
 app.get

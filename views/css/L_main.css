@@ -73,6 +73,7 @@ header > div {
 }
 
 img {
+  background-image: url(../img/main.png);
   height: 550px;
   width: 800px;
   margin-left: 40px;
