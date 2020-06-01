@@ -20,6 +20,7 @@ app.get("/login",function(req,res){
     res.render("login.ejs",{});
 
 })
+<<<<<<< HEAD
 app.post('/users',sync,(req,res) =>{
     try{
         const salt = await bycrpt.genSalt()
@@ -34,6 +35,8 @@ app.post('/users',sync,(req,res) =>{
     res.status(201).send()
 }
 })
+=======
+>>>>>>> a9c1c83f780b5574058bc0efbc6b1baa9aa3a708
 app.get("/register",function(req,res){
     console.log("회원가입 페이지 요청");
     res.render("register",{});
