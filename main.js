@@ -1,9 +1,10 @@
 const express = require('express');
 const ejs = require('ejs');
 const app = express();
+const bycrpt = require('bcrypt');
 const PORT  = process.env.PORT || 3000;
-
-
+const bodyparser = require('body-parser');
+app.use(express.urlencoded({ extended:false }))
 
 app.set('view engine','ejs');
 app.use(express.static(__dirname+'/'));
@@ -14,11 +15,19 @@ app.get("/",function(req,res){
 })
 
 // const mainRoute = require("./views/html/main");
+<<<<<<< HEAD
 app.get("/login",function(req,res){
     console.log("로그인 페이지 요청");
     res.render("login.ejs",{});
 
 })
+=======
+
+//app.get("/login",function(req,res){
+//    console.log("로그인 페이지 요청");
+//    res.render("login.ejs",{});
+//
+>>>>>>> 5901d1d64ef3dccb108ba0491dfb8c19bf738c22
 app.get("/register",function(req,res){
     console.log("회원가입 페이지 요청");
     res.render("register",{});
@@ -45,6 +54,8 @@ app.get("/myinfo",function(req,res){
 
 })
 app.post('/register',(req,res) =>{
+    req.body.email
+    req.body.password
 
 })
 app.get
