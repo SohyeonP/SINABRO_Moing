@@ -1,9 +1,10 @@
 const express = require('express');
 const ejs = require('ejs');
 const app = express();
+const bycrpt = require('bcrypt');
 const PORT  = process.env.PORT || 3000;
-
-
+const bodyparser = require('body-parser');
+app.use(express.urlencoded({ extended:false }))
 
 app.set('view engine','ejs');
 app.use(express.static(__dirname+'/'));
@@ -18,6 +19,20 @@ app.get("/login",function(req,res){
     console.log("로그인 페이지 요청");
     res.render("login.ejs",{});
 
+})
+app.post('/users',sync,(req,res) =>{
+    try{
+        const salt = await bycrpt.genSalt()
+        const hashedPassword = await bycrpt.hash(req.body.password, salt)
+        console.log(salt)
+        console.log(hashedPassword)
+        user.push(user)
+        res.status(201).send()
+    }
+    // const user = {email:req.body.email,password:req.body.hashedpassword salt:salt}
+    user.push(user)
+    res.status(201).send()
+}
 })
 app.get("/register",function(req,res){
     console.log("회원가입 페이지 요청");
@@ -45,6 +60,8 @@ app.get("/myinfo",function(req,res){
 
 })
 app.post('/register',(req,res) =>{
+    req.body.email
+    req.body.password
 
 })
 app.get
