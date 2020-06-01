@@ -4,7 +4,7 @@
   "description": "모잉 웹페이지 졸작 저장소 입니다.\r 팀원: 김아람/박소현",
   "main": "main.js",
   "scripts": {
-    "start": "node main.js",
+    "start": "nodemon main.js",
     "backend": "nodemon main.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
