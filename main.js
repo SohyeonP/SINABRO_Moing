@@ -15,11 +15,25 @@ app.get("/",function(req,res){
 })
 
 // const mainRoute = require("./views/html/main");
+app.get("/login",function(req,res){
+    console.log("로그인 페이지 요청");
+    res.render("login.ejs",{});
 
-//app.get("/login",function(req,res){
-//    console.log("로그인 페이지 요청");
-//    res.render("login.ejs",{});
-//
+})
+app.post('/users',sync,(req,res) =>{
+    try{
+        const salt = await bycrpt.genSalt()
+        const hashedPassword = await bycrpt.hash(req.body.password, salt)
+        console.log(salt)
+        console.log(hashedPassword)
+        user.push(user)
+        res.status(201).send()
+    }
+    // const user = {email:req.body.email,password:req.body.hashedpassword salt:salt}
+    user.push(user)
+    res.status(201).send()
+}
+})
 app.get("/register",function(req,res){
     console.log("회원가입 페이지 요청");
     res.render("register",{});
