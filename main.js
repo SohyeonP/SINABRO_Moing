@@ -15,19 +15,11 @@ app.get("/",function(req,res){
 })
 
 // const mainRoute = require("./views/html/main");
-<<<<<<< HEAD
 app.get("/login",function(req,res){
     console.log("로그인 페이지 요청");
     res.render("login.ejs",{});
 
 })
-=======
-
-//app.get("/login",function(req,res){
-//    console.log("로그인 페이지 요청");
-//    res.render("login.ejs",{});
-//
->>>>>>> 5901d1d64ef3dccb108ba0491dfb8c19bf738c22
 app.get("/register",function(req,res){
     console.log("회원가입 페이지 요청");
     res.render("register",{});
