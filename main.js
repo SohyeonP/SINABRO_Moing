@@ -1,12 +1,20 @@
 const express = require('express');
+
 const ejs = require('ejs');
+
 const app = express();
+
 const bycrpt = require('bcrypt');
-const PORT = process.env.PORT || 3000;
+
+const PORT = normalizePort(process.env.PORT || '3000');
+
+app.set('port',port);
 const bodyparser = require('body-parser');
+
 app.use(express.urlencoded({ extended: false }))
 
 app.set('view engine', 'ejs');
+
 app.use(express.static(__dirname + '/'));
 
 app.get("/", function (req, res) {
@@ -21,21 +29,16 @@ app.get("/login", function (req, res) {
 
 
 })
-<<<<<<< HEAD
 app.post('/login',(req,res) =>{
    
 
 })
 
 app.get("/register",function(req,res){
-=======
-app.get("/register", function (req, res) {
->>>>>>> 0399578402d2066563febdf93d825e7fdd3816a9
     console.log("회원가입 페이지 요청");
     res.render("ejs/register", {});
 
 })
-<<<<<<< HEAD
 app.post('/register', async (req,res) =>{
    try{
     const hashedPassword = await bycrpt.hash(req.body.password,10)
@@ -53,9 +56,6 @@ app.post('/register', async (req,res) =>{
 
 })
 app.get("/study_find",function(req,res){
-=======
-app.get("/study_find", function (req, res) {
->>>>>>> 0399578402d2066563febdf93d825e7fdd3816a9
     console.log("스터디 찾기 페이지 요청");
     res.render("ejs/study_find", {});
 
@@ -75,12 +75,6 @@ app.get("/myinfo", function (req, res) {
     res.render("ejs/myinfo", {});
 
 })
-<<<<<<< HEAD
-=======
-app.post('/register', (req, res) => {
-    req.body.email
-    req.body.password
->>>>>>> 0399578402d2066563febdf93d825e7fdd3816a9
 
 app.get
 app.listen(3000, () => {
