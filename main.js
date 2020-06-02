@@ -2,73 +2,57 @@ const express = require('express');
 const ejs = require('ejs');
 const app = express();
 const bycrpt = require('bcrypt');
-const PORT  = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3000;
 const bodyparser = require('body-parser');
-app.use(express.urlencoded({ extended:false }))
+app.use(express.urlencoded({ extended: false }))
 
-app.set('view engine','ejs');
-app.use(express.static(__dirname+'/'));
+app.set('view engine', 'ejs');
+app.use(express.static(__dirname + '/'));
 
-app.get("/",function(req,res){
+app.get("/", function (req, res) {
     console.log("메인페이지");
-    res.render("main",{});
+    res.render("ejs/main", {});
 })
 
 // const mainRoute = require("./views/html/main");
-app.get("/login",function(req,res){
+app.get("/login", function (req, res) {
     console.log("로그인 페이지 요청");
-    res.render("login.ejs",{});
+    res.render("ejs/login", {});
+
 
 })
-<<<<<<< HEAD
-app.post('/users',sync,(req,res) =>{
-    try{
-        const salt = await bycrpt.genSalt()
-        const hashedPassword = await bycrpt.hash(req.body.password, salt)
-        console.log(salt)
-        console.log(hashedPassword)
-        user.push(user)
-        res.status(201).send()
-    }
-    // const user = {email:req.body.email,password:req.body.hashedpassword salt:salt}
-    user.push(user)
-    res.status(201).send()
-}
-})
-=======
->>>>>>> a9c1c83f780b5574058bc0efbc6b1baa9aa3a708
-app.get("/register",function(req,res){
+app.get("/register", function (req, res) {
     console.log("회원가입 페이지 요청");
-    res.render("register",{});
+    res.render("ejs/register", {});
 
 })
-app.get("/study_find",function(req,res){
+app.get("/study_find", function (req, res) {
     console.log("스터디 찾기 페이지 요청");
-    res.render("study_find",{});
+    res.render("ejs/study_find", {});
 
 })
-app.get("/about",function(req,res){
+app.get("/about", function (req, res) {
     console.log("About 페이지 요청");
-    res.render("about",{});
+    res.render("ejs/about", {});
 
 })
-app.get("/L_main",function(req,res){
+app.get("/L_main", function (req, res) {
     console.log("로그인 메인  페이지 요청");
-    res.render("L_main",{});
+    res.render("ejs/L_main", {});
 
 })
-app.get("/myinfo",function(req,res){
+app.get("/myinfo", function (req, res) {
     console.log("마이페이지");
-    res.render("myinfo",{});
+    res.render("ejs/myinfo", {});
 
 })
-app.post('/register',(req,res) =>{
+app.post('/register', (req, res) => {
     req.body.email
     req.body.password
 
 })
 app.get
-app.listen(3000, ()=>{
+app.listen(3000, () => {
     console.log(`3000번 port에 http server를 띄웠습니다.`)
 })
 // 뷰 엔진 설정
