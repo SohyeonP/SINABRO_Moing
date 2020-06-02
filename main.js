@@ -20,26 +20,30 @@ app.get("/login",function(req,res){
     res.render("login.ejs",{});
 
 })
-<<<<<<< HEAD
-app.post('/users',sync,(req,res) =>{
-    try{
-        const salt = await bycrpt.genSalt()
-        const hashedPassword = await bycrpt.hash(req.body.password, salt)
-        console.log(salt)
-        console.log(hashedPassword)
-        user.push(user)
-        res.status(201).send()
-    }
-    // const user = {email:req.body.email,password:req.body.hashedpassword salt:salt}
-    user.push(user)
-    res.status(201).send()
-}
+app.post('/login',(req,res) =>{
+   
+
 })
-=======
->>>>>>> a9c1c83f780b5574058bc0efbc6b1baa9aa3a708
+
 app.get("/register",function(req,res){
     console.log("회원가입 페이지 요청");
     res.render("register",{});
+
+})
+app.post('/register', async (req,res) =>{
+   try{
+    const hashedPassword = await bycrpt.hash(req.body.password,10)
+    users.push({
+        id: Date.now().toString(),
+        email:req.body.email,
+        password: hashedPassword,
+        name: req.body.name
+    })
+    res.redirect('/login')
+   }catch{
+    res.redirect('/register')
+   }
+   console.log(users)
 
 })
 app.get("/study_find",function(req,res){
@@ -62,11 +66,7 @@ app.get("/myinfo",function(req,res){
     res.render("myinfo",{});
 
 })
-app.post('/register',(req,res) =>{
-    req.body.email
-    req.body.password
 
-})
 app.get
 app.listen(3000, ()=>{
     console.log(`3000번 port에 http server를 띄웠습니다.`)
