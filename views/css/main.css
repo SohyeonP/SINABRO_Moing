@@ -109,7 +109,6 @@ nav {
   background-image: url(../img/main.png);
   width: 1200px;
   height: 400px;
-
 }
 
 .c_info {
@@ -226,6 +225,32 @@ h2 {
 
 
 
+
+.banner {
+  margin-top: 50px;
+  left: 100px;
+  width: 1000px;
+  height: 90px;
+  position: relative;
+}
+
+.banner p {
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: normal;
+  text-align: center;
+  position: absolute;
+  top: 10%;
+  left: 38%;
+}
+
+.banner .bold {
+  font-size: 30px;
+}
+
+.banner p span {
+  font-weight: 800;
+}
 
 
 

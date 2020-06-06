@@ -6,9 +6,8 @@ const app = express();
 
 const bycrpt = require('bcrypt');
 
-const PORT = normalizePort(process.env.PORT || '3000');
+const PORT = process.env.PORT || 3000;
 
-app.set('port',port);
 const bodyparser = require('body-parser');
 
 app.use(express.urlencoded({ extended: false }))
@@ -29,33 +28,33 @@ app.get("/login", function (req, res) {
 
 
 })
-app.post('/login',(req,res) =>{
-   
+app.post('/login', (req, res) => {
+
 
 })
 
-app.get("/register",function(req,res){
+app.get("/register", function (req, res) {
     console.log("회원가입 페이지 요청");
     res.render("ejs/register", {});
 
 })
-app.post('/register', async (req,res) =>{
-   try{
-    const hashedPassword = await bycrpt.hash(req.body.password,10)
-    users.push({
-        id: Date.now().toString(),
-        email:req.body.email,
-        password: hashedPassword,
-        name: req.body.name
-    })
-    res.redirect('/login')
-   }catch{
-    res.redirect('/register')
-   }
-   console.log(users)
+app.post('/register', async (req, res) => {
+    try {
+        const hashedPassword = await bycrpt.hash(req.body.password, 10)
+        users.push({
+            id: Date.now().toString(),
+            email: req.body.email,
+            password: hashedPassword,
+            name: req.body.name
+        })
+        res.redirect('/login')
+    } catch{
+        res.redirect('/register')
+    }
+    console.log(users)
 
 })
-app.get("/study_find",function(req,res){
+app.get("/study_find", function (req, res) {
     console.log("스터디 찾기 페이지 요청");
     res.render("ejs/study_find", {});
 
@@ -73,6 +72,18 @@ app.get("/L_main", function (req, res) {
 app.get("/myinfo", function (req, res) {
     console.log("마이페이지");
     res.render("ejs/myinfo", {});
+
+})
+
+app.get("/myinfo_m", function (req, res) {
+    console.log("마이페이지 수정");
+    res.render("ejs/myinfo_m", {});
+
+})
+
+app.get("/host", function (req, res) {
+    console.log("호스트 페이지");
+    res.render("ejs/host", {});
 
 })
 
