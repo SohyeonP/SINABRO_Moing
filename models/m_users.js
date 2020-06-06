@@ -2,39 +2,39 @@ module.exports = (sequelize,Datatypes)=>{
 
     return sequelize.define(`m_users`,{
         user_id:{
-            type:sequelize.INTEGER,
+            type:Datatypes.INTEGER,
             primaryKey:true,
             autoincrement:true
 
         },
         user_email:{
-            type:sequelize.STRING,
+            type:Datatypes.STRING,
             allownull:false
 
         },
         user_pw:{
-            type:sequelize.STRING,
+            type:Datatypes.STRING,
             allownull:false
         },
         user_name:{
-            type:sequelize.STRING,
+            type:Datatypes.STRING,
         }
         ,role:{
-            type:sequelize.INTEGER,
+            type:Datatypes.INTEGER,
         },
         token:{
-            type:sequelize.STRING,
+            type:Datatypes.STRING,
            
         }
         ,tokenExp:{
-            type:sequelize.INTEGER,
+            type:Datatypes.INTEGER,
         },
         user_img:{
-            type:sequelize.TEXT,
+            type:Datatypes.TEXT,
             allowNull: true
         },
         user_introduce:{
-            type:sequelize.TEXT,
+            type:Datatypes.TEXT,
             allowNull: true
         },
     },{
