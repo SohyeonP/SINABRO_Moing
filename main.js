@@ -1,27 +1,22 @@
 const express = require('express');
-
 const ejs = require('ejs');
-
 const app = express();
-
 const bycrpt = require('bcrypt');
-
-const PORT = normalizePort(process.env.PORT || '3000');
-
-app.set('port',port);
+const PORT = process.env.PORT || 3000;
 const bodyparser = require('body-parser');
-
 app.use(express.urlencoded({ extended: false }))
 
 app.set('view engine', 'ejs');
-
 app.use(express.static(__dirname + '/'));
 
 app.get("/", function (req, res) {
     console.log("메인페이지");
     res.render("ejs/main", {});
 })
-
+app.get("/main", function (req, res) {
+    console.log("메인페이지");
+    res.render("ejs/main", {});
+})
 // const mainRoute = require("./views/html/main");
 app.get("/login", function (req, res) {
     console.log("로그인 페이지 요청");
