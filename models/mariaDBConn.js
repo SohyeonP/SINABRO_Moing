@@ -1,10 +1,8 @@
 const mariadb = require('mariadb');
-var conn= mariadb.createConnection();
+const Sequelize = require('sequelize');
 
-conn.connect();
 
-mariadb.createConnection({
-    host :"localhost",
-    user:'root',
-    password:'1234'
-}).then(conn)
+  var sequelize = new Sequelize('mariadb', 'root', '1234', {
+    dialect: 'mariadb',
+    host:'localhost'
+  })
