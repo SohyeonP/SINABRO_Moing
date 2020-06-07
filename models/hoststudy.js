@@ -2,20 +2,20 @@ module.exports = (sequelize,Datatypes)=>{
 
     return sequelize.define(`host_study`,{
         hoststudy_id:{
-            type:sequelize.INTEGER,
+            type:Datatypes.INTEGER,
             primaryKey:true,
             autoincrement:true
 
         },
         createdAt: {
             allowNull: false,
-            type: Datatype.DATE,
+            type: Datatypes.DATE,
           },
         room_name:{
-            type:Datatype.STRING,
+            type:Datatypes.STRING,
         },
         host_name:{
-            type: equelize.STRING,
+            type: Datatypes.STRING,
         },
         // title_img:{
         //     type: Datatype.BLOB('long')
@@ -27,11 +27,11 @@ module.exports = (sequelize,Datatypes)=>{
 
         // },
         join_in:{
-            type:Datatype.INTEGER,
+            type:Datatypes.INTEGER,
 
         },
         introduce:{
-            type:Datatype.TEXT,
+            type:Datatypes.TEXT,
         }
     },{
         timestamps:true,

@@ -4,21 +4,21 @@
 module.exports = (sequelize,Datatypes)=>{
     return sequelize.define(`comment`,{
         comment_id:{
-           type:sequelize.INTEGER,
+           type:Datatypes.INTEGER,
            primaryKey:true,
            autoincrement:true
         },
         user_id:{
-            type:sequelize.INTEGER,
+            type:Datatypes.INTEGER,
         },
         comment_content:{
-            type:sequelize.INTEGER,
+            type:Datatypes.INTEGER,
         },
         like_thumb:{
-            type:sequelize.INTEGER,
+            type:Datatypes.INTEGER,
         },
         reg_date:{
-            type: Sequelize.DATE,
+            type:Datatypes.DATE,
         }
 
 

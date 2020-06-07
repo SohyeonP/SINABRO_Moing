@@ -8,3 +8,4 @@ router.get("/myinfo", function (req, res) {
     res.render("ejs/myinfo", {});
 
 })
+module.exports = router;
