@@ -23,12 +23,44 @@
 //     res.render("ejs/login", {});
 
 
+<<<<<<< HEAD
+})
+app.post('/login', (req, res) => {
+
+=======
 // })
 // app.post('/login',(req,res) =>{
    
+>>>>>>> ba19559acb4db35882f49bdbc00fcdeb2331e77b
 
 // })
 
+<<<<<<< HEAD
+app.get("/register", function (req, res) {
+    console.log("회원가입 페이지 요청");
+    res.render("ejs/register", {});
+
+})
+app.post('/register', async (req, res) => {
+    try {
+        const hashedPassword = await bycrpt.hash(req.body.password, 10)
+        users.push({
+            id: Date.now().toString(),
+            email: req.body.email,
+            password: hashedPassword,
+            name: req.body.name
+        })
+        res.redirect('/login')
+    } catch{
+        res.redirect('/register')
+    }
+    console.log(users)
+
+})
+app.get("/study_find", function (req, res) {
+    console.log("스터디 찾기 페이지 요청");
+    res.render("ejs/study_find", {});
+=======
 // app.get("/register",function(req,res){
 //     console.log("회원가입 페이지 요청");
 //     res.render("ejs/register", {});
@@ -53,6 +85,7 @@
 // app.get("/study_find",function(req,res){
 //     console.log("스터디 찾기 페이지 요청");
 //     res.render("ejs/study_find", {});
+>>>>>>> ba19559acb4db35882f49bdbc00fcdeb2331e77b
 
 // })
 // app.get("/about", function (req, res) {
@@ -71,8 +104,34 @@
 
 // })
 
+<<<<<<< HEAD
+app.get("/myinfo_m", function (req, res) {
+    console.log("마이페이지 수정");
+    res.render("ejs/myinfo_m", {});
+
+})
+
+app.get("/host", function (req, res) {
+    console.log("호스트 페이지");
+    res.render("ejs/host", {});
+
+})
+
+app.get("/M_CR", function (req, res) {
+    console.log("스터디 생성 페이지");
+    res.render("ejs/M_CR", {});
+
+})
+
+app.get
+app.listen(3000, () => {
+    console.log(`3000번 port에 http server를 띄웠습니다.`)
+})
+// 뷰 엔진 설정
+=======
 // app.get
 // app.listen(3000, () => {
 //     console.log(`3000번 port에 http server를 띄웠습니다.`)
 // })
 // // 뷰 엔진 설정
+>>>>>>> ba19559acb4db35882f49bdbc00fcdeb2331e77b

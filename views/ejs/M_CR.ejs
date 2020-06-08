@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="../views/css/M_CR.css" />
+  <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/innks/NanumSquareRound/master/nanumsquareround.min.css">
+  <script src="https://cdn.ckeditor.com/4.9.0/standard/ckeditor.js"></script>
+  <title>Moing</title>
+</head>
+
+<body>
+  <header>
+    <div>
+      <h1 class="Logo"><a href="/"><span>M</span>oing</a></h1>
+      <nav>
+        <ul class="menu">
+          <li><a href="/about">ABOUT</a></li>
+          <li><a href="/study_find">STUDY FIND</a></li>
+          <li><a href="#">내 스터디 커뮤니티</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+
+  <div class="cr">
+    <p>스터디 생성하기</p>
+  </div>
+
+  <div class="body">
+    <div class="container">
+
+      <div class="st_cr">스터디 생성하기</div>
+
+      <form method="post">
+
+        <div class="studyname">
+          <label>스터디 이름<br>
+            <input type="text" name="studyname">
+          </label>
+        </div>
+
+        <div class="t_img">
+          <label>상단 이미지<br>
+            <input type="file" name="img">
+          </label>
+        </div>
+
+        <div class="check">
+          <p>분류</p>
+          <label><input type="checkbox" name="coding">코딩</label>
+          <label><input type="checkbox" name="english">영어</label><br>
+          <label><input type="checkbox" name="design">디자인</label>
+          <label><input type="checkbox" name="language">제2외국어</label><br>
+          <label><input type="checkbox" name="toeic">토익</label>
+          <label><input type="checkbox" name="any">기타</label>
+        </div>
+        
+        <p>스터디 소개 및 커리큘럼 등록</p>
+        <textarea id="study_info"></textarea>
+
+        <!--<div class="st_i">
+          <label>스터디 소개<br>
+            <textarea cols="100" rows="10" name="study_i"></textarea>
+          </label><br>
+          <input type="file">
+        </div>
+
+        <div class="c_f">
+          <label>커리큘럼 등록<br>
+            <input type="file" name="curriculum">
+          </label>
+        </div>-->
+
+        <div class="button">
+          <input type="submit" name="submit" value="등록" />
+          <input type="button" name="cancle" value="취소">
+        </div>
+
+      </form>
+    </div>
+  </div>
+  <footer>
+    <div class="footer_f">
+      <div class="f_logo">
+        <span>M</span>oing
+      </div>
+      <div class="info">
+        개인정보처리방침<span>|</span>이용약관<span>|</span>위치정보 이용약관<span>|</span>고객센터<span>|</span>공지사항
+      </div>
+      <address>모잉<span>|</span>경기도 안양시 동안구 비산동</address>
+      <p>Copyright © Moing. All Rights Reserved.</p>
+    </div>
+  </footer>
+  
+  <script>CKEDITOR.replace('study_info')</script>
+</body></html>

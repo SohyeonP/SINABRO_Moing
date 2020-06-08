@@ -1,20 +1,20 @@
-module.exports = (sequelize,Datatypes)=>{
+module.exports = (sequelize, Datatypes) => {
 
-    return sequelize.define(`host_study`,{
-        hoststudy_id:{
-            type:Datatypes.INTEGER,
-            primaryKey:true,
-            autoincrement:true
+    return sequelize.define(`host_study`, {
+        hoststudy_id: {
+            type: Datatypes.INTEGER,
+            primaryKey: true,
+            autoincrement: true
 
         },
         createdAt: {
             allowNull: false,
             type: Datatypes.DATE,
-          },
-        room_name:{
-            type:Datatypes.STRING,
         },
-        host_name:{
+        room_name: {
+            type: Datatypes.STRING,
+        },
+        host_name: {
             type: Datatypes.STRING,
         },
         // title_img:{
@@ -26,16 +26,16 @@ module.exports = (sequelize,Datatypes)=>{
         // checkbox:{
 
         // },
-        join_in:{
-            type:Datatypes.INTEGER,
+        join_in: {
+            type: Datatypes.INTEGER,
 
         },
-        introduce:{
-            type:Datatypes.TEXT,
+        introduce: {
+            type: Datatypes.TEXT,
         }
-    },{
-        timestamps:true,
-        paranoid:true
-        }   
-    );
+    }, {
+        timestamps: true,
+        paranoid: true
     }
+    );
+}

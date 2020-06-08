@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8" />
-  <link rel="stylesheet" href="../css/myinfo.css" />
+  <link rel="stylesheet" href="../css/host.css" />
   <link rel="stylesheet" type="text/css"
     href="https://cdn.rawgit.com/innks/NanumSquareRound/master/nanumsquareround.min.css">
 
@@ -26,57 +26,44 @@
   </header>
 
   <div class="cr">
-    <p>마이페이지 &gt; 내 정보</p>
+    <p>마이페이지 &gt; 스터디 관리</p>
   </div>
 
   <div class="main">
-    <h2>내 정보</h2>
+    <h2>스터디 관리</h2>
 
     <div class="mypage">
       <div class="page">마이페이지</div>
-      <div class="my_info"><a href="#"><span>내 정보</span></a></div>
+      <div class="my_info"><a href="/mypage/myinfo">내 정보</a></div>
       <div class="alram"><a href="#">알림 설정</a></div>
-      <div class="study"><a href="#">스터디 관리</a></div>
+      <div class="study"><a href="/host"><span>스터디 관리</span></a></div>
     </div>
 
-    <div class="m_info">
-      <img src="../img/about.png">
-      <table>
-        <tr>
-          <td>별명</td>
-          <td>황수연#1234</td>
-        </tr>
-        <tr>
-          <td>직업</td>
-          <td>학생</td>
-        </tr>
-        <tr>
-          <td>관심분야</td>
-          <td>토익</td>
-        </tr>
-        <tr>
-          <td>E-mail</td>
-          <td>htndus96@naver.com</td>
-        </tr>
-        <tr>
-          <td>휴대폰</td>
-          <td>010-1234-5678</td>
-        </tr>
-        <tr>
-          <td>자기소개</td>
-          <td>
-            <div class="textarea">작성한 자기소개</div>
-          </td>
-        </tr>
-      </table>
-      <a href="/mypage/myinfo_m"><button type="button">프로필 수정</button></a>
+
+    <div class="study_list">
+      <p>생성한 스터디 목록</p>
+      <h3><a href="/M_CR">+</a></h3>
+      <ul>
+        <li>자바 어려운 사람 드루와 드루와 </li>
+
+        <li>
+          <ul class="list">
+            <li><a href="#">수업 등록</a></li>
+            <li><a href="#">스터디 수정</a></li>
+          </ul>
+        </li>
+
+        <li>디자인을 배워보자!</li>
+        <li>
+          <ul class="list">
+            <li><a href="#">수업 등록</a></li>
+            <li><a href="#">스터디 수정</a></li>
+          </ul>
+        </li>
+      </ul>
     </div>
+
   </div>
-
-
-
-
-
 
 
   <footer>
@@ -91,6 +78,7 @@
       <p>Copyright © Moing. All Rights Reserved.</p>
     </div>
   </footer>
+
 </body>
 
 </html>

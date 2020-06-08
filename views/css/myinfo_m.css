@@ -11,7 +11,6 @@ li {
 a {
   text-decoration: none;
   color: black;
-
 }
 
 body {
@@ -20,21 +19,20 @@ body {
   padding: 0 auto;
 }
 
-.body {
+
+.main {
   min-height: 100%;
   position: relative;
   width: 1200px;
   margin: 0 auto;
+  overflow:auto;
 }
-
-
-
 
 /*메뉴와 로고 설정*/
 header {
+  width: 1200px;
   margin: 0 auto;
   top: 0;
-  width: 1200px;
   height: 100px;
 }
 
@@ -59,6 +57,7 @@ header > div {
   float: right;
   padding: 0px;
   margin: 0px;
+  
 }
 
 .menu li {
@@ -83,8 +82,8 @@ header > div {
   line-height: 30px;
   font-size: 14px;
   text-align: left;
-  border-top: solid 2px #eeeeee;
   border-bottom: solid 2px #eeeeee;
+  border-top: solid 2px #eeeeee;
   margin: 0px;
 }
 
@@ -97,92 +96,148 @@ header > div {
 
 
 
-.st_cr {
+
+
+h2 {
+  text-align: center;
   font-size: 28px;
   font-weight: normal;
+  margin: 60px 35px 60px;
+}
+
+.mypage {
+  position: sticky;
+  float: left;
+  top: 20px;
+  margin-left: 40px;
+  border-radius: 3px;
+  border: solid 2px #39bde7;
+  width: 140px;
+  height: 190px;
   text-align: center;
-  margin: 110px auto;
-}
-
-form {
-  margin: 0px 280px;
   font-size: 16px;
+  border-radius: 3px;
 }
 
-form div {
-  margin-bottom: 41px
+.page {
+  font-weight: bold;
+  margin: 29px 0px;
 }
 
-
-
-
-/*스터디 이름 */
-.studyname input {
-  width: 350px;
-  height: 45px;
-  margin-top: 12px;
+.my_info,
+.alram,
+.study {
+  margin-bottom: 20px;
+  font-weight: normal;
 }
 
-
-
-
-/*상단 이미지 업로드*/
-.t_img input {
-  height: 45px;
-  margin-top: 12px;
+.mypage span {
+  color: #43b3c1;
 }
 
 
 
 
-/*분류 선택*/
-.check label {
-  margin-right: 70px;
+
+
+
+.m_info {
+  margin-bottom: 100px;
+  font-size: 14px;
+  float: right;
+  margin-right: 40px;
+  border: solid 1px #cccccc;
+  width: 860px;
+  height: 900px;
+  padding: 40px;
+  
+}
+
+img {
+  width: 150px;
+  height: 150px;
+  float: left;
+  border: solid 1px #cccccc;
+}
+
+input[type=file] {
+  border: solid 1px #cccccc;
+  padding: 0px;
+}
+
+.mymy {
+  margin-left: 279px;
+}
+
+.mymy div {
+  margin: 30px 0px;
+}
+
+input[type=text],input[type=number] {
+  width: 300px;
+  height: 30px;
+}
+
+.nickname input, .job input{
+  margin-left: 76px;
 }
 
 .check p {
-  margin-bottom: 34px;
+  vertical-align: top;
+  display: inline;
+  width: 65px;
+  margin-right: 10px;
 }
 
+.check div{
+  display: inline-block;
+  margin: 0;
+}
 .check input {
+  margin-left: 40px;
   margin-bottom: 20px;
 }
-
 
 label:nth-child(5) {
-  margin-right: 55px;
+  margin-left: -15px;
 }
 
+.email input{
+  margin-left: 55px;
+}
 
+.password p {
+  display: inline;
+  margin: 0;
+  vertical-align: top;
+}
 
+.password input {
+  margin-left: 20px;
+  margin-bottom: 10px;
+}
+.password div {
+  margin: 0;
+  display: inline-block;
+}
 
-/*.st_i textarea {
-  margin-top: 12px;
-  margin-bottom: 20px;
-  width: 640px;
-  height: 150px;
+.phone input {
+  margin-left: 60px;
+}
+
+.my p {
+  vertical-align: top;
+  display: inline;
+  margin: 0;
+}
+
+.my textarea {
+  margin-left: 40px;
+  width: 460px;
+  height: 100px;
   resize: none;
 }
 
-.st_i input {
-  height: 45px;
-}
-
-.c_f input {
-  margin-top: 12px;
-  height: 45px;
-}*/
-
-textarea {
-  resize: none;
-}
-form p {
-  word-spacing: 5px;
-}
-
-
-
-/*버튼*/
 .button {
   margin-top: 100px;
   text-align: center;
@@ -212,12 +267,13 @@ form p {
 
 
 
+
+
 footer {
   right: 0;
   left: 0;
   position: absolute;
-  margin-top: 100px;
-  min-width: 1200px;
+  min-width: 1180px;
   background-color: #666666;
   padding: 20px;
   color: #ffffff;
