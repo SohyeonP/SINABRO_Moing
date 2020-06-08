@@ -5,6 +5,7 @@ var router = express.Router();
 
 router.get("/study_find",function(req,res){
     console.log("스터디 찾기 페이지 요청");
-    res.render("ejs/study_find", {});
+    res.render("study_find", {});
 
 })
+module.exports = router;

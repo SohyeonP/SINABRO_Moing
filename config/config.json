@@ -2,9 +2,10 @@
   "development": {
     "username": "root",
     "password": "1234",
-    "database": "sample",
+    "database": "moing",
     "host": "127.0.0.1",
     "dialect": "mariadb",
+    "timezone": "+09:00",
     "operatorsAliases": false,
     "port":"3308"
   },

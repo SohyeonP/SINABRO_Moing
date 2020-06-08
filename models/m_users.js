@@ -4,12 +4,16 @@ module.exports = (sequelize,Datatypes)=>{
         user_id:{
             type:Datatypes.INTEGER,
             primaryKey:true,
-            autoincrement:true
+            autoIncrement:true
 
         },
         user_email:{
             type:Datatypes.STRING,
-            allownull:false
+            allownull:false,
+            vaildate:{
+                isEmail:true
+            },
+            primaryKey:true
 
         },
         user_pw:{
@@ -21,13 +25,15 @@ module.exports = (sequelize,Datatypes)=>{
         }
         ,role:{
             type:Datatypes.INTEGER,
+            allownull:true,
         },
         token:{
             type:Datatypes.STRING,
-           
+            allownull:true,
         }
         ,tokenExp:{
             type:Datatypes.INTEGER,
+            allownull:true,
         },
         user_img:{
             type:Datatypes.TEXT,
@@ -37,6 +43,8 @@ module.exports = (sequelize,Datatypes)=>{
             type:Datatypes.TEXT,
             allowNull: true
         },
+        
+        
     },{
         timestamps:true,
         paranoid:true

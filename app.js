@@ -1,11 +1,10 @@
 var createError = require('http-errors');
 var express = require('express');
-
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var sequelize = require('sequelize');
-var bodyparser = require('body-parser');
+
 
 var mainRouter = require('./routes/main');
 
@@ -13,53 +12,57 @@ var hoststudyRouter = require('./routes/hoststudy');
 
 var mypageRouter = require('./routes/mypage');
 
-var registerRouter = require('./routes/register');
+
 
 var studyfindRouter = require('./routes/studyfind');
 
+var userRouter = require('./routes/user');
 
 //Express Layout 팩키지 참조
 var expressLayouts = require('express-ejs-layouts');
 
-var sequelize = require('./models/index').sequelize;
-//게시글 관리 라우터 파일을 참조한다.
 
-sequelize.sync();
+const models = require('./models/index.js');
+
+models.sequelize.sync().then(()=>{
+  console.log("maria moingDB 연결 성공");
+}).catch(err =>{
+  console.log("연결 실패");
+  console.log(err);
+});
+
+
+
 
 var app = express();
 
+app.set('views', path.join(__dirname, 'views/ejs'));
 app.set('view engine', 'ejs');
-app.set('views', path.join(__dirname, 'views'));
 
-
-app.set('layout', 'layoutMaster'); //기본레이아웃 페이지 이름설정
-app.set("layout extractScripts", true); //컨텐츠 페이지내 스크립트 사용(통합)여부
-app.use(expressLayouts);
+// app.set('layout', 'layoutMaster'); //기본레이아웃 페이지 이름설정
+// app.set("layout extractScripts", true); //컨텐츠 페이지내 스크립트 사용(통합)여부
+// app.use(expressLayouts);
 
 
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'views')));
 
+var bodyparser = require('body-parser');
+app.use(bodyparser.urlencoded({extended:false}));
+// app.use("/css/",cssDirectoryPath);
 
 //메인페이지 호출시 적용되는 라우터파일 정의
 //http://localhost:3000
 app.use('/', mainRouter);
+app.use('/main', mainRouter);
 
-//참조된 사용자정보관리 라우터 객체 적용
-//http://localhost:3000/users
-app.use('/login', loginRouter);
+app.use('/user', userRouter);
 
-//참조된 게시글 라우터 객체 적용
-//http://localhost:3000/article
 app.use('/mypage', mypageRouter); 
 
-//open API 라우터의 기본 루트 주소를 세팅 한다. 
-app.use('/api',openAPIRouter);
-
-app.use('/register',registerRouter);
 
 app.use('/studyfind',studyfindRouter);
 
