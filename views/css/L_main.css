@@ -21,21 +21,21 @@ body {
 }
 
 .body {
-  min-height: 100%;
   position: relative;
   width: 1200px;
   margin: 0 auto;
 }
 
 header {
+  width: 1200px;
+  min-height: 100%;
   top: 0;
   height: 100px;
 }
 
 header > div {
   float: left;
-  width: 830px;
-  /* 로고와 메뉴 사이 간격 조정 */
+  width: 1200px;
 }
 
 .Logo {
@@ -47,12 +47,16 @@ header > div {
   font-size: 36px;
 }
 
+/* 로고 글씨색 수정 */
 .Logo span {
   color: #43b3c1;
 }
 
+nav {
+  margin-left: 300px;
+}
+
 .menu {
-  float: right;
   padding: 0px;
   margin: 0px;
 }
@@ -65,54 +69,191 @@ header > div {
   line-height: 40px;
   margin: 30px 55px;
   /*상하여백 60->30으로 수정*/
-  display: block;
+  display: inline-block;
   color: black;
   font-size: 16px;
   /*크기수정*/
   font-weight: 400;
 }
 
-img {
-  background-image: url(../img/main.png);
-  height: 550px;
-  width: 800px;
-  margin-left: 40px;
-}
-
-.user {
-  margin-right: 40px;
-  /*오른쪽 여백 수정*/
+.login {
   float: right;
-  height: 210px;
-  /*유저정보 박스 크기 수정*/
-  width: 270px;
-  /*유저정보 박스 크기 수정*/
-  border: 15px solid #d0f3f7;
+  margin-right: 0px;
 }
 
-.user div {
-  margin: 90px 0 0 5px;
-  /*상단 정보 들어갈 자리&버튼 여백*/
-  font-size: 0px;
-}
-
-button {
-  font-size: 14px;
-  /*크기수정 */
-  border: 0px;
-  border-radius: 10px;
-  padding: 0px;
+.login li {
+  cursor: pointer;
+  float: left;
+  line-height: 30px;
+  margin: 20px 11px;
   display: inline-block;
-  background-color: #43b3c1;
-  color: white;
-  width: 120px;
-  height: 45px;
-  margin: 5px;
+  color: #696969;
+  font-size: 14px;
+  font-weight: normal;
 }
 
-button a {
-  color: white;
+.login li:nth-child(3) {
+  color: #43b3c1;
 }
+
+
+
+
+
+.swiper-container {
+  width: 1200px;
+  height: 400px;
+  margin-bottom: 50px;
+}
+
+
+.img {
+  background-image: url(../img/main.png);
+  width: 1200px;
+  height: 400px;
+}
+
+.c_info {
+  z-index: 10;
+  padding: 65px 100px;
+  color: #ffffff;
+}
+
+.best {
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.name {
+  font-size: 40px;
+  font-weight: 800;
+  margin: 13px 0px;
+}
+
+.sub {
+  font-size: 18px;
+  font-weight: normal;
+  width: 230px;
+  line-height: 24px;
+}
+
+h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  margin-left: 125px;
+}
+
+.slider {
+  margin-left: 125px;
+  width: 1000px;
+}
+.study {
+  margin: 0 auto;
+  width: 280px;
+}
+
+.study img {
+  width: 280px;
+  height: 200px;
+}
+
+.study_title {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.study p {
+  margin: 5px 0px;
+}
+
+.checked {
+  font-size: 13px;
+  color: #808080;
+  font-weight: lighter;
+}
+
+.p {
+  margin-right: 80px;
+  margin-top: 12px;
+  float: right;
+  color: #43b3c1;
+  font-size: 14px;
+  font-weight: normal;
+}
+
+.founder {
+  margin-top: 20px;
+  font-size: 16px;
+}
+
+.founder span {
+  font-weight: bold;
+
+}
+
+.slick-next {
+  background: url(../img/iconfinder_arrow-left-01_186410.png);
+  display: hidden;
+  position: absolute;
+  background-size: cover;
+  width: 60px;
+  height: 60px;
+  text-indent: -9999px;
+  border: none;
+  left: -110px;
+  top: 80px;
+  outline: none;
+  cursor: pointer;
+}
+
+.slick-prev {
+  background: url(../img/iconfinder_arrow-right-01_186409.png);
+  display: hidden;
+  position: absolute;
+  background-size: cover;
+  width: 60px;
+  height: 60px;
+  text-indent: -9999px;
+  border: none;
+  right: -60px;
+  top: 70px;
+  outline: none;
+  cursor: pointer;
+}
+
+
+
+
+
+.banner {
+  margin-top: 50px;
+  left: 100px;
+  width: 1000px;
+  height: 90px;
+  position: relative;
+}
+
+.banner p {
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: normal;
+  text-align: center;
+  position: absolute;
+  top: 10%;
+  left: 38%;
+}
+
+.banner .bold {
+  font-size: 30px;
+}
+
+.banner p span {
+  font-weight: 800;
+}
+
 
 
 
