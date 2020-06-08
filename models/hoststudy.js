@@ -9,29 +9,29 @@ module.exports = (sequelize,Datatypes)=>{
         },
         createdAt: {
             allowNull: false,
-            type: Sequelize.DATE,
+            type: Datatype.DATE,
           },
         room_name:{
-            type:sequelize.STRING,
+            type:Datatype.STRING,
         },
         host_name:{
             type: equelize.STRING,
         },
-        title_img:{
-            type: Sequelize.BLOB('long')
-        },
-        box_img:{
-            type: Sequelize.BLOB('long')
-        },
-        checkbox:{
+        // title_img:{
+        //     type: Datatype.BLOB('long')
+        // },
+        // box_img:{
+        //     type: Datatype.BLOB('long')
+        // },
+        // checkbox:{
 
-        },
+        // },
         join_in:{
-
+            type:Datatype.INTEGER,
 
         },
         introduce:{
-
+            type:Datatype.TEXT,
         }
     },{
         timestamps:true,
