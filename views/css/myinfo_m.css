@@ -25,6 +25,7 @@ body {
   position: relative;
   width: 1200px;
   margin: 0 auto;
+  overflow:auto;
 }
 
 /*메뉴와 로고 설정*/
@@ -56,6 +57,7 @@ header > div {
   float: right;
   padding: 0px;
   margin: 0px;
+  
 }
 
 .menu li {
@@ -140,76 +142,101 @@ h2 {
 
 
 .m_info {
+  margin-bottom: 100px;
+  font-size: 14px;
   float: right;
   margin-right: 40px;
   border: solid 1px #cccccc;
   width: 860px;
-  height: 485px;
+  height: 900px;
   padding: 40px;
+  
 }
 
-
-
-
-
-.studyname input {
-  width: 350px;
-  height: 45px;
-  margin-top: 12px;
+img {
+  width: 150px;
+  height: 150px;
+  float: left;
+  border: solid 1px #cccccc;
 }
 
-
-
-
-
-.t_img input {
-  height: 45px;
-  margin-top: 12px;
+input[type=file] {
+  border: solid 1px #cccccc;
+  padding: 0px;
 }
 
+.mymy {
+  margin-left: 279px;
+}
 
+.mymy div {
+  margin: 30px 0px;
+}
 
+input[type=text],input[type=number] {
+  width: 300px;
+  height: 30px;
+}
 
-
-.check label {
-  margin-right: 70px;
+.nickname input, .job input{
+  margin-left: 76px;
 }
 
 .check p {
-  margin-bottom: 34px;
+  vertical-align: top;
+  display: inline;
+  width: 65px;
+  margin-right: 10px;
 }
 
+.check div{
+  display: inline-block;
+  margin: 0;
+}
 .check input {
+  margin-left: 40px;
   margin-bottom: 20px;
 }
-
 
 label:nth-child(5) {
-  margin-right: 55px;
+  margin-left: -15px;
 }
 
+.email input{
+  margin-left: 55px;
+}
 
+.password p {
+  display: inline;
+  margin: 0;
+  vertical-align: top;
+}
 
-.st_i textarea {
-  margin-top: 12px;
-  margin-bottom: 20px;
-  width: 640px;
-  height: 150px;
+.password input {
+  margin-left: 20px;
+  margin-bottom: 10px;
+}
+.password div {
+  margin: 0;
+  display: inline-block;
+}
+
+.phone input {
+  margin-left: 60px;
+}
+
+.my p {
+  vertical-align: top;
+  display: inline;
+  margin: 0;
+}
+
+.my textarea {
+  margin-left: 40px;
+  width: 460px;
+  height: 100px;
   resize: none;
 }
-
-.st_i input {
-  height: 45px;
-}
-
-
-
-.c_f input {
-  margin-top: 12px;
-  height: 45px;
-}
-
-
 
 .button {
   margin-top: 100px;
@@ -235,6 +262,9 @@ label:nth-child(5) {
   color: #666666;
   background-color: #eeeeee;
 }
+
+
+
 
 
 

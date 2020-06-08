@@ -1,22 +1,22 @@
 
-module.exports = (sequelize,Datatypes)=>{
-    return sequelize.define(`reply`,{
-        reply_id:{
-           type:sequelize.INTEGER,
-           primaryKey:true,
-           autoincrement:true
+module.exports = (sequelize, Datatypes) => {
+    return sequelize.define(`reply`, {
+        reply_id: {
+            type: Datatypes.INTEGER,
+            primaryKey: true,
+            autoincrement: true
         },
-        comment_id:{
-            type:sequelize.INTEGER,
+        comment_id: {
+            type: Datatypes.INTEGER,
         },
-        user_id:{
-            type:sequelize.INTEGER,
+        user_id: {
+            type: Datatypes.INTEGER,
         },
-        reply_content:{
-            type:sequelize.STRING,
+        reply_content: {
+            type: Datatypes.STRING,
         },
-        reg_date:{
-            type: Sequelize.DATE,
+        reg_date: {
+            type: Datatypes.DATE,
         }
 
 

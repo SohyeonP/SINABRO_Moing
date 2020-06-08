@@ -2,13 +2,7 @@ const express = require('express');
 const ejs = require('ejs');
 const app = express();
 const bycrpt = require('bcrypt');
-<<<<<<< HEAD
-
 const PORT = process.env.PORT || 3000;
-
-=======
-const PORT = process.env.PORT || 3000;
->>>>>>> 66f503ad0463fa9a1924a0bcdb5c0fa16fb6d593
 const bodyparser = require('body-parser');
 app.use(express.urlencoded({ extended: false }))
 
@@ -86,6 +80,12 @@ app.get("/myinfo_m", function (req, res) {
 app.get("/host", function (req, res) {
     console.log("호스트 페이지");
     res.render("ejs/host", {});
+
+})
+
+app.get("/M_CR", function (req, res) {
+    console.log("스터디 생성 페이지");
+    res.render("ejs/M_CR", {});
 
 })
 
