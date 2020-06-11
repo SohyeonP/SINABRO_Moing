@@ -1,14 +1,14 @@
-module.exports = (sequelize,Datatypes)=>{
+module.exports = (sequelize,Sequelize)=>{
 
     return sequelize.define(`m_users`,{
         user_id:{
-            type:Datatypes.INTEGER,
+            type:Sequelize.INTEGER,
             primaryKey:true,
             autoIncrement:true
 
         },
         user_email:{
-            type:Datatypes.STRING,
+            type:Sequelize.STRING,
             allownull:false,
             vaildate:{
                 isEmail:true
@@ -17,30 +17,30 @@ module.exports = (sequelize,Datatypes)=>{
 
         },
         user_pw:{
-            type:Datatypes.STRING,
+            type:Sequelize.STRING,
             allownull:false
         },
         user_name:{
-            type:Datatypes.STRING,
+            type:Sequelize.STRING,
         }
         ,role:{
-            type:Datatypes.INTEGER,
+            type:Sequelize.INTEGER,
             allownull:true,
         },
         token:{
-            type:Datatypes.STRING,
+            type:Sequelize.STRING,
             allownull:true,
         }
         ,tokenExp:{
-            type:Datatypes.INTEGER,
+            type:Sequelize.INTEGER,
             allownull:true,
         },
         user_img:{
-            type:Datatypes.TEXT,
+            type:Sequelize.TEXT,
             allowNull: true
         },
         user_introduce:{
-            type:Datatypes.TEXT,
+            type:Sequelize.TEXT,
             allowNull: true
         },
         

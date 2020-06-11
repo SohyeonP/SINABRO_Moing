@@ -53,16 +53,13 @@ app.use(express.static(path.join(__dirname, 'views')));
 var bodyparser = require('body-parser');
 app.use(bodyparser.urlencoded({extended:false}));
 // app.use("/css/",cssDirectoryPath);
-
-//메인페이지 호출시 적용되는 라우터파일 정의
-//http://localhost:3000
+//Router
 app.use('/', mainRouter);
-app.use('/main', mainRouter);
+
 
 app.use('/user', userRouter);
 
 app.use('/mypage', mypageRouter); 
-
 
 app.use('/studyfind',studyfindRouter);
 
