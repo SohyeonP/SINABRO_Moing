@@ -1,37 +1,37 @@
-module.exports = (sequelize, Datatypes) => {
+module.exports = (sequelize, Sequelize) => {
 
     return sequelize.define(`host_study`, {
         hoststudy_id: {
-            type: Datatypes.INTEGER,
+            type: Sequelize.INTEGER,
             primaryKey: true,
             autoincrement: true
 
         },
         createdAt: {
             allowNull: false,
-            type: Datatypes.DATE,
+            type: Sequelize.DATE,
         },
         room_name: {
-            type: Datatypes.STRING,
+            type: Sequelize.STRING,
         },
         host_name: {
-            type: Datatypes.STRING,
+            type: Sequelize.STRING,
         },
-        // title_img:{
-        //     type: Datatype.BLOB('long')
-        // },
-        // box_img:{
-        //     type: Datatype.BLOB('long')
-        // },
+        title_img:{
+            type: Sequelize.BLOB('long')
+        },
+        box_img:{
+            type: Sequelize.BLOB('long')
+        },
         // checkbox:{
 
         // },
         join_in: {
-            type: Datatypes.INTEGER,
+            type: Sequelize.INTEGER,
 
         },
         introduce: {
-            type: Datatypes.TEXT,
+            type: Sequelize.TEXT,
         }
     }, {
         timestamps: true,
