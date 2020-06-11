@@ -120,6 +120,9 @@ form div {
   margin-top: 12px;
 }
 
+.studyname label {
+  font-weight: bold;
+}
 
 
 
@@ -127,6 +130,10 @@ form div {
 .t_img input {
   height: 45px;
   margin-top: 12px;
+}
+
+.t_img label {
+  font-weight: bold;
 }
 
 
@@ -139,6 +146,7 @@ form div {
 
 .check p {
   margin-bottom: 34px;
+  font-weight: bold;
 }
 
 .check input {
@@ -153,8 +161,7 @@ label:nth-child(5) {
 
 
 
-/*스터디 소개*/
-.st_i textarea {
+/* .st_i textarea {
   margin-top: 12px;
   margin-bottom: 20px;
   width: 640px;
@@ -167,24 +174,29 @@ label:nth-child(5) {
 }
 
 
-
-
-/*커리큘럼 등록*/
 .c_f input {
   margin-top: 12px;
   height: 45px;
+} */
+
+textarea {
+  resize: none;
 }
-
-
+form p {
+  word-spacing: 5px;
+  font-weight: bold;
+}
 
 
 /*버튼*/
 .button {
   margin-top: 100px;
   text-align: center;
+  
 }
 
 .button input {
+  cursor: pointer;
   margin: 0 auto;
   width: 150px;
   height: 45px;

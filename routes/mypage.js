@@ -14,4 +14,10 @@ router.get("/myinfo_m", function (req, res) {
     res.render("myinfo_m", {});
 
 })
+
+router.get("/alram", function (req, res) {
+    console.log("알람 설정");
+    res.render("alram", {});
+
+})
 module.exports = router;

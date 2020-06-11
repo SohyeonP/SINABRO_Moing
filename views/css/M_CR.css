@@ -123,6 +123,9 @@ form div {
   margin-top: 12px;
 }
 
+.studyname label {
+  font-weight: bold;
+}
 
 
 
@@ -132,6 +135,9 @@ form div {
   margin-top: 12px;
 }
 
+.t_img label {
+  font-weight: bold;
+}
 
 
 
@@ -142,6 +148,7 @@ form div {
 
 .check p {
   margin-bottom: 34px;
+  font-weight: bold;
 }
 
 .check input {
@@ -178,6 +185,7 @@ textarea {
 }
 form p {
   word-spacing: 5px;
+  font-weight: bold;
 }
 
 
@@ -189,6 +197,7 @@ form p {
 }
 
 .button input {
+  cursor: pointer;
   margin: 0 auto;
   width: 150px;
   height: 45px;

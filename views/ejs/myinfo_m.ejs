@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8" />
-  <link rel="stylesheet" href="../../css/myinfo_m.css" />
+  <link rel="stylesheet" href="../css/myinfo_m.css" />
   <link rel="stylesheet" type="text/css"
     href="https://cdn.rawgit.com/innks/NanumSquareRound/master/nanumsquareround.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
@@ -35,8 +35,8 @@
     <div class="mypage">
       <div class="page">마이페이지</div>
       <div class="my_info"><a href="/mypage/myinfo"><span>내 정보</span></a></div>
-      <div class="alram"><a href="#">알림 설정</a></div>
-      <div class="study"><a href="#">스터디 관리</a></div>
+      <div class="alram"><a href="/mypage/alram">알림 설정</a></div>
+      <div class="study"><a href="/mypage/host">스터디 관리</a></div>
     </div>
 
     <div class="m_info">
@@ -44,7 +44,7 @@
 
 
         <input type="file" id="files">
-        <img src="#" id="foo">
+        <img src="#" id="profile">
 
         <div class="mymy">
           <div class="nickname">
@@ -100,7 +100,7 @@
 
         <div class="button">
           <input type="submit" name="submit" value="등록" />
-          <input type="button" name="cancle" value="취소">
+          <input type="button" name="cancle" value="취소" onClick="location.href='/mypage/myinfo'" />
         </div>
 
       </form>
@@ -133,7 +133,7 @@
       if (input.files && input.files[0]) {
         var reader = new FileReader();
         reader.onload = function (e) {
-          $('#foo').attr('src', e.target.result);
+          $('#profile').attr('src', e.target.result);
         }
         reader.readAsDataURL(input.files[0]);
       }

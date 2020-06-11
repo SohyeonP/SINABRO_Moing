@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8" />
-  <link rel="stylesheet" href="../css/host.css" />
+  <link rel="stylesheet" href="../css/alram.css" />
   <link rel="stylesheet" type="text/css"
     href="https://cdn.rawgit.com/innks/NanumSquareRound/master/nanumsquareround.min.css">
 
@@ -14,11 +14,11 @@
 <body>
   <header>
     <div>
-      <h1 class="Logo"><a href="/"><span>M</span>oing</a></h1>
+      <h1 class="Logo"><a href="#"><span>M</span>oing</a></h1>
       <nav>
         <ul class="menu">
           <li><a href="/about">ABOUT</a></li>
-          <li><a href="/study_find">STUDY FIND</a></li>
+          <li><a href="/sttudy_find">STUDY FIND</a></li>
           <li><a href="#">내 스터디 커뮤니티</a></li>
         </ul>
       </nav>
@@ -26,44 +26,43 @@
   </header>
 
   <div class="cr">
-    <p>마이페이지 &gt; 스터디 관리</p>
+    <p>마이페이지 &gt; 알림 설정</p>
   </div>
 
   <div class="main">
-    <h2>스터디 관리</h2>
+    <h2>알림 설정</h2>
 
     <div class="mypage">
       <div class="page">마이페이지</div>
       <div class="my_info"><a href="/mypage/myinfo">내 정보</a></div>
-      <div class="alram"><a href="/mypage/alram">알림 설정</a></div>
-      <div class="study"><a href="/hoststudy"><span>스터디 관리</span></a></div>
+      <div class="alram"><a href="/mypage/alram"><span>알림 설정</span></a></div>
+      <div class="study"><a href="/hoststudy">스터디 관리</a></div>
     </div>
 
-
-    <div class="study_list">
-      <p>생성한 스터디 목록</p>
-      <h3><a href="/hoststudy/study_c">+</a></h3>
+    <div class="alram_s">
       <ul>
-        <li>자바 어려운 사람 드루와 드루와 </li>
-
-        <li>
-          <ul class="list">
-            <li><a href="#">수업 등록</a></li>
-            <li><a href="/hoststudy/study_m">스터디 수정</a></li>
-          </ul>
+        <li class="new">
+          내가 가입한 스터디의 새 수업의 알림을 받습니다.
+          <label class="button">
+            <input type="checkbox" onclick="toggle(this)">
+            <span class="toggle round"></span>
+          </label>
         </li>
-
-        <li>디자인을 배워보자!</li>
-        <li>
-          <ul class="list">
-            <li><a href="#">수업 등록</a></li>
-            <li><a href="#">스터디 수정</a></li>
-          </ul>
+        <li class="sa">
+          스터디 공지사항을 알림 받습니다.
+          <label class="button">
+            <input type="checkbox" onclick="toggle(this)">
+            <span class="toggle round"></span>
+          </label>
         </li>
       </ul>
     </div>
-
   </div>
+
+
+
+
+
 
 
   <footer>
@@ -79,6 +78,12 @@
     </div>
   </footer>
 
+
+  <script>
+    function toggle(element) {
+      console.log(element.checked);
+    }
+  </script>
 </body>
 
 </html>
