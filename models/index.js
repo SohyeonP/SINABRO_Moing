@@ -12,7 +12,7 @@ db.sequelize = sequelize;
 db.Sequelize = Sequelize;
 
 
-user = require('./m_users')(sequelize,Sequelize);
+db.user = require('./m_users')(sequelize,Sequelize);
 db.hoststudy = require('./hoststudy')(sequelize,Sequelize);
 db.reply = require('./reply')(sequelize,Sequelize);
 db.comment = require('./comment')(sequelize,Sequelize);

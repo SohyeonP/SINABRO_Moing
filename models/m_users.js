@@ -23,26 +23,26 @@ module.exports = (sequelize,Sequelize)=>{
         user_name:{
             type:Sequelize.STRING,
         }
-        ,role:{
-            type:Sequelize.INTEGER,
-            allownull:true,
-        },
-        token:{
-            type:Sequelize.STRING,
-            allownull:true,
-        }
-        ,tokenExp:{
-            type:Sequelize.INTEGER,
-            allownull:true,
-        },
-        user_img:{
-            type:Sequelize.TEXT,
-            allowNull: true
-        },
-        user_introduce:{
-            type:Sequelize.TEXT,
-            allowNull: true
-        },
+        // ,role:{
+        //     type:Sequelize.INTEGER,
+        //     allownull:true,
+        // },
+        // token:{
+        //     type:Sequelize.STRING,
+        //     allownull:true,
+        // }
+        // ,tokenExp:{
+        //     type:Sequelize.INTEGER,
+        //     allownull:true,
+        // },
+        // user_img:{
+        //     type:Sequelize.TEXT,
+        //     allowNull: true
+        // },
+        // user_introduce:{
+        //     type:Sequelize.TEXT,
+        //     allowNull: true
+        // },
         
         
     },{
