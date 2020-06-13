@@ -27,7 +27,7 @@ router.post("/sign_up", function (req, res) {
     };
     console.log(m_user);
 
-    user.create(m_ser)
+    user.create(m_user)
         .then((result) => {
             console.log("들어간 데이터:", result);
             return res.redirect("/user/sign_in");
