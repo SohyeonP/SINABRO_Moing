@@ -31,7 +31,9 @@ body {
 
 /*메뉴와 로고 설정*/
 header {
+  margin: 0 auto;
   top: 0;
+  width: 1200px;
   height: 100px;
 }
 
