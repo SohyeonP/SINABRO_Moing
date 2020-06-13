@@ -5,8 +5,8 @@ var router = express.Router();
 router.get("/", function (req, res) {
     console.log("메인페이지");
     res.render("main", {
-        title:"모잉",
-       
+        title: "모잉",
+
     });
 });
 router.get("/main", function (req, res) {
@@ -34,14 +34,14 @@ router.get("/sign_in", function (req, res) {
 
 })
 
-router.get("/sign_up",function(req,res){
+router.get("/sign_up", function (req, res) {
     console.log("회원가입 페이지 요청");
     res.render("register", {
 
     });
 
 })
-router.get("/study_find",function(req,res){
+router.get("/study_find", function (req, res) {
     console.log("스터디 찾기 페이지 요청");
     res.render("study_find", {});
 

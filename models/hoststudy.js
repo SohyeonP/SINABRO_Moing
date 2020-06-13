@@ -4,7 +4,7 @@ module.exports = (sequelize, Sequelize) => {
         hoststudy_id: {
             type: Sequelize.INTEGER,
             primaryKey: true,
-            autoincrement: true
+            autoIncrement: true
 
         },
         createdAt: {
@@ -17,10 +17,10 @@ module.exports = (sequelize, Sequelize) => {
         host_name: {
             type: Sequelize.STRING,
         },
-        title_img:{
+        title_img: {
             type: Sequelize.BLOB('long')
         },
-        box_img:{
+        box_img: {
             type: Sequelize.BLOB('long')
         },
         // checkbox:{

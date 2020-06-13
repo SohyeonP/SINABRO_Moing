@@ -24,9 +24,9 @@ var expressLayouts = require('express-ejs-layouts');
 
 const models = require('./models/index.js');
 
-models.sequelize.sync().then(()=>{
+models.sequelize.sync().then(() => {
   console.log("maria moingDB 연결 성공");
-}).catch(err =>{
+}).catch(err => {
   console.log("연결 실패");
   console.log(err);
 });
@@ -51,7 +51,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'views')));
 
 var bodyparser = require('body-parser');
-app.use(bodyparser.urlencoded({extended:false}));
+app.use(bodyparser.urlencoded({ extended: false }));
 // app.use("/css/",cssDirectoryPath);
 //Router
 app.use('/', mainRouter);
@@ -59,11 +59,11 @@ app.use('/', mainRouter);
 
 app.use('/user', userRouter);
 
-app.use('/mypage', mypageRouter); 
+app.use('/mypage', mypageRouter);
 
-app.use('/studyfind',studyfindRouter);
+app.use('/studyfind', studyfindRouter);
 
-app.use('/hoststudy',hoststudyRouter);
+app.use('/hoststudy', hoststudyRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
