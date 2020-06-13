@@ -9,9 +9,13 @@ var hoststudy = db.hoststudy;
 
 router.get("/", function (req, res) {
   console.log("스터디 관리");
-  res.render("host", {});
+
+  hoststudy.findAll().then((list) => {
+    res.render('host', { data: list });
+  })
 
 })
+
 
 router.get("/study_c", function (req, res, next) {
   console.log("스터디 생성");
@@ -49,8 +53,30 @@ router.post('/study_c', function (req, res) {
 
 router.get("/study_m", function (req, res) {
   console.log("스터디 수정");
-  res.render("M_MR", {});
+  const studyidx = req.query.hoststudy_id;
+
+  hoststudy.findOne({ where: { hoststudy_id: studyidx } }).then((study) => {
+    res.render('M_MR', { data: study });
+  });
 
 })
+
+router.post('/study_m', function (req, res, next) {
+
+  hoststudy.update({
+    room_name: req.body.studyname,
+    title_img: req.body.img,
+    box_img: req.body.study_info
+  }, {
+
+    where: { hoststudy_id: req.body.studyidx }
+
+  }).then((result) => {
+    // 정상 수정 후 목록페이지로 자동이동처리
+    return res.redirect("/hoststudy");
+
+  }).catch((err) => { });
+  console.log("에러발생");
+});
 
 module.exports = router;

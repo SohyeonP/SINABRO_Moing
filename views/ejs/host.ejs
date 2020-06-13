@@ -42,24 +42,20 @@
 
     <div class="study_list">
       <p>생성한 스터디 목록</p>
+
+
       <h3><a href="/hoststudy/study_c">+</a></h3>
       <ul>
-        <li>자바 어려운 사람 드루와 드루와 </li>
+        <% for(var i=0;i<data.length;i++){ %>
 
+        <li><%=data[i].room_name %></li>
         <li>
           <ul class="list">
             <li><a href="#">수업 등록</a></li>
-            <li><a href="/hoststudy/study_m">스터디 수정</a></li>
+            <li><a href="/hoststudy/study_m?hoststudy_id=<%=data[i].hoststudy_id%>">스터디 수정</a></li>
           </ul>
         </li>
-
-        <li>디자인을 배워보자!</li>
-        <li>
-          <ul class="list">
-            <li><a href="#">수업 등록</a></li>
-            <li><a href="#">스터디 수정</a></li>
-          </ul>
-        </li>
+        <% } %>
       </ul>
     </div>
 

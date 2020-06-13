@@ -136,10 +136,12 @@ h2 {
 
 .study_list {
   border: solid 1px #cccccc;
+  min-height: 100%;
   margin-left: 230px;
   margin-right: 40px;
   font-size: 18px;
   font-weight: normal;
+  padding-bottom: 40px;
 }
 
 .study_list p {
@@ -162,7 +164,6 @@ h2 {
 
 .study_list > ul {
   width: 928px;
-  height: 220px;
   padding: 20px;
   margin: 0;
 }
@@ -173,11 +174,12 @@ h2 {
   margin: 20px 60px;
 }
 
-.study_list li:nth-child(3){
+.study_list li:nth-child(2n+3){
   margin-top: 100px;
 }
 .study_list li:nth-child(2n) {
   list-style: none;
+  
 }
 
 .list {

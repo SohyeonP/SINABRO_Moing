@@ -35,17 +35,17 @@
 
       <div class="st_mr">스터디 수정하기</div>
 
-      <form method="post">
+      <form method="post" action="/hoststudy/study_m" onsubmit="return formcheck();">
 
         <div class="studyname">
           <label>스터디 이름<br>
-            <input type="text" name="studyname">
+            <input type="text" name="studyname" value="<%=data.room_name%>">
           </label>
         </div>
 
         <div class="t_img">
           <label>상단 이미지<br>
-            <input type="file" name="img">
+            <input type="file" name="img" value="<%=data.title_img%>">
           </label>
         </div>
 
@@ -60,7 +60,7 @@
         </div>
 
         <p>스터디 소개 및 커리큘럼 등록</p>
-        <textarea id="study_info"></textarea>
+        <textarea id="study_info"><%=data.study_info%></textarea>
 
         <!-- <div class="st_i">
           <label>스터디 소개<br>
@@ -77,9 +77,9 @@
 
         <div class="button">
           <input type="submit" name="submit" value="수정" />
-          <input type="button" name="cancle" value="취소">
+          <input type="button" name="cancle" value="취소" onclick="location.href='/hoststudy'">
         </div>
-
+        <input type="hidden" name="studyidx" value="<%=data.hoststudy_id%>">
       </form>
     </div>
   </div>
@@ -101,28 +101,30 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script>CKEDITOR.replace('study_info')</script>
   <script>
-    $("#studyname").focus();
+    document.getElementById("studyname").focus();
 
-    $("#btnSave").click(function () {
+    function formcheck() {
 
-      if ($("#studyname").val() == "") {
-        alert("스터디 이름을 작성해 주세요.");
-        $("#studyname").focus();
+      if (document.getElementById("studyname").value == "") {
+        alert("제목을 입력해주세요.");
+        document.getElementById("studyname").focus();
         return false;
       }
 
-      if ($("#img").val() == "") {
-        alert("상단 이미지를 등록해주세요.");
-        $("#img").focus();
+      if (document.getElementById("img").value == "") {
+        alert("글 내용을 입력해주세요.");
+        document.getElementById("img").focus();
         return false;
       }
 
-      if ($("#study_info").val() == "") {
-        alert("스터디 소개 및 커리큘럼을 작성해주세요.");
-        $("#study_info").focus();
-        return false;
-      }
-    })
+      return true;
+    }
+
+    /* if ($("#study_info").val() == "") {
+       alert("스터디 소개 및 커리큘럼을 작성해주세요.");
+       $("#study_info").focus();
+       return false;
+     }*/
   </script>
 </body>
 
