@@ -1,27 +1,27 @@
-module.exports = (sequelize,Sequelize)=>{
+module.exports = (sequelize, DataTypes) => {
 
-    return sequelize.define(`m_users`,{
-        user_id:{
-            type:Sequelize.INTEGER,
-            primaryKey:true,
-            autoIncrement:true
+    return sequelize.define(`m_users`, {
+        user_id: {
+            type: DataTypes.INTEGER,
+            primaryKey: true,
+            autoIncrement: true
 
         },
-        user_email:{
-            type:Sequelize.STRING,
-            allownull:false,
-            vaildate:{
-                isEmail:true
+        user_email: {
+            type: DataTypes.STRING,
+            allownull: false,
+            vaildate: {
+                isEmail: true
             },
-            primaryKey:true
+            primaryKey: true
 
         },
-        user_pw:{
-            type:Sequelize.STRING,
-            allownull:false
+        user_pw: {
+            type: DataTypes.STRING,
+            allownull: false
         },
-        user_name:{
-            type:Sequelize.STRING,
+        user_name: {
+            type: DataTypes.STRING,
         }
         // ,role:{
         //     type:Sequelize.INTEGER,
@@ -43,11 +43,11 @@ module.exports = (sequelize,Sequelize)=>{
         //     type:Sequelize.TEXT,
         //     allowNull: true
         // },
-        
-        
-    },{
-        timestamps:true,
-        paranoid:true
-        }   
-    );
+
+
+    }, {
+        timestamps: true,
+        paranoid: true
     }
+    );
+}

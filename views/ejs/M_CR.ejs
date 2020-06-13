@@ -34,9 +34,9 @@
 
       <div class="st_cr">스터디 생성하기</div>
 
-      <form method="post">
+      <form method="post" action="/hoststudy/study_c" onsubmit="return formcheck();">
 
-        <div class="studyname" action="/hoststudy/study_c" onsubmit="return formcheck();">
+        <div class="studyname">
           <label>스터디 이름<br>
             <input type="text" name="studyname" id="studyname">
           </label>
@@ -95,31 +95,33 @@
     </div>
   </footer>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
   <script>CKEDITOR.replace('study_info')</script>
   <script>
-    $("#studyname").focus();
+    document.getElementById("studyname").focus();
 
-    $("#btnSave").click(function () {
+    function formcheck() {
 
-      if ($("#studyname").val() == "") {
-        alert("스터디 이름을 작성해 주세요.");
-        $("#studyname").focus();
+      if (document.getElementById("studyname").value == "") {
+        alert("제목을 입력해주세요.");
+        document.getElementById("studyname").focus();
         return false;
       }
 
-      if ($("#img").val() == "") {
-        alert("상단 이미지를 등록해주세요.");
-        $("#img").focus();
+      if (document.getElementById("img").value == "") {
+        alert("글 내용을 입력해주세요.");
+        document.getElementById("img").focus();
         return false;
       }
 
-      if ($("#study_info").val() == "") {
-        alert("스터디 소개 및 커리큘럼을 작성해주세요.");
-        $("#study_info").focus();
-        return false;
-      }
-    })
+      return true;
+    }
+
+    /* if ($("#study_info").val() == "") {
+       alert("스터디 소개 및 커리큘럼을 작성해주세요.");
+       $("#study_info").focus();
+       return false;
+     }*/
   </script>
 </body>
 
