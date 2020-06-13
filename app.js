@@ -1,10 +1,9 @@
 var createError = require('http-errors');
+var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-
-var express = require('express');
-var app = express();
+var sequelize = require('sequelize');
 
 
 var mainRouter = require('./routes/main');
@@ -13,20 +12,14 @@ var hoststudyRouter = require('./routes/hoststudy');
 
 var mypageRouter = require('./routes/mypage');
 
+
+
 var studyfindRouter = require('./routes/studyfind');
 
 var userRouter = require('./routes/user');
 
 //Express Layout 팩키지 참조
-app.use('/', mainRouter);
-
-app.use('/user', userRouter);
-
-app.use('/mypage', mypageRouter); 
-
-app.use('/studyfind',studyfindRouter);
-
-app.use('/hoststudy',hoststudyRouter);
+var expressLayouts = require('express-ejs-layouts');
 
 
 const models = require('./models/index.js');
@@ -37,6 +30,11 @@ models.sequelize.sync().then(() => {
   console.log("연결 실패");
   console.log(err);
 });
+
+
+
+
+var app = express();
 
 app.set('views', path.join(__dirname, 'views/ejs'));
 app.set('view engine', 'ejs');
@@ -56,6 +54,8 @@ var bodyparser = require('body-parser');
 app.use(bodyparser.urlencoded({ extended: false }));
 // app.use("/css/",cssDirectoryPath);
 //Router
+app.use('/', mainRouter);
+
 
 app.use('/user', userRouter);
 
