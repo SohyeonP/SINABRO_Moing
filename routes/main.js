@@ -46,5 +46,10 @@ router.get("/study_find", function (req, res) {
     res.render("study_find", {});
 
 })
+router.get("/studyroom", function (req, res) {
+    console.log("스터디 페이지 요청");
+    res.render("studyroom", {});
+
+})
 
 module.exports = router;
