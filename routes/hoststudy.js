@@ -29,13 +29,14 @@ router.get("/study_c", function (req, res, next) {
 
 })
 
-router.post('/study_c', function (req, res) {
+router.post('/study_c', function (req, res, next) {
 
   var study = {
     room_name: req.body.studyname,
     host_name: 'test',
-    title_img: req.body.img,
-    box_img: req.body.study_info
+    checkbox: req.body.checkbox
+    // title_img: req.body.img,
+    // box_img: req.body.study_info
   };
 
   console.log(study);
@@ -65,8 +66,8 @@ router.post('/study_m', function (req, res, next) {
 
   hoststudy.update({
     room_name: req.body.studyname,
-    title_img: req.body.img,
-    box_img: req.body.study_info
+    // title_img: req.body.img,
+    // box_img: req.body.study_info
   }, {
 
     where: { hoststudy_id: req.body.studyidx }

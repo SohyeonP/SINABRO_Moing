@@ -51,12 +51,13 @@
 
         <div class="check">
           <p>분류</p>
-          <label><input type="checkbox" name="coding">코딩</label>
-          <label><input type="checkbox" name="english">영어</label><br>
-          <label><input type="checkbox" name="design">디자인</label>
-          <label><input type="checkbox" name="language">제2외국어</label><br>
-          <label><input type="checkbox" name="toeic">토익</label>
-          <label><input type="checkbox" name="any">기타</label>
+          <label><input type="checkbox" name="check" id="coding" value="coding">코딩</label>
+          <label><input type="checkbox" name="check" id="english" value="english">영어</label><br>
+          <label><input type="checkbox" name="check" id="design" value="design">디자인</label>
+          <label><input type="checkbox" name="check" id="language" value="language">제2외국어</label><br>
+          <label><input type="checkbox" name="check" id="toeic" value="toeic">토익</label>
+          <label><input type="checkbox" name="check" id="any" value="any">기타</label>
+          <input type="text" id="checkbox" name="checkbox" value="<%=data.checkbox%>">
         </div>
 
         <p>스터디 소개 및 커리큘럼 등록</p>
@@ -98,6 +99,7 @@
   </footer>
 
 
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.1.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script>CKEDITOR.replace('study_info')</script>
   <script>
@@ -125,6 +127,41 @@
        $("#study_info").focus();
        return false;
      }*/
+  </script>
+   <script>
+    $(document).ready(function() {
+      var checkbox1 = $("#checkbox").val();
+      
+      if(checkbox1.indexOf("coding") != -1){
+        $("input:checkbox[id='coding']").prop("checked",true);
+      }
+      if(checkbox1.indexOf("english") != -1){
+        $("input:checkbox[id='english']").prop("checked",true);
+      }
+      if(checkbox1.indexOf("design") != -1){
+        $("input:checkbox[id='design']").prop("checked",true);
+      }
+      if(checkbox1.indexOf("language") != -1){
+        $("input:checkbox[id='design']").prop("checked",true);
+      }
+      if(checkbox1.indexOf("toeic") != -1){
+        $("input:checkbox[id='toeic']").prop("checked",true);
+      }
+      if(checkbox1.indexOf("any") != -1){
+        $("input:checkbox[id='any']").prop("checked",true);
+      }
+      
+
+      $("#btnSave").click(function() {
+        var checkbox2 = [];
+        $("input[name=check]:checked").each(function() {
+          checkbox2.push($(this).val());
+          var checkbox = checkbox2.join(' ');
+          $("#checkbox").val(checkbox);
+          console.log(checkbox);
+        });
+      });
+    })
   </script>
 </body>
 

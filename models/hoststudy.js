@@ -17,15 +17,15 @@ module.exports = (sequelize, Sequelize) => {
         host_name: {
             type: Sequelize.STRING,
         },
-        title_img: {
-            type: Sequelize.BLOB('long')
-        },
-        box_img: {
-            type: Sequelize.BLOB('long')
-        },
-        // checkbox:{
-
+        // title_img: {
+        //     type: Sequelize.BLOB('long')
         // },
+        // box_img: {
+        //     type: Sequelize.BLOB('long')
+        // },
+        checkbox:{
+            type: Sequelize.STRING,
+        },
         join_in: {
             type: Sequelize.INTEGER,
 

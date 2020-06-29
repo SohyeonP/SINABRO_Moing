@@ -50,12 +50,13 @@
 
         <div class="check">
           <p>분류</p>
-          <label><input type="checkbox" name="coding">코딩</label>
-          <label><input type="checkbox" name="english">영어</label><br>
-          <label><input type="checkbox" name="design">디자인</label>
-          <label><input type="checkbox" name="language">제2외국어</label><br>
-          <label><input type="checkbox" name="toeic">토익</label>
-          <label><input type="checkbox" name="any">기타</label>
+          <label><input type="checkbox" name="check" value="coding">코딩</label>
+          <label><input type="checkbox" name="check" value="english">영어</label><br>
+          <label><input type="checkbox" name="check" value="design">디자인</label>
+          <label><input type="checkbox" name="check" value="language">제2외국어</label><br>
+          <label><input type="checkbox" name="check" value="toeic">토익</label>
+          <label><input type="checkbox" name="check" value="any">기타</label>
+          <input type="hidden" id="checkbox" name="checkbox">
         </div>
 
         <p>스터디 소개 및 커리큘럼 등록</p>
@@ -96,6 +97,7 @@
   </footer>
 
   <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.1.min.js"></script>
   <script>CKEDITOR.replace('study_info')</script>
   <script>
     document.getElementById("studyname").focus();
@@ -122,6 +124,20 @@
        $("#study_info").focus();
        return false;
      }*/
+  </script>
+
+  <script>
+    $(document).ready(function() {
+      $("#btnSave").click(function() {
+        var checkbox1 = [];
+        $("input[name=check]:checked").each(function() {
+          checkbox1.push($(this).val());
+          var checkbox = checkbox1.join(' ');
+          $("#checkbox").val(checkbox);
+          console.log(checkbox);
+        });
+      });
+    })
   </script>
 </body>
 
