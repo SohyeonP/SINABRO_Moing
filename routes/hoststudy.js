@@ -66,6 +66,7 @@ router.post('/study_m', function (req, res, next) {
 
   hoststudy.update({
     room_name: req.body.studyname,
+    checkbox: req.body.checkbox
     // title_img: req.body.img,
     // box_img: req.body.study_info
   }, {
@@ -74,7 +75,8 @@ router.post('/study_m', function (req, res, next) {
 
   }).then((result) => {
     // 정상 수정 후 목록페이지로 자동이동처리
-    return res.redirect("/hoststudy");
+    // return res.redirect("/hoststudy");
+    console.log(result);
 
   }).catch((err) => { });
   console.log("에러발생");

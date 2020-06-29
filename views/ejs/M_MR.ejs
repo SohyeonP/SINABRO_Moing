@@ -77,7 +77,8 @@
         </div> -->
 
         <div class="button">
-          <input type="submit" name="submit" value="수정" />
+          <input type="submit" name="submit" value="수정" id="btnModify"/>
+          <input type="botton" id="new" />
           <input type="button" name="cancle" value="취소" onclick="location.href='/hoststudy'">
         </div>
         <input type="hidden" name="studyidx" value="<%=data.hoststudy_id%>">
@@ -113,11 +114,11 @@
         return false;
       }
 
-      if (document.getElementById("img").value == "") {
-        alert("글 내용을 입력해주세요.");
-        document.getElementById("img").focus();
-        return false;
-      }
+      // if (document.getElementById("img").value == "") {
+      //   alert("글 내용을 입력해주세요.");
+      //   document.getElementById("img").focus();
+      //   return false;
+      // }
 
       return true;
     }
@@ -131,7 +132,7 @@
    <script>
     $(document).ready(function() {
       var checkbox1 = $("#checkbox").val();
-      
+
       if(checkbox1.indexOf("coding") != -1){
         $("input:checkbox[id='coding']").prop("checked",true);
       }
@@ -152,13 +153,12 @@
       }
       
 
-      $("#btnSave").click(function() {
+      $("#btnModify").click(function() {
         var checkbox2 = [];
         $("input[name=check]:checked").each(function() {
           checkbox2.push($(this).val());
           var checkbox = checkbox2.join(' ');
           $("#checkbox").val(checkbox);
-          console.log(checkbox);
         });
       });
     })
