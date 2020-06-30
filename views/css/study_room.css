@@ -138,6 +138,58 @@ h2 {
   cursor: pointer;
 }
 
+.contents {
+  float: left;
+  margin-top: -30px;
+}
+.content1 {
+  margin-bottom: 100px;
+}
+
+/*콘텐츠(공지사항)*/
+
+
+.notice h2 {
+  font-weight: bold;
+}
+
+.notice ul {
+  margin-top: -30px;
+  margin-left: 20px;
+}
+.notice ul li {
+  line-height: 30px;
+  list-style: disc;
+  font-size: 16px;
+}
+.notice ul div span {
+  
+  margin-left: 300px;
+  color: #696969;
+  font-size: 14px;
+}
+
+/*콘텐츠(스터디목록)*/
+.studylist h2 {
+  font-weight: bold;
+}
+
+.studylist ul {
+  margin-top: -30px;
+  margin-left: 20px;
+}
+.studylist ul li {
+  line-height: 30px;
+  list-style: disc;
+  font-size: 16px;
+}
+.studylist ul div span {
+  float: right;
+  color: #696969;
+  font-size: 14px;
+}
+
+
 /*Footer*/
 footer {
   right: 0;
