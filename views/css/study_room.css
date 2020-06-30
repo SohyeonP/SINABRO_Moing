@@ -140,15 +140,10 @@ h2 {
 
 .contents {
   float: left;
-  margin-top: -30px;
-}
-.content1 {
-  margin-bottom: 100px;
+  margin-top: -50px;
 }
 
 /*콘텐츠(공지사항)*/
-
-
 .notice h2 {
   font-weight: bold;
 }
@@ -170,8 +165,15 @@ h2 {
 }
 
 /*콘텐츠(스터디목록)*/
+
 .studylist h2 {
   font-weight: bold;
+}
+
+.studylist img {
+  width: 100px;
+  height: 60px;
+  display: inline-block;
 }
 
 .studylist ul {
@@ -180,7 +182,6 @@ h2 {
 }
 .studylist ul li {
   line-height: 30px;
-  list-style: disc;
   font-size: 16px;
 }
 .studylist ul div span {
@@ -188,6 +189,7 @@ h2 {
   color: #696969;
   font-size: 14px;
 }
+
 
 
 /*Footer*/
