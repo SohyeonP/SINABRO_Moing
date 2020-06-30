@@ -39,9 +39,9 @@ var app = express();
 app.set('views', path.join(__dirname, 'views/ejs'));
 app.set('view engine', 'ejs');
 
-// app.set('layout', 'layoutMaster'); //기본레이아웃 페이지 이름설정
-// app.set("layout extractScripts", true); //컨텐츠 페이지내 스크립트 사용(통합)여부
-// app.use(expressLayouts);
+app.set('layout', 'layoutMaster'); //기본레이아웃 페이지 이름설정
+app.set("layout extractScripts", true); //컨텐츠 페이지내 스크립트 사용(통합)여부
+app.use(expressLayouts);
 
 
 app.use(logger('dev'));
