@@ -34,8 +34,8 @@ router.post('/study_c', function (req, res, next) {
   var study = {
     room_name: req.body.studyname,
     host_name: 'test',
-    checkbox: req.body.checkbox
-    // title_img: req.body.img,
+    checkbox: req.body.checkbox,
+    title_img: req.body.title_img
     // box_img: req.body.study_info
   };
 
@@ -66,8 +66,8 @@ router.post('/study_m', function (req, res, next) {
 
   hoststudy.update({
     room_name: req.body.studyname,
-    checkbox: req.body.checkbox
-    // title_img: req.body.img,
+    checkbox: req.body.checkbox,
+    title_img: req.body.img
     // box_img: req.body.study_info
   }, {
 
@@ -75,8 +75,7 @@ router.post('/study_m', function (req, res, next) {
 
   }).then((result) => {
     // 정상 수정 후 목록페이지로 자동이동처리
-    // return res.redirect("/hoststudy");
-    console.log(result);
+    return res.redirect("/hoststudy");
 
   }).catch((err) => { });
   console.log("에러발생");

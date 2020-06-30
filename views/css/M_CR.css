@@ -130,13 +130,22 @@ form div {
 
 
 /*상단 이미지 업로드*/
-.t_img input {
-  height: 45px;
-  margin-top: 12px;
+/* .t_img input {
+  height: 30px;
+  margin-top: 5px;
 }
 
 .t_img label {
-  font-weight: bold;
+  font-size: 14px;
+} */
+.dropzone {
+  outline: 2px dashed #000000 ;
+    outline-offset:-10px;  
+    text-align: center;
+    transition: all .15s ease-in-out;
+    width: 550px;
+    height: 250px;
+    background-color:#b9b9b9;
 }
 
 

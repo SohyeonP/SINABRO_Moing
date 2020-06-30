@@ -35,7 +35,7 @@
 
       <div class="st_mr">스터디 수정하기</div>
 
-      <form method="post" action="/hoststudy/study_m" onsubmit="return formcheck();">
+      <form method="post" action="/hoststudy/study_m">
 
         <div class="studyname">
           <label>스터디 이름<br>
@@ -44,9 +44,11 @@
         </div>
 
         <div class="t_img">
-          <label>상단 이미지<br>
+          <p>상단 이미지</p>
+          <!-- <label>상단 이미지<br>
             <input type="file" name="img" value="<%=data.title_img%>">
-          </label>
+          </label> -->
+          <div class="dropzone" name="title_img"></div>
         </div>
 
         <div class="check">
@@ -57,7 +59,8 @@
           <label><input type="checkbox" name="check" id="language" value="language">제2외국어</label><br>
           <label><input type="checkbox" name="check" id="toeic" value="toeic">토익</label>
           <label><input type="checkbox" name="check" id="any" value="any">기타</label>
-          <input type="text" id="checkbox" name="checkbox" value="<%=data.checkbox%>">
+          <input type="hidden" id="checkdata" value="<%=data.checkbox%>">
+          <input type="hidden" id="checkbox" name="checkbox">
         </div>
 
         <p>스터디 소개 및 커리큘럼 등록</p>
@@ -78,7 +81,6 @@
 
         <div class="button">
           <input type="submit" name="submit" value="수정" id="btnModify"/>
-          <input type="botton" id="new" />
           <input type="button" name="cancle" value="취소" onclick="location.href='/hoststudy'">
         </div>
         <input type="hidden" name="studyidx" value="<%=data.hoststudy_id%>">
@@ -104,34 +106,23 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script>CKEDITOR.replace('study_info')</script>
   <script>
-    document.getElementById("studyname").focus();
+    $(document).ready(function() {
+      $("#studyname").focus();
 
-    function formcheck() {
 
-      if (document.getElementById("studyname").value == "") {
-        alert("제목을 입력해주세요.");
-        document.getElementById("studyname").focus();
-        return false;
+      function formcheck() {
+        if($("#studyname").val() == ""){
+          alert("스터디 방 이름을 입력해주세요!");
+          $("#studyname").focus();
+          return false;
+        }
+        return true;
       }
-
-      // if (document.getElementById("img").value == "") {
-      //   alert("글 내용을 입력해주세요.");
-      //   document.getElementById("img").focus();
-      //   return false;
-      // }
-
-      return true;
-    }
-
-    /* if ($("#study_info").val() == "") {
-       alert("스터디 소개 및 커리큘럼을 작성해주세요.");
-       $("#study_info").focus();
-       return false;
-     }*/
+    })
   </script>
    <script>
     $(document).ready(function() {
-      var checkbox1 = $("#checkbox").val();
+      var checkbox1 = $("#checkdata").val();
 
       if(checkbox1.indexOf("coding") != -1){
         $("input:checkbox[id='coding']").prop("checked",true);
@@ -143,7 +134,7 @@
         $("input:checkbox[id='design']").prop("checked",true);
       }
       if(checkbox1.indexOf("language") != -1){
-        $("input:checkbox[id='design']").prop("checked",true);
+        $("input:checkbox[id='language']").prop("checked",true);
       }
       if(checkbox1.indexOf("toeic") != -1){
         $("input:checkbox[id='toeic']").prop("checked",true);
@@ -158,11 +149,54 @@
         $("input[name=check]:checked").each(function() {
           checkbox2.push($(this).val());
           var checkbox = checkbox2.join(' ');
-          $("#checkbox").val(checkbox);
+          $("input[name=checkbox]").val(checkbox);
         });
       });
     })
   </script>
+
+<script>
+  $(document).ready(function() {
+    $('.dropzone').on("dragover",dragOver)
+                  .on("dragleave", dragOver)
+                  .on("drop",uploadFile);
+    
+    function dragOver(e){
+      e.stopPropagation();
+      e.preventDefault();
+
+      if (e.type == "dragover") {
+        $(e.target).css({
+          "background-color":"gray",
+          "outline-offset":"-20px"
+        });
+      }else {
+        $(e.target).css({
+            "background-color": "#b9b9b9",
+            "outline-offset": "-10px"
+        });
+      }
+    }
+    
+    function uploadFile(e){
+      e.stopPropagation();
+      e.preventDefault();
+      dragOver(e);
+      var file = e.originalEvent.dataTransfer.files;
+
+      if(file[0].type.match(/image.*/)){
+        $(e.target).css({
+          "background-image":"url("+window.URL.createObjectURL(file[0]) + ")",
+          "outline":"none",
+          "background-size": "100% 100%"
+        })
+      } else {
+        alert("이미지만 업로드해주세요!");
+      }
+      
+    }
+  })
+</script>
 </body>
 
 </html>

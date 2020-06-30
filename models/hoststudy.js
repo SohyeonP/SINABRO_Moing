@@ -17,9 +17,9 @@ module.exports = (sequelize, Sequelize) => {
         host_name: {
             type: Sequelize.STRING,
         },
-        // title_img: {
-        //     type: Sequelize.BLOB('long')
-        // },
+        title_img: {
+            type: Sequelize.BLOB('long')
+        },
         // box_img: {
         //     type: Sequelize.BLOB('long')
         // },

@@ -34,7 +34,7 @@
 
       <div class="st_cr">스터디 생성하기</div>
 
-      <form method="post" action="/hoststudy/study_c" onsubmit="return formcheck();">
+      <form method="post" action="/hoststudy/study_c">
 
         <div class="studyname">
           <label>스터디 이름<br>
@@ -43,9 +43,11 @@
         </div>
 
         <div class="t_img">
-          <label>상단 이미지<br>
-            <input type="file" name="img" id="img">
-          </label>
+          <p>상단 이미지</p>
+          <!-- <input type="text" readonly="readonly" class="file-name">
+          <label for="img">파일 업로드</label>
+          <input type="file" name="img" id="img" accept="image/gif,image/jpeg,image/png"> -->
+          <div class="dropzone" name="title_img"></div>
         </div>
 
         <div class="check">
@@ -100,30 +102,19 @@
   <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.1.min.js"></script>
   <script>CKEDITOR.replace('study_info')</script>
   <script>
-    document.getElementById("studyname").focus();
+    $(document).ready(function() {
+      $("#studyname").focus();
 
-    function formcheck() {
 
-      if (document.getElementById("studyname").value == "") {
-        alert("제목을 입력해주세요.");
-        document.getElementById("studyname").focus();
-        return false;
+      function formcheck() {
+        if($("#studyname").val() == ""){
+          alert("스터디 방 이름을 입력해주세요!");
+          $("#studyname").focus();
+          return false;
+        }
+        return true;
       }
-
-      if (document.getElementById("img").value == "") {
-        alert("글 내용을 입력해주세요.");
-        document.getElementById("img").focus();
-        return false;
-      }
-
-      return true;
-    }
-
-    /* if ($("#study_info").val() == "") {
-       alert("스터디 소개 및 커리큘럼을 작성해주세요.");
-       $("#study_info").focus();
-       return false;
-     }*/
+    })
   </script>
 
   <script>
@@ -138,6 +129,56 @@
       });
     })
   </script>
+
+  <script>
+    $(document).ready(function() {
+      $('.dropzone').on("dragover",dragOver)
+                    .on("dragleave", dragOver)
+                    .on("drop",uploadFile);
+      
+      function dragOver(e){
+        e.stopPropagation();
+        e.preventDefault();
+
+        if (e.type == "dragover") {
+          $(e.target).css({
+            "background-color":"gray",
+            "outline-offset":"-20px"
+          });
+        }else {
+          $(e.target).css({
+              "background-color": "#b9b9b9",
+              "outline-offset": "-10px"
+          });
+        }
+      }
+      
+      function uploadFile(e){
+        e.stopPropagation();
+        e.preventDefault();
+        dragOver(e);
+        var file = e.originalEvent.dataTransfer.files;
+
+        if(file[0].type.match(/image.*/)){
+          $(e.target).css({
+            "background-image":"url("+window.URL.createObjectURL(file[0]) + ")",
+            "outline":"none",
+            "background-size": "100% 100%"
+          })
+        } else {
+          alert("이미지만 업로드해주세요!");
+        }
+        
+      }
+    })
+  </script>
+  <!-- <script>
+    $(document).ready(function() {
+      function fileupload() {
+        $.each()
+      }
+    })
+  </script> -->
 </body>
 
 </html>
