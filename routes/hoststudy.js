@@ -35,7 +35,8 @@ router.post('/study_c', function (req, res, next) {
     room_name: req.body.studyname,
     host_name: 'test',
     checkbox: req.body.checkbox,
-    title_img: req.body.title_img
+    title_img: req.body.title_img,
+    // introduce : req.body.study_info
     // box_img: req.body.study_info
   };
 
@@ -67,7 +68,7 @@ router.post('/study_m', function (req, res, next) {
   hoststudy.update({
     room_name: req.body.studyname,
     checkbox: req.body.checkbox,
-    title_img: req.body.img
+    title_img: req.body.img,
     // box_img: req.body.study_info
   }, {
 

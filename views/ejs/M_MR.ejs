@@ -42,10 +42,11 @@
 
         <div class="t_img">
           <p>상단 이미지</p>
-          <!-- <label>상단 이미지<br>
-            <input type="file" name="img" value="<%=data.title_img%>">
-          </label> -->
-          <div class="dropzone" name="title_img"></div>
+          <div class="dropzone">
+            <p id="pp">드래그하여 이미지를 업로드 해주세요.</p>
+          </div>
+          <input type="text" id="title_img" name="title_img">
+          <input type="text" id="img" name="img">
         </div>
 
         <div class="check">
@@ -84,9 +85,6 @@
       </form>
     </div>
   </div>
-    <footer>
-      <%- footer %>
-    </footer>
   
 
 
@@ -178,6 +176,9 @@
           "outline":"none",
           "background-size": "100% 100%"
         })
+        var file_info = file[0].name;
+        $("#img").val(file_info);
+        $("#pp").hide();
       } else {
         alert("이미지만 업로드해주세요!");
       }

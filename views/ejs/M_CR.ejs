@@ -40,10 +40,10 @@
 
         <div class="t_img">
           <p>상단 이미지</p>
-          <!-- <input type="text" readonly="readonly" class="file-name">
-          <label for="img">파일 업로드</label>
-          <input type="file" name="img" id="img" accept="image/gif,image/jpeg,image/png"> -->
-          <div class="dropzone" name="title_img"></div>
+          <div class="dropzone">
+            <p id="pp">드래그하여 이미지를 업로드 해주세요.</p>
+          </div>
+          <input type="hidden" id="title_img" name="title_img">
         </div>
 
         <div class="check">
@@ -84,7 +84,7 @@
 
   <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
   <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.1.min.js"></script>
-  <script>CKEDITOR.replace('study_info')</script>
+  <script>CKEDITOR.replace('study_info');</script>
   <script>
     $(document).ready(function() {
       $("#studyname").focus();
@@ -110,6 +110,9 @@
           var checkbox = checkbox1.join(' ');
           $("#checkbox").val(checkbox);
         });
+        var info_data = CKEDITOR.instances.study_info.getData();
+        $("#study_info").val(info_data);
+        console.log($("#study_info"));
       });
     })
   </script>
@@ -149,6 +152,9 @@
             "outline":"none",
             "background-size": "100% 100%"
           })
+          var file_info = file[0].name;
+          $("#title_img").val(file_info);
+          $("#pp").hide();
         } else {
           alert("이미지만 업로드해주세요!");
         }
@@ -156,13 +162,6 @@
       }
     })
   </script>
-  <!-- <script>
-    $(document).ready(function() {
-      function fileupload() {
-        $.each()
-      }
-    })
-  </script> -->
 </body>
 
 </html>
