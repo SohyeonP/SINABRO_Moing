@@ -98,13 +98,12 @@ h2 {
   float: left;
   top: 20px;
   margin-left: 40px;
-  border-radius: 3px;
+  border-radius: 10px;
   border: solid 2px #39bde7;
   width: 160px;
   height: 230px;
   text-align: center;
   font-size: 16px;
-  border-radius: 3px;
 }
 
 .page {
@@ -138,12 +137,22 @@ h2 {
   cursor: pointer;
 }
 
+/*콘텐츠*/
 .contents {
   float: left;
   margin-top: -50px;
 }
 
-/*콘텐츠(공지사항)*/
+.content1 {
+  float: left;
+}
+
+.content2 {
+  float: left;
+  margin-left: 30px;
+}
+
+/*콘텐츠1(공지사항)*/
 .notice h2 {
   font-weight: bold;
 }
@@ -158,36 +167,153 @@ h2 {
   font-size: 16px;
 }
 .notice ul div span {
-  
   margin-left: 300px;
   color: #696969;
   font-size: 14px;
 }
 
-/*콘텐츠(스터디목록)*/
+/*콘텐츠1(스터디목록)*/
 
 .studylist h2 {
   font-weight: bold;
 }
 
-.studylist img {
+.studylist li > img {
   width: 100px;
   height: 60px;
-  display: inline-block;
+  margin-right: 20px;
+  display:inline-block;
+  vertical-align:middle;
 }
 
 .studylist ul {
   margin-top: -30px;
-  margin-left: 20px;
 }
+
 .studylist ul li {
-  line-height: 30px;
   font-size: 16px;
+  margin-bottom: 20px;
 }
-.studylist ul div span {
+
+.studylist ul span {
+  line-height: 60px;
   float: right;
   color: #696969;
   font-size: 14px;
+}
+
+
+/*콘텐츠2(스터디참여자)*/
+.attend h2 {
+  font-weight: bold;
+}
+
+.people_area {
+  position: sticky;
+  margin-top: -50px;
+  margin-left: 30px;
+  width: 300px;
+  height: 135px;
+  border-radius: 10px;
+  border: solid 1px #808080;
+}
+
+.people_name {
+  margin-left: -30px;
+}
+
+.people_area ul {
+  text-align: center;
+}
+
+.people_area ul li {
+  display: inline-block;
+  line-height: 35px;
+  font-weight: bold;
+  letter-spacing: 5px;
+}
+
+
+/*콘텐츠2(제츨목록)*/
+.sublist h2 {
+  font-weight: bold;
+  margin-bottom: 50px;
+}
+
+.sublist ul {
+  margin-top: -20px;
+}
+
+.sublist ul li {
+  line-height: 30px;
+}
+
+.sublist ul .day {
+  color: #696969;
+  font-size: 14px;
+  margin-right: 10px;
+}
+
+.sublist ul .complate {
+  float: right;
+  font-size: 12px;
+  letter-spacing: normal;
+  color: #43b3c1;
+}
+
+/*콘텐츠2(커뮤니티)*/
+.community {
+  margin-left: 30px;
+}
+.community h2 {
+  margin: 0;
+  margin-right: 120px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  display: inline-block;
+}
+
+.community .re_real {
+  display: inline-block;
+}
+
+.community .realtime {
+  font-size: 12px;
+  color: #43b3c1;
+}
+
+.community .recommend {
+  font-size: 12px;
+  color: #696969;
+}
+
+.question {
+  width: 230px;
+  height: 70px;
+  border-radius: 10px;
+  background-color: #b6e1e7;
+  margin-bottom: 10px;
+}
+
+.question .text {
+  font-size: 15px;
+  display: inline-block;
+  margin: 15px;
+  margin-bottom: 0;
+}
+
+.question .part {
+  font-size: 13px;
+  display: inline-block;
+  
+}
+
+.answer {
+  float: right;
+  width: 230px;
+  height: 70px;
+  border-radius: 10px;
+  background-color: #b6e1e7;
 }
 
 
