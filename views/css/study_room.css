@@ -229,7 +229,6 @@ h2 {
 .people_area ul li {
   display: inline-block;
   line-height: 35px;
-  font-weight: bold;
   letter-spacing: 5px;
 }
 
@@ -295,17 +294,17 @@ h2 {
   margin-bottom: 10px;
 }
 
-.question .text {
-  font-size: 15px;
+.text {
   display: inline-block;
   margin: 15px;
-  margin-bottom: 0;
+  margin-bottom: 0px;
 }
-
-.question .part {
-  font-size: 13px;
+.part {
   display: inline-block;
-  
+  margin-right: 15px;
+  font-size: 12px;
+  text-align: right;
+  color: #696969;
 }
 
 .answer {
@@ -315,7 +314,6 @@ h2 {
   border-radius: 10px;
   background-color: #b6e1e7;
 }
-
 
 
 /*Footer*/
