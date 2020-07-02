@@ -22,11 +22,7 @@ router.get("/about", function (req, res) {
     res.render("about", {});
 
 })
-router.get("/L_main", function (req, res) {
-    console.log("로그인 메인  페이지 요청");
-    res.render("L_main", {});
 
-})
 router.get("/sign_in", function (req, res) {
     console.log("로그인 페이지 요청");
     res.render("login", {});
@@ -49,6 +45,11 @@ router.get("/study_find", function (req, res) {
 router.get("/studyroom", function (req, res) {
     console.log("스터디 페이지 요청");
     res.render("studyroom", {});
+
+})
+router.get("/L_main", function (req, res) {
+    console.log("로그인 메인  페이지 요청");
+    res.render("L_main", {});
 
 })
 
