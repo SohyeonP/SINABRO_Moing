@@ -59,6 +59,7 @@
 
         <p>스터디 소개 및 커리큘럼 등록</p>
         <textarea id="study_info"></textarea>
+        <textarea id="study" name="study" style="display: none;"></textarea>
 
         <!--<div class="st_i">
           <label>스터디 소개<br>
@@ -111,8 +112,8 @@
           $("#checkbox").val(checkbox);
         });
         var info_data = CKEDITOR.instances.study_info.getData();
-        $("#study_info").val(info_data);
-        console.log($("#study_info"));
+        $("#study").val(info_data);
+        console.log(info_data);
       });
     })
   </script>

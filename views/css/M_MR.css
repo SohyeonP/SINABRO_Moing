@@ -137,17 +137,20 @@ form div {
 .t_img label {
   font-weight: bold;
 } */
-
 .dropzone {
-  outline: 2px dashed #000000 ;
-    outline-offset:-10px;  
-    text-align: center;
-    transition: all .15s ease-in-out;
-    width: 550px;
-    height: 250px;
-    background-color:#b9b9b9;
+  outline: 1px dashed #000000 ;
+  outline-offset:-10px;  
+  text-align: center;
+  transition: all .15s ease-in-out;
+  width: 550px;
+  height: 150px;
+  background-color:#b9b9b9;
+  padding-top: 100px;;
 }
 
+.dropzone p {
+  font-weight: normal;
+}
 
 
 

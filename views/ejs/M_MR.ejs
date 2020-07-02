@@ -45,8 +45,8 @@
           <div class="dropzone">
             <p id="pp">드래그하여 이미지를 업로드 해주세요.</p>
           </div>
-          <input type="text" id="title_img" name="title_img">
-          <input type="text" id="img" name="img">
+          <input type="hidden" id="title_img" name="title_img" >
+          <input type="hidden" id="img" name="img">
         </div>
 
         <div class="check">
@@ -62,7 +62,10 @@
         </div>
 
         <p>스터디 소개 및 커리큘럼 등록</p>
-        <textarea id="study_info"><%=data.study_info%></textarea>
+        <textarea id="study_info"></textarea>
+        <textarea id="s_info" style="display: none;"><%=data.introduce%></textarea>
+        <textarea id="study" name="study" style="display: none;"></textarea>
+
 
         <!-- <div class="st_i">
           <label>스터디 소개<br>
@@ -93,6 +96,9 @@
   <script>CKEDITOR.replace('study_info')</script>
   <script>
     $(document).ready(function() {
+      var s_info = $("#s_info").val();
+      var info_data = CKEDITOR.instances.study_info.setData(s_info);
+
       $("#studyname").focus();
 
 
@@ -137,6 +143,8 @@
           var checkbox = checkbox2.join(' ');
           $("input[name=checkbox]").val(checkbox);
         });
+        var info_data = CKEDITOR.instances.study_info.getData();
+        $("#study").val(info_data);
       });
     })
   </script>
