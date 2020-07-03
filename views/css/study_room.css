@@ -112,15 +112,6 @@ h2 {
   display: inline-block;
 }
 
-.progress {
-  display: inline;
-  font-size: 12px;
-  text-align: right;
-  color: #43b3c1;
-  margin-left: 5px;
-  cursor: pointer;
-}
-
 .my_info,
 .alram,
 .study {
@@ -296,14 +287,14 @@ h2 {
 
 .text {
   display: inline-block;
-  margin: 15px;
-  margin-bottom: 0px;
+  font-size: 14px;
+  font-weight: bold;
+  margin: 10px;
+  margin-bottom: 7px;
 }
 .part {
-  display: inline-block;
-  margin-right: 15px;
+  margin-left: 10px;
   font-size: 12px;
-  text-align: right;
   color: #696969;
 }
 
