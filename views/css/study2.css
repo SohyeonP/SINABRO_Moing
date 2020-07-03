@@ -1,0 +1,298 @@
+html {
+  height: 100%;
+  margin: 0 auto;
+  font-family: "NanumSquareRound", sans-serif;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+body {
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 auto;
+}
+
+
+.main {
+  min-height: 100%;
+  position: relative;
+  width: 1200px;
+  margin: 0 auto;
+}
+
+/*메뉴와 로고 설정*/
+header {
+  width: 1200px;
+  margin: 0 auto;
+  top: 0;
+  height: 100px;
+}
+
+header > div {
+  float: left;
+  width: 830px;
+}
+
+.Logo {
+  line-height: 40px;
+  margin: 30px 55px 30px 65px;
+  float: left;
+  font-weight: 800;
+  font-size: 36px;
+}
+
+.Logo span {
+  color: #43b3c1;
+}
+
+.menu {
+  float: right;
+  padding: 0px;
+  margin: 0px;
+}
+
+.menu li {
+  float: left;
+}
+
+.menu a {
+  line-height: 40px;
+  margin: 30px 55px;
+  display: block;
+  color: black;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+
+
+
+.cr {
+  min-width: 1200px;
+  height: 30px;
+  line-height: 30px;
+  font-size: 14px;
+  text-align: left;
+  border-top: solid 2px #eeeeee;
+  border-bottom: solid 2px #eeeeee;
+  margin: 0px;
+}
+
+.cr p {
+  width: 1200px;
+  margin: 0 auto;
+  padding-left: 130px;
+}
+
+
+
+
+
+
+.class {
+  margin: 80px 40px;
+  ;
+}
+
+
+.side {
+  width: 190px;
+  height: 331px;
+  border: solid 1px #43b3c1;
+  display: inline-block;
+  float: left;
+}
+
+.side p {
+  width: 151px;
+  margin-top: -1px;
+  margin-bottom: 0;
+  padding: 20px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: #43b3c1;
+  height: 50px;
+}
+
+
+.side button {
+  background-color: #ffffff;
+  text-align: left;
+  padding: 15px 20px;
+  font-size: 14px;
+  width: 190px;
+  height: 61px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-bottom: solid 1px #43b3c1;
+}
+
+.side button.active {
+  background-color: #b6e1e7;
+}
+
+.class button span {
+  font-size: 10px;
+  color: #696969;
+}
+
+.con {
+  margin-left: 190px;
+  display: none;
+}
+
+.one {
+  display: block;
+}
+
+.video {
+  display: inline-block;
+  background-color: #dddddd;
+  text-align: center;
+  margin-left: 28px;
+  width: 670px;
+  height: 380px;
+  line-height: 360px;
+}
+
+.tab {
+  float: right;
+  width: 228px;
+  height: 360px;
+  border: solid 1px #cccccc;
+}
+
+.subtab {
+  font-weight: bold;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: #696969;
+  border-bottom: solid 1px #cccccc;
+  height: 38px;
+  width: 114px;
+  float: left;
+  background-color: #ffffff;
+  cursor: pointer;
+}
+
+.on {
+  color: #43b3c1;
+  border-bottom: solid 2px #43b3c1;
+}
+
+.sub {
+  display: none;
+  font-size: 16px;
+  padding: 20px;
+  margin-top: 38px;
+}
+
+#sub1,
+#sub3,
+#sub5,
+#sub7 {
+  display: block;
+}
+
+#sub2,
+#sub4,
+#sub6,
+#sub8 {
+  padding: 0;
+  margin-top: 38px;
+}
+
+.sub ul {
+  padding: 26px 0px;
+  margin: 0px 10px;
+}
+
+.sub li {
+  font-size: 14px;
+  width: 228px;
+  height: 50px;
+}
+
+.sub li button {
+  cursor: pointer;
+  outline: none;
+  border: none;
+  width: 70px;
+  height: 30px;
+  font-size: 12px;
+  color: #ffffff;
+  background-color: #43c3b1;
+  float: right;
+  margin-right: 20px;
+  margin-top: -8px;
+}
+
+
+
+
+
+
+
+footer {
+  right: 0;
+  left: 0;
+  position: absolute;
+  margin-top: -100px;
+  min-width: 1200px;
+  background-color: #666666;
+  padding: 20px;
+  color: #ffffff;
+}
+
+.footer_f {
+  width: 1200px;
+  margin: 0 auto;
+  padding-left: 50px;
+}
+
+.info {
+  font-weight: normal;
+  font-size: 11px;
+  padding: 0;
+}
+
+.info span {
+  margin: 10px;
+}
+
+address {
+  font-size: 10px;
+  font-style: normal;
+  margin-top: 25px;
+}
+
+address span {
+  margin: 10px;
+}
+
+footer p {
+  font-size: 10px;
+  margin-top: 10px;
+}
+
+.f_logo {
+  margin-top: 10px;
+  margin-right: 100px;
+  float: right;
+  font-size: 50px;
+  font-weight: bolder;
+}
+
+.f_logo span {
+  color: #43b3c1;
+}
