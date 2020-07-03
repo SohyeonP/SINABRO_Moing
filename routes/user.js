@@ -83,6 +83,14 @@ router.post("/sign_in", function (req, res) {
         }
     })
 })
+router.get("/L_main", function (req, res) {
+    console.log("로그인 메인  페이지 요청");
+    let user_name = {
+        name:"사용자 이름"
+    }
+    res.render("L_main", {user_name:name});
+
+})
 router.get("err", function (req, res) {
     res.render(err);
 })
