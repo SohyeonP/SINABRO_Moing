@@ -54,6 +54,17 @@ router.get("/study_find", function (req, res) {
   
   })
 
+router.get("/host_s", function (req, res) {
+  console.log("스터디 찾기 페이지 요청");
+
+  hoststudy.findAll().then((list) => {
+    res.render('host_sample', { 
+
+     });
+  })
+
+})
+
 router.get("/studyroom", function (req, res) {
     console.log("스터디 페이지 요청");
     const studyidx = req.query.hoststudy_id;
