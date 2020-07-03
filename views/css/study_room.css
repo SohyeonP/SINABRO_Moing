@@ -73,7 +73,9 @@ header > div {
 
 .middleText {
   position: relative;
+  margin-bottom: 30px;
 }
+
 .study_img {
   margin-top: 34px;
   width: 1200px;
@@ -81,9 +83,13 @@ header > div {
 }
 
 .study_title {
+  position: absolute;
+  margin: 0;
+  margin-top: -60px;
+  margin-left: 40px;
   font-size: 32px;
   font-weight: bold;
-  margin: 39px 0px 56px 40px;
+  color: #fff;
 }
 
 /*좌측 네비게이션*/
@@ -110,15 +116,6 @@ h2 {
   font-weight: bold;
   margin: 29px 0px;
   display: inline-block;
-}
-
-.progress {
-  display: inline;
-  font-size: 12px;
-  text-align: right;
-  color: #43b3c1;
-  margin-left: 5px;
-  cursor: pointer;
 }
 
 .my_info,
@@ -216,18 +213,29 @@ h2 {
   height: 135px;
   border-radius: 10px;
   border: solid 1px #808080;
+  overflow:auto;
 }
-
-.people_name {
-  margin-left: -30px;
+.people_area::-webkit-scrollbar {
+  width: 10px;
+}
+.people_area::-webkit-scrollbar-thumb {
+  background-color: #cccccc;;
+  border-radius: 10px;
+  border: 2px solid transparent;
+}
+.people_area::-webkit-scrollbar-track {
+  border-radius: 10px;
+  margin: 10px;
 }
 
 .people_area ul {
+  padding-left: 30px;
   text-align: center;
+  display: inline-block;
 }
 
 .people_area ul li {
-  display: inline-block;
+  float: left;
   line-height: 35px;
   letter-spacing: 5px;
 }
@@ -296,15 +304,33 @@ h2 {
 
 .text {
   display: inline-block;
-  margin: 15px;
-  margin-bottom: 0px;
+  font-size: 14px;
+  font-weight: bold;
+  margin: 10px;
+  margin-bottom: 7px;
 }
 .part {
-  display: inline-block;
-  margin-right: 15px;
+  margin-left: 10px;
+}
+.part .smallpart {
   font-size: 12px;
-  text-align: right;
   color: #696969;
+}
+
+.like {
+  float: right;
+  margin-top: -20px;
+  margin-right: 10px;
+}
+.like img {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+.like span {
+  font-size: 12px;
+  color: #696969;
+  vertical-align: middle;
 }
 
 .answer {
