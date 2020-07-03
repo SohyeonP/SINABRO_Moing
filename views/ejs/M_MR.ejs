@@ -100,16 +100,6 @@
       var info_data = CKEDITOR.instances.study_info.setData(s_info);
 
       $("#studyname").focus();
-
-
-      function formcheck() {
-        if($("#studyname").val() == ""){
-          alert("스터디 방 이름을 입력해주세요!");
-          $("#studyname").focus();
-          return false;
-        }
-        return true;
-      }
     })
   </script>
    <script>
@@ -137,6 +127,13 @@
       
 
       $("#btnModify").click(function() {
+        if($("#studyname").val() == ""){
+          alert("스터디 방 이름을 입력해주세요!");
+          $("#studyname").focus();
+          return false;
+        }
+        return true;
+
         var checkbox2 = [];
         $("input[name=check]:checked").each(function() {
           checkbox2.push($(this).val());

@@ -58,165 +58,23 @@
 
     <h2>최신 스터디</h2>
     <div class="slider">
+      <% for(var i=0;i<data.length;i++){ %>
       <div class="study">
         <img src="../img/new.jpg">
         <div class="study_title">
-          <p>자바 어려운 사람 드루와 드루와</p>
+          <p><%=data[i].room_name %></p>
         </div>
         <div class="checked">
-          <p>코딩 디자인</p>
+          <p><%=data[i].checkbox %></p>
         </div>
         <div class="p">
           <p>가입 가능</p>
         </div>
         <div class="founder">
-          <p>개설자 <span>황수연</span></p>
+          <p>개설자 <span><%=data[i].host_name %></span></p>
         </div>
       </div>
-
-      <div class="study">
-        <img src="../img/new.jpg">
-        <div class="study_title">
-          <p>자바 어려운 사람 드루와 드루와</p>
-        </div>
-        <div class="checked">
-          <p>코딩 디자인</p>
-        </div>
-        <div class="p">
-          <p>가입 가능</p>
-        </div>
-        <div class="founder">
-          <p>개설자 <span>황수연</span></p>
-        </div>
-      </div>
-
-      <div class="study">
-        <img src="../img/new.jpg">
-        <div class="study_title">
-          <p>자바 어려운 사람 드루와 드루와</p>
-        </div>
-        <div class="checked">
-          <p>코딩 디자인</p>
-        </div>
-        <div class="p">
-          <p>가입 가능</p>
-        </div>
-        <div class="founder">
-          <p>개설자 <span>황수연</span></p>
-        </div>
-      </div>
-
-      <div class="study">
-        <img src="../img/new.jpg">
-        <div class="study_title">
-          <p>자바 어려운 사람 드루와 드루와</p>
-        </div>
-        <div class="checked">
-          <p>코딩 디자인</p>
-        </div>
-        <div class="p">
-          <p>가입 가능</p>
-        </div>
-        <div class="founder">
-          <p>개설자 <span>황수연</span></p>
-        </div>
-      </div>
-
-      <div class="study">
-        <img src="../img/new.jpg">
-        <div class="study_title">
-          <p>자바 어려운 사람 드루와 드루와</p>
-        </div>
-        <div class="checked">
-          <p>코딩 디자인</p>
-        </div>
-        <div class="p">
-          <p>가입 가능</p>
-        </div>
-        <div class="founder">
-          <p>개설자 <span>황수연</span></p>
-        </div>
-      </div>
-
-      <div class="study">
-        <img src="../img/new.jpg">
-        <div class="study_title">
-          <p>자바 어려운 사람 드루와 드루와</p>
-        </div>
-        <div class="checked">
-          <p>코딩 디자인</p>
-        </div>
-        <div class="p">
-          <p>가입 가능</p>
-        </div>
-        <div class="founder">
-          <p>개설자 <span>황수연</span></p>
-        </div>
-      </div>
-
-      <div class="study">
-        <img src="../img/new.jpg">
-        <div class="study_title">
-          <p>자바 어려운 사람 드루와 드루와</p>
-        </div>
-        <div class="checked">
-          <p>코딩 디자인</p>
-        </div>
-        <div class="p">
-          <p>가입 가능</p>
-        </div>
-        <div class="founder">
-          <p>개설자 <span>황수연</span></p>
-        </div>
-      </div>
-
-      <div class="study">
-        <img src="../img/new.jpg">
-        <div class="study_title">
-          <p>자바 어려운 사람 드루와 드루와</p>
-        </div>
-        <div class="checked">
-          <p>코딩 디자인</p>
-        </div>
-        <div class="p">
-          <p>가입 가능</p>
-        </div>
-        <div class="founder">
-          <p>개설자 <span>황수연</span></p>
-        </div>
-      </div>
-
-      <div class="study">
-        <img src="../img/new.jpg">
-        <div class="study_title">
-          <p>자바 어려운 사람 드루와 드루와</p>
-        </div>
-        <div class="checked">
-          <p>코딩 디자인</p>
-        </div>
-        <div class="p">
-          <p>가입 가능</p>
-        </div>
-        <div class="founder">
-          <p>개설자 <span>황수연</span></p>
-        </div>
-      </div>
-
-      <div class="study">
-        <img src="../img/new.jpg">
-        <div class="study_title">
-          <p>자바 어려운 사람 드루와 드루와</p>
-        </div>
-        <div class="checked">
-          <p>코딩 디자인</p>
-        </div>
-        <div class="p">
-          <p>가입 가능</p>
-        </div>
-        <div class="founder">
-          <p>개설자 <span>황수연</span></p>
-        </div>
-      </div>
+      <% }%>
 
     </div>
 

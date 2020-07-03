@@ -21,7 +21,7 @@ router.get("/study_c", function (req, res, next) {
   console.log("스터디 생성");
 
   let study = {
-    studyname: "",
+    room_name: "",
     img: "",
     study_info: ""
   }
@@ -32,7 +32,7 @@ router.get("/study_c", function (req, res, next) {
 router.post('/study_c', function (req, res, next) {
 
   var study = {
-    room_name: req.body.studyname,
+    room_name: req.body.room_name,
     host_name: 'test',
     checkbox: req.body.checkbox,
     title_img: req.body.title_img,

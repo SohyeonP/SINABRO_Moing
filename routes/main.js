@@ -2,17 +2,24 @@ const express = require('express');
 const ejs = require('ejs');
 var router = express.Router();
 
-router.get("/", function (req, res) {
-    console.log("메인페이지");
-    res.render("main", {
-        title: "모잉",
+const db = require('../models/index');
+const Sequelize = db.Sequelize;
+var hoststudy = db.hoststudy;
 
-    });
-});
-router.get("/main", function (req, res) {
-    console.log("메인페이지");
-    res.render("main", {});
-})
+
+router.get("/", function (req, res) {
+    console.log("스터디 관리");
+  
+    hoststudy.findAll().then((list) => {
+      res.render('main', { data: list });
+    })
+  
+  })
+
+// router.get("/main", function (req, res) {
+//     console.log("메인페이지");
+//     res.render("main", {});
+// })
 // const mainRoute = require("./views/html/main");
 
 

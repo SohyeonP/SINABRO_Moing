@@ -30,11 +30,11 @@
 
       <div class="st_cr">스터디 생성하기</div>
 
-      <form method="post" action="/hoststudy/study_c">
+      <form method="post" action="/hoststudy/study_c" enctype="multipart/form-data">
 
         <div class="studyname">
           <label>스터디 이름<br>
-            <input type="text" name="studyname" id="studyname">
+            <input type="text" name="room_name" id="room_name">
           </label>
         </div>
 
@@ -54,7 +54,7 @@
           <label><input type="checkbox" name="check" value="language">제2외국어</label><br>
           <label><input type="checkbox" name="check" value="toeic">토익</label>
           <label><input type="checkbox" name="check" value="any">기타</label>
-          <input type="hidden" id="checkbox" name="checkbox">
+          <input type="text" id="checkbox" name="checkbox">
         </div>
 
         <p>스터디 소개 및 커리큘럼 등록</p>
@@ -88,23 +88,21 @@
   <script>CKEDITOR.replace('study_info');</script>
   <script>
     $(document).ready(function() {
-      $("#studyname").focus();
+      $("#room_name").focus();
 
-
-      function formcheck() {
-        if($("#studyname").val() == ""){
-          alert("스터디 방 이름을 입력해주세요!");
-          $("#studyname").focus();
-          return false;
-        }
-        return true;
-      }
     })
   </script>
 
   <script>
     $(document).ready(function() {
       $("#btnSave").click(function() {
+        if($("#room_name").val() == ""){
+          alert("스터디 방 이름을 입력해주세요!");
+          $("#room_name").focus();
+          return false;
+        }
+        return true;
+
         var checkbox1 = [];
         $("input[name=check]:checked").each(function() {
           checkbox1.push($(this).val());
