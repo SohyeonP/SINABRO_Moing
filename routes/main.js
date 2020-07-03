@@ -74,6 +74,15 @@ router.get("/studyroom", function (req, res) {
     });
 })
 
+router.get("/study", function (req, res) {
+  console.log("스터디 요청");
+  const studyidx = req.query.hoststudy_id;
+
+  hoststudy.findOne({where: {hoststudy_id: studyidx}}).then((study) => {
+      res.render("study", {data: study});
+  });
+})
+
 router.get("/L_main", function (req, res) {
     console.log("로그인 메인  페이지 요청");
 

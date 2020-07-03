@@ -4,9 +4,6 @@ html {
   font-family: "NanumSquareRound", sans-serif;
 }
 
-li {
-  list-style: none;
-}
 
 a {
   text-decoration: none;
@@ -19,18 +16,14 @@ body {
   padding: 0 auto;
 }
 
-
-.main {
-  min-height: 100%;
+.body {
   position: relative;
+  min-height: 100%;
   width: 1200px;
   margin: 0 auto;
 }
 
-/*메뉴와 로고 설정*/
 header {
-  width: 1200px;
-  margin: 0 auto;
   top: 0;
   height: 100px;
 }
@@ -59,6 +52,7 @@ header > div {
 }
 
 .menu li {
+  list-style: none;
   float: left;
 }
 
@@ -71,172 +65,225 @@ header > div {
   font-weight: 400;
 }
 
-
-
-
-.cr {
-  min-width: 1200px;
-  height: 30px;
-  line-height: 30px;
-  font-size: 14px;
-  text-align: left;
-  border-top: solid 2px #eeeeee;
-  border-bottom: solid 2px #eeeeee;
-  margin: 0px;
+.menu span {
+  color: #43b3c1;
 }
 
-.cr p {
+.study_img {
+  margin-top: 34px;
   width: 1200px;
-  margin: 0 auto;
-  padding-left: 130px;
+  height: 300px;
+}
+
+.study_title {
+  font-size: 32px;
+  font-weight: bold;
+  margin: 39px 0px 56px 40px;
 }
 
 
 
 
 
+/*그룹 정보*/
 
-.class {
-  margin: 80px 40px;
-  ;
+.group_in {
+  position: sticky;
+  top: 30px;
+  margin-left: 39px;
+  float: left;
+  width: 272px;
+  height: 362px;
+  border: solid 2px #43b3c1;
+  text-align: center;
 }
 
+.g_info {
+  font-size: 16px;
+  font-weight: normal;
+  border-bottom: solid 1px #b6e1e7;
+  padding: 15px;
+}
 
-.side {
-  width: 190px;
-  height: 331px;
-  border: solid 1px #43b3c1;
-  display: inline-block;
+.founder {
+  font-size: 16px;
+  font-weight: normal;
+  border-bottom: solid 1px #b6e1e7;
+  padding: 20px;
+/*  text-align: center;*/
+}
+
+.founder img {
+  width: 30px;
+  height: 30px;
+  margin: 0px 9px -9px 34px;
+}
+
+.message {
+  font-size: 16px;
+  margin: 20px 30px;
+  line-height: 1.67;
+}
+
+.room_info {
+  font-size: 14px;
   float: left;
 }
 
-.side p {
-  width: 151px;
-  margin-top: -1px;
-  margin-bottom: 0;
-  padding: 20px;
-  font-size: 20px;
-  font-weight: bold;
-  color: #ffffff;
-  background-color: #43b3c1;
-  height: 50px;
+.room_info div {
+  margin-bottom: 10px;
 }
 
-
-.side button {
-  background-color: #ffffff;
-  text-align: left;
-  padding: 15px 20px;
-  font-size: 14px;
-  width: 190px;
-  height: 61px;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  border-bottom: solid 1px #43b3c1;
-}
-
-.side button.active {
-  background-color: #b6e1e7;
-}
-
-.class button span {
-  font-size: 10px;
+.room_info div span {
   color: #696969;
+}
+
+.checked {
+  margin-left: 22px;
+}
+
+.checked span {
+  margin-left: 50px;
+}
+
+.c_date {
+  margin-left: 15px;
+}
+
+.c_date span {
+  margin-left: 36px;
+}
+
+.p {
+  margin-left: 51px;
+}
+.p span {
+  margin-left: 34px;
+}
+
+.p .join {
+  font-size: 12px;
+  margin-left: 6px;
+  color: #43b3c1;
+}
+
+.button input {
+  margin: 15px 20px;
+  width: 230px;
+  height: 50px;
+  background-color: #43b3c1;
+  color: #ffffff;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+
+
+
+
+
+/*탭 메뉴*/
+.tab {
+  font-size: 16px;
+  border: solid 1px #43b3c1;
+  text-align: center;
+  width: 800px;
+  height: 1200px;
+  margin-left: 360px;
+  margin-bottom: 50px;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+.tab input[type="radio"] + label {
+  cursor: pointer;
+  padding: 15px;
+  background: #43b3c1;
+  color: #ffffff;
+  display: inline-block;
+  border: none;
+  width: 368px;
+}
+
+.tab input:checked + label {
+  background: #ffffff;
+  color: #43b3c1;
 }
 
 .con {
-  margin-left: 190px;
   display: none;
 }
 
-.one {
+input[id="tabone"]:checked ~ .group {
   display: block;
 }
 
-.video {
-  display: inline-block;
-  background-color: #dddddd;
-  text-align: center;
-  margin-left: 28px;
-  width: 670px;
-  height: 380px;
-  line-height: 360px;
+input[id="tabtwo"]:checked ~ .QnA {
+  display: block;
 }
 
-.tab {
-  float: right;
-  width: 228px;
-  height: 360px;
-  border: solid 1px #cccccc;
+.group {
+  margin-top: 95px;
 }
 
-.subtab {
+.study_info p, table{
+  margin: auto;
+}
+
+
+
+
+.curriculum {
+  font-size: 30px;
   font-weight: bold;
-  font-size: 16px;
-  border: none;
-  outline: none;
-  color: #696969;
-  border-bottom: solid 1px #cccccc;
-  height: 38px;
-  width: 114px;
+  margin-top: 92px;
+}
+
+.QnA {
+  background-color: #d0f3f7;
+  margin: 10px;
+  width: 780px;
+  height: 900px;
+}
+
+.Q {
   float: left;
+  margin: 30px 0px 10px 20px;
+  text-align: left;
+  width: 600px;
+  height: 120px;
+  border-radius: 10px;
   background-color: #ffffff;
-  cursor: pointer;
 }
 
-.on {
-  color: #43b3c1;
-  border-bottom: solid 2px #43b3c1;
+.Q p {
+  margin: 20px 51px 31px 22px;
+  line-height: 1.5;
 }
 
-.sub {
-  display: none;
-  font-size: 16px;
-  padding: 20px;
-  margin-top: 38px;
-}
-
-#sub1,
-#sub3,
-#sub5,
-#sub7 {
-  display: block;
-}
-
-#sub2,
-#sub4,
-#sub6,
-#sub8 {
-  padding: 0;
-  margin-top: 38px;
-}
-
-.sub ul {
-  padding: 26px 0px;
-  margin: 0px 10px;
-}
-
-.sub li {
+.QnA span {
   font-size: 14px;
-  width: 228px;
-  height: 50px;
-}
-
-.sub li button {
-  cursor: pointer;
-  outline: none;
-  border: none;
-  width: 70px;
-  height: 30px;
-  font-size: 12px;
-  color: #ffffff;
-  background-color: #43c3b1;
   float: right;
   margin-right: 20px;
-  margin-top: -8px;
 }
 
+.A {
+  float: right;
+  text-align: left;
+  width: 600px;
+  height: 120px;
+  border-radius: 10px;
+  background-color: #ffffff;
+  margin: 10px 40px;
+  line-height: 1.5;
+}
+
+.A p{
+  margin: 20px 0px 31px 21px;
+}
 
 
 
@@ -247,7 +294,7 @@ footer {
   right: 0;
   left: 0;
   position: absolute;
-  margin-top: -100px;
+  margin-top: 100px;
   min-width: 1200px;
   background-color: #666666;
   padding: 20px;
