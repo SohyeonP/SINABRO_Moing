@@ -73,7 +73,9 @@ header > div {
 
 .middleText {
   position: relative;
+  margin-bottom: 30px;
 }
+
 .study_img {
   margin-top: 34px;
   width: 1200px;
@@ -81,9 +83,13 @@ header > div {
 }
 
 .study_title {
+  position: absolute;
+  margin: 0;
+  margin-top: -60px;
+  margin-left: 40px;
   font-size: 32px;
   font-weight: bold;
-  margin: 39px 0px 56px 40px;
+  color: #fff;
 }
 
 /*좌측 네비게이션*/
