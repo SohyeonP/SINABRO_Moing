@@ -48,12 +48,12 @@
 
         <div class="check">
           <p>분류</p>
-          <label><input type="checkbox" name="check" value="coding">코딩</label>
-          <label><input type="checkbox" name="check" value="english">영어</label><br>
-          <label><input type="checkbox" name="check" value="design">디자인</label>
-          <label><input type="checkbox" name="check" value="language">제2외국어</label><br>
-          <label><input type="checkbox" name="check" value="toeic">토익</label>
-          <label><input type="checkbox" name="check" value="any">기타</label>
+          <label><input type="checkbox" name="check" value="코딩">코딩</label>
+          <label><input type="checkbox" name="check" value="영어">영어</label><br>
+          <label><input type="checkbox" name="check" value="디자인">디자인</label>
+          <label><input type="checkbox" name="check" value="제2외국어">제2외국어</label><br>
+          <label><input type="checkbox" name="check" value="토익">토익</label>
+          <label><input type="checkbox" name="check" value="기타">기타</label>
           <input type="hidden" id="checkbox" name="checkbox">
         </div>
 
@@ -67,7 +67,6 @@
           </label><br>
           <input type="file">
         </div>
-
         <div class="c_f">
           <label>커리큘럼 등록<br>
             <input type="file" name="curriculum">
@@ -89,8 +88,6 @@
   <script>
     $(document).ready(function() {
       $("#studyname").focus();
-
-
       function formcheck() {
         if($("#studyname").val() == ""){
           alert("스터디 방 이름을 입력해주세요!");
@@ -127,7 +124,6 @@
       function dragOver(e){
         e.stopPropagation();
         e.preventDefault();
-
         if (e.type == "dragover") {
           $(e.target).css({
             "background-color":"gray",
@@ -146,7 +142,6 @@
         e.preventDefault();
         dragOver(e);
         var file = e.originalEvent.dataTransfer.files;
-
         if(file[0].type.match(/image.*/)){
           $(e.target).css({
             "background-image":"url("+window.URL.createObjectURL(file[0]) + ")",

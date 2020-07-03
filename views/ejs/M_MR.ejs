@@ -51,12 +51,12 @@
 
         <div class="check">
           <p>분류</p>
-          <label><input type="checkbox" name="check" id="coding" value="coding">코딩</label>
-          <label><input type="checkbox" name="check" id="english" value="english">영어</label><br>
-          <label><input type="checkbox" name="check" id="design" value="design">디자인</label>
-          <label><input type="checkbox" name="check" id="language" value="language">제2외국어</label><br>
-          <label><input type="checkbox" name="check" id="toeic" value="toeic">토익</label>
-          <label><input type="checkbox" name="check" id="any" value="any">기타</label>
+          <label><input type="checkbox" name="check" id="coding" value="코딩">코딩</label>
+          <label><input type="checkbox" name="check" id="english" value="영어">영어</label><br>
+          <label><input type="checkbox" name="check" id="design" value="디자인">디자인</label>
+          <label><input type="checkbox" name="check" id="language" value="제2외국어">제2외국어</label><br>
+          <label><input type="checkbox" name="check" id="toeic" value="토익">토익</label>
+          <label><input type="checkbox" name="check" id="any" value="기타">기타</label>
           <input type="hidden" id="checkdata" value="<%=data.checkbox%>">
           <input type="hidden" id="checkbox" name="checkbox">
         </div>
@@ -100,43 +100,40 @@
       var info_data = CKEDITOR.instances.study_info.setData(s_info);
 
       $("#studyname").focus();
-
-
-      function formcheck() {
-        if($("#studyname").val() == ""){
-          alert("스터디 방 이름을 입력해주세요!");
-          $("#studyname").focus();
-          return false;
-        }
-        return true;
-      }
     })
   </script>
    <script>
     $(document).ready(function() {
       var checkbox1 = $("#checkdata").val();
 
-      if(checkbox1.indexOf("coding") != -1){
-        $("input:checkbox[id='coding']").prop("checked",true);
+      if(checkbox1.indexOf("코딩") != -1){
+        $("input:checkbox[id='코딩']").prop("checked",true);
       }
-      if(checkbox1.indexOf("english") != -1){
-        $("input:checkbox[id='english']").prop("checked",true);
+      if(checkbox1.indexOf("영어") != -1){
+        $("input:checkbox[id='영어']").prop("checked",true);
       }
-      if(checkbox1.indexOf("design") != -1){
-        $("input:checkbox[id='design']").prop("checked",true);
+      if(checkbox1.indexOf("디자인") != -1){
+        $("input:checkbox[id='디자인']").prop("checked",true);
       }
-      if(checkbox1.indexOf("language") != -1){
-        $("input:checkbox[id='language']").prop("checked",true);
+      if(checkbox1.indexOf("제2외국어") != -1){
+        $("input:checkbox[id='제2외국어']").prop("checked",true);
       }
-      if(checkbox1.indexOf("toeic") != -1){
-        $("input:checkbox[id='toeic']").prop("checked",true);
+      if(checkbox1.indexOf("토익") != -1){
+        $("input:checkbox[id='토익']").prop("checked",true);
       }
-      if(checkbox1.indexOf("any") != -1){
-        $("input:checkbox[id='any']").prop("checked",true);
+      if(checkbox1.indexOf("기타") != -1){
+        $("input:checkbox[id='기타']").prop("checked",true);
       }
       
 
       $("#btnModify").click(function() {
+        if($("#studyname").val() == ""){
+          alert("스터디 방 이름을 입력해주세요!");
+          $("#studyname").focus();
+          return false;
+        }
+        return true;
+
         var checkbox2 = [];
         $("input[name=check]:checked").each(function() {
           checkbox2.push($(this).val());
