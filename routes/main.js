@@ -8,7 +8,7 @@ var hoststudy = db.hoststudy;
 
 
 router.get("/", function (req, res) {
-    console.log("스터디 관리");
+    console.log("메인페이지");
   
     hoststudy.findAll().then((list) => {
       res.render('main', { data: list });
@@ -44,20 +44,31 @@ router.get("/sign_up", function (req, res) {
     });
 
 })
+
 router.get("/study_find", function (req, res) {
     console.log("스터디 찾기 페이지 요청");
-    res.render("study_find", {});
+  
+    hoststudy.findAll().then((list) => {
+      res.render('study_find', { data: list });
+    })
+  
+  })
 
-})
 router.get("/studyroom", function (req, res) {
     console.log("스터디 페이지 요청");
-    res.render("studyroom", {});
+    const studyidx = req.query.hoststudy_id;
 
+    hoststudy.findOne({where: {hoststudy_id: studyidx}}).then((study) => {
+        res.render("studyroom", {data: study});
+    });
 })
+
 router.get("/L_main", function (req, res) {
     console.log("로그인 메인  페이지 요청");
-    res.render("L_main", {});
 
+    hoststudy.findAll().then((list) => {
+        res.render("L_main", { data: list});
+    })
 })
 
 module.exports = router;
