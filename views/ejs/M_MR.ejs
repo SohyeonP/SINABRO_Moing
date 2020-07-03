@@ -36,7 +36,7 @@
 
         <div class="studyname">
           <label>스터디 이름<br>
-            <input type="text" name="studyname" value="<%=data.room_name%>">
+            <input type="text" name="studyname" value="<%=data.room_name %>">
           </label>
         </div>
 
@@ -51,19 +51,19 @@
 
         <div class="check">
           <p>분류</p>
-          <label><input type="checkbox" name="check" id="coding" value="코딩">코딩</label>
-          <label><input type="checkbox" name="check" id="english" value="영어">영어</label><br>
-          <label><input type="checkbox" name="check" id="design" value="디자인">디자인</label>
-          <label><input type="checkbox" name="check" id="language" value="제2외국어">제2외국어</label><br>
-          <label><input type="checkbox" name="check" id="toeic" value="토익">토익</label>
-          <label><input type="checkbox" name="check" id="any" value="기타">기타</label>
-          <input type="hidden" id="checkdata" value="<%=data.checkbox%>">
+          <label><input type="checkbox" name="check" id="코딩" value="코딩">코딩</label>
+          <label><input type="checkbox" name="check" id="영어" value="영어">영어</label><br>
+          <label><input type="checkbox" name="check" id="디자인" value="디자인">디자인</label>
+          <label><input type="checkbox" name="check" id="제2외국어" value="제2외국어">제2외국어</label><br>
+          <label><input type="checkbox" name="check" id="토익" value="토익">토익</label>
+          <label><input type="checkbox" name="check" id="기타" value="기타">기타</label>
+          <input type="hidden" id="checkdata" value="<%=data.checkbox %>">
           <input type="hidden" id="checkbox" name="checkbox">
         </div>
 
         <p>스터디 소개 및 커리큘럼 등록</p>
         <textarea id="study_info"></textarea>
-        <textarea id="s_info" style="display: none;"><%=data.introduce%></textarea>
+        <textarea id="s_info" style="display: none;"><%=data.introduce %></textarea>
         <textarea id="study" name="study" style="display: none;"></textarea>
 
 
@@ -100,6 +100,14 @@
       var info_data = CKEDITOR.instances.study_info.setData(s_info);
 
       $("#studyname").focus();
+
+      if($("#studyname").val() == ""){
+          alert("스터디 방 이름을 입력해주세요!");
+          $("#studyname").focus();
+          return false;
+        }
+        return true;
+
     })
   </script>
    <script>
@@ -127,13 +135,6 @@
       
 
       $("#btnModify").click(function() {
-        if($("#studyname").val() == ""){
-          alert("스터디 방 이름을 입력해주세요!");
-          $("#studyname").focus();
-          return false;
-        }
-        return true;
-
         var checkbox2 = [];
         $("input[name=check]:checked").each(function() {
           checkbox2.push($(this).val());

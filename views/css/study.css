@@ -4,9 +4,6 @@ html {
   font-family: "NanumSquareRound", sans-serif;
 }
 
-li {
-  list-style: none;
-}
 
 a {
   text-decoration: none;
@@ -55,6 +52,7 @@ header > div {
 }
 
 .menu li {
+  list-style: none;
   float: left;
 }
 
@@ -231,9 +229,12 @@ input[id="tabtwo"]:checked ~ .QnA {
   margin-top: 95px;
 }
 
-.group span {
-  font-size: 14px;
+.study_info p, table{
+  margin: auto;
 }
+
+
+
 
 .curriculum {
   font-size: 30px;

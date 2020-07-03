@@ -45,13 +45,9 @@
 
 
       <div class="con group">
-        <div>
-          이 스터디는 자바를 보다 더 쉽게 익힐 수 있도록 구성하였습니다.<br><br><br><br>
-          <span>자바가 어려우신 분들이나 처음 접해 보는 분들에게 추천합니다.</span><br><br><br><br><br>
-          자바는 어렵지 않습니다!<br>
-          이 스터디와 함께라면 누구보다 빠르게 익힐 수 있습니다.<br><br><br><br>
-          이 스터디가 끝나고 나면 자바 마스터가 될 것입니다!
-        </div>
+        <textarea id="s_info" style="display: none;"><%=data.introduce %></textarea>
+        <div id="study_info"></div>
+
         <div class="curriculum">
           <p>커리큘럼</p>
         </div>
@@ -74,4 +70,12 @@
     </div>
   </div>
 </body>
+<script src="https://cdn.ckeditor.com/4.9.0/standard/ckeditor.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.8.1.min.js"></script>
+<script>
+  $(document).ready(function() {
+    var s_info = $("#s_info").val();
+    $("#study_info").append(s_info)
+  })
+</script>
 </html>
