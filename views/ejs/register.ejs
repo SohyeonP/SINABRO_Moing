@@ -46,7 +46,7 @@
 
         <input type="password" id="Confpassword" name="Confpassword" class="form-control" placeholder="ConfPassword" required><br>
 
-        <button id="btn-Yes" class="btn btn-info btn-block" type="submit">가입하기</button>
+        <span id ="register"><button id="btn-Yes" class="btn btn-info btn-block" type="submit">가입하기</button></span>
 
         <button id="btn-Yes" class="btn btn-danger btn-block" type="submit">Google로 가입 하기</button>
 
@@ -60,7 +60,13 @@
   <div class="modal">
   </div>
   <script>
+      document.getElementById("register").addEventListener("click", myFunction);
 
+      function myFunction() {
+  
+         window.self.close();
+      }
+  
   </script>
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
     integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"

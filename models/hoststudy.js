@@ -18,11 +18,11 @@ module.exports = (sequelize, Sequelize) => {
             type: Sequelize.STRING,
         },
         title_img: {
-            type: Sequelize.BLOB('long')
+            type: Sequelize.BLOB('long'),
         },
-        // box_img: {
-        //     type: Sequelize.BLOB('long')
-        // },
+        box_img: {
+            type: Sequelize.BLOB('long'),
+        },
         checkbox:{
             type: Sequelize.STRING,
         },
