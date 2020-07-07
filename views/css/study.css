@@ -149,6 +149,9 @@ header > div {
 .c_date {
   margin-left: 15px;
 }
+.c_date p {
+  display: inline;
+}
 
 .c_date span {
   margin-left: 36px;

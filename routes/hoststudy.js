@@ -36,7 +36,8 @@ router.post('/study_c', function (req, res, next) {
     host_name: 'test',
     checkbox: req.body.checkbox,
     title_img: req.body.title_img,
-    introduce : req.body.study
+    introduce : req.body.study,
+    box_img: '11111'
     // box_img: req.body.study_info
   };
 
