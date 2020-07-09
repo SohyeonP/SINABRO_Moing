@@ -30,7 +30,7 @@
 
       <div class="st_cr">스터디 생성하기</div>
 
-      <form method="post" action="/hoststudy/study_c">
+      <form method="post" action="/hoststudy/study_c" enctype="multipart/form-data">
 
         <div class="studyname">
           <label>스터디 이름<br>
@@ -40,10 +40,12 @@
 
         <div class="t_img">
           <p>상단 이미지</p>
-          <div class="dropzone">
-            <p id="pp">드래그하여 이미지를 업로드 해주세요.</p>
+          <input type="file" name="img" id="img" style="display: none;">
+          <div id="click">
+            <p id="pp">클릭하여 이미지를 업로드 해주세요.</p>
+            <img src="" id="t_img">
           </div>
-          <input type="hidden" id="title_img" name="title_img">
+          <!-- <input type="hidden" id="title_img" name="title_img"> -->
         </div>
 
         <div class="check">
@@ -117,46 +119,69 @@
 
   <script>
     $(document).ready(function() {
-      $('.dropzone').on("dragover",dragOver)
-                    .on("dragleave", dragOver)
-                    .on("drop",uploadFile);
-      
-      function dragOver(e){
-        e.stopPropagation();
+
+      $('#click').click(function(e){
         e.preventDefault();
-        if (e.type == "dragover") {
-          $(e.target).css({
-            "background-color":"gray",
-            "outline-offset":"-20px"
-          });
-        }else {
-          $(e.target).css({
-              "background-color": "#b9b9b9",
-              "outline-offset": "-10px"
-          });
-        }
-      }
+        $('input[type=file]').click();
+      });
+      // $('.dropzone').on("dragover",dragOver)
+      //               .on("dragleave", dragOver)
+      //               .on("drop",uploadFile);
       
-      function uploadFile(e){
-        e.stopPropagation();
-        e.preventDefault();
-        dragOver(e);
-        var file = e.originalEvent.dataTransfer.files;
-        if(file[0].type.match(/image.*/)){
-          $(e.target).css({
-            "background-image":"url("+window.URL.createObjectURL(file[0]) + ")",
-            "outline":"none",
-            "background-size": "100% 100%"
-          })
-          var file_info = file[0].name;
-          $("#title_img").val(file_info);
-          $("#pp").hide();
-        } else {
-          alert("이미지만 업로드해주세요!");
-        }
+      // function dragOver(e){
+      //   e.stopPropagation();
+      //   e.preventDefault();
+      //   if (e.type == "dragover") {
+      //     $(e.target).css({
+      //       "background-color":"gray",
+      //       "outline-offset":"-20px"
+      //     });
+      //   }else {
+      //     $(e.target).css({
+      //         "background-color": "#b9b9b9",
+      //         "outline-offset": "-10px"
+      //     });
+      //   }
+      // }
+      
+      // function uploadFile(e){
+      //   e.stopPropagation();
+      //   e.preventDefault();
+      //   dragOver(e);
+      //   var file = e.originalEvent.dataTransfer.files;
+      //   if(file[0].type.match(/image.*/)){
+      //     $(e.target).css({
+      //       "background-image":"url("+window.URL.createObjectURL(file[0]) + ")",
+      //       "outline":"none",
+      //       "background-size": "100% 100%"
+      //     })
+      //     var file_info = file[0].name;
+      //     $("#title_img").val(file_info);
+      //     $("#pp").hide();
+      //   } else {
+      //     alert("이미지만 업로드해주세요!");
+      //   }
         
-      }
+      // }
     })
+  </script>
+
+  <script type="text/javascript">
+    function readURL(input) {
+      if (input.files && input.files[0]) {
+        var reader = new FileReader();
+        reader.onload = function (e) {
+          $('#t_img').attr('src', e.target.result);
+        }
+        reader.readAsDataURL(input.files[0]);
+        $('#pp').hide();
+      }
+    }
+
+    $("#img").change(function () {
+      readURL(this);
+    });
+
   </script>
 </body>
 

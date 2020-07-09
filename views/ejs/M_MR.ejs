@@ -32,7 +32,7 @@
 
       <div class="st_mr">스터디 수정하기</div>
 
-      <form method="post" action="/hoststudy/study_m">
+      <form method="post" action="/hoststudy/study_m" enctype="multipart/form-data">
 
         <div class="studyname">
           <label>스터디 이름<br>
@@ -42,11 +42,11 @@
 
         <div class="t_img">
           <p>상단 이미지</p>
-          <div class="dropzone">
-            <p id="pp">드래그하여 이미지를 업로드 해주세요.</p>
+          <input type="file" name="img" id="img" style="display: none;">
+          <div id="click">
+            <!-- <p id="pp">클릭하여 이미지를 업로드 해주세요.</p> -->
+            <img src="../upload/<%=data.title_img %>" id="t_img">
           </div>
-          <input type="hidden" id="title_img" name="title_img" >
-          <input type="hidden" id="img" name="img">
         </div>
 
         <div class="check">
@@ -147,7 +147,30 @@
     })
   </script>
 
-<script>
+<script type="text/javascript">
+  function readURL(input) {
+    if (input.files && input.files[0]) {
+      var reader = new FileReader();
+      reader.onload = function (e) {
+        $('#t_img').attr('src', e.target.result);
+      }
+      reader.readAsDataURL(input.files[0]);
+      $('#pp').hide();
+    }
+  }
+
+  $("#img").change(function () {
+    readURL(this);
+  });
+
+  $('#click').click(function(e){
+    e.preventDefault();
+    $('input[type=file]').click();
+  });
+
+</script>
+
+<!-- <script>
   $(document).ready(function() {
     $('.dropzone').on("dragover",dragOver)
                   .on("dragleave", dragOver)
@@ -191,7 +214,7 @@
       
     }
   })
-</script>
+</script> -->
 </body>
 
 </html>

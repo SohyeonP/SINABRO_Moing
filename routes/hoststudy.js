@@ -1,6 +1,16 @@
 const express = require('express');
 const ejs = require('ejs');
 var router = express.Router();
+const multer = require('multer');
+var storage = multer.diskStorage({
+  destination: (req, file, cb) => {
+      cb(null, 'views/upload/');
+  },
+  filename: (req,file,cb) => {
+      cb(null, Date.now()+file.originalname);
+  }
+});
+var upload = multer({storage: storage});
 
 const db = require('../models/index');
 const Sequelize = db.Sequelize;
@@ -29,13 +39,13 @@ router.get("/study_c", function (req, res, next) {
 
 })
 
-router.post('/study_c', function (req, res, next) {
-
+router.post('/study_c', upload.single('img'), function (req, res, next) {
+  var filename = req.file.filename;
   var study = {
     room_name: req.body.studyname,
     host_name: 'test',
     checkbox: req.body.checkbox,
-    title_img: req.body.title_img,
+    title_img: filename,
     introduce : req.body.study,
     box_img: '11111'
     // box_img: req.body.study_info
@@ -64,12 +74,14 @@ router.get("/study_m", function (req, res) {
 
 })
 
-router.post('/study_m', function (req, res, next) {
-
+router.post('/study_m', upload.single('img'), function (req, res, next) {
+  console.log(req.file);
+  var filename = req.file.filename;
+  // console.log(filename);
   hoststudy.update({
     room_name: req.body.studyname,
     checkbox: req.body.checkbox,
-    title_img: req.body.img,
+    title_img: filename,
     introduce: req.body.study
     // box_img: req.body.study_info
   }, {

@@ -137,7 +137,7 @@ form div {
 .t_img label {
   font-weight: bold;
 } */
-.dropzone {
+/* .dropzone {
   outline: 1px dashed #000000 ;
   outline-offset:-10px;  
   text-align: center;
@@ -150,6 +150,21 @@ form div {
 
 .dropzone p {
   font-weight: normal;
+} */
+
+#click {
+  text-align: center;
+  background-color: #b9b9b9;
+  width: 550px;
+  height: 300px;
+  overflow: hidden;
+}
+
+
+.t_img img {
+  background-color: #b9b9b9;
+  width: 100%;
+  height: 100%;
 }
 
 
