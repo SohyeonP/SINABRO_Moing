@@ -34,11 +34,12 @@ module.exports = (sequelize, DataTypes) => {
         // ,tokenExp:{
         //     type:Sequelize.INTEGER,
         //     allownull:true,
-        // },
-        // user_img:{
-        //     type:Sequelize.TEXT,
-        //     allowNull: true
-        // },
+    // }
+        ,
+        user_img:{
+            type:DataTypes.TEXT,
+            allowNull: true
+        }
         // user_introduce:{
         //     type:Sequelize.TEXT,
         //     allowNull: true

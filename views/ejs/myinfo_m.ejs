@@ -35,11 +35,11 @@
     </div>
 
     <div class="m_info">
-      <form method="post">
+      <form method="post" enctype="multipart/form-data" action="/mypage/myinfo_m">
 
 
-        <input type="file" id="files">
-        <img src="#" id="profile">
+        <input type="file" id="files" name="files">
+        <img src="/views/upload/<%=data.user_img%>" id="profile">
 
         <div class="mymy">
           <div class="nickname">
@@ -68,7 +68,7 @@
 
           <div class="email">
             <label>E-mail
-              <input type="text" id="email" name="email">
+              <input type="text" id="email" name="email" value="<%=data.user_email %>">
             </label>
           </div>
 
@@ -97,7 +97,6 @@
           <input type="submit" name="submit" value="등록" />
           <input type="button" name="cancle" value="취소" onClick="location.href='/mypage/myinfo'" />
         </div>
-
       </form>
     </div>
     <div style="clear:both;"></div>
