@@ -4,6 +4,7 @@
 <head>
   <link rel="stylesheet" href="../css/host_sample.css" />
   <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -36,8 +37,17 @@
 
 
     <div class="study_list">
+      <div id="toggle">
+        <p class="subtitle">관리할 스터디 페이지를 선택하세요.</p>
+      <button id="button"><img src="../img/close.png" alt="Dropdown"></i></button>
+        <ul>
+          <li>자바가 어려운 사람들 드루와 드루와</li>
+          <li>디자인을 배워보자!</li>
+          <button class="createbtn">+ 생성하기</button>
+        </ul>
+      </div>
         <p>관리할 스터디 페이지를 선택하세요.</p>
-        <h3><a href="#"><i class="fa fa-caret-down"></i></a></h3>
+        <button id="button1"><img src="../img/down-arrow.png" alt="Dropdown"></i></button>
         <div class="notice">
             <span>공지사항</span>
             <table class="noc_table">
@@ -158,11 +168,24 @@
                 </div>
               </div>
             </div>
-          </div>
+        </div>
     </div>
     <div style="clear: both;"></div>
   </div>
 
+  <script>
+    $(function (){
+      $("#button").click(function (){
+        $("#toggle").toggle();
+      });
+    });
+
+    $(function (){
+      $("#button1").click(function (){
+        $("#toggle").toggle();
+      });
+    });
+  </script>
 
 
 </body>

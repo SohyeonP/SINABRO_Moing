@@ -142,26 +142,87 @@ html {
     font-size: 18px;
     font-weight: normal;
     padding-bottom: 40px;
+    position: relative;
   }
   
   .study_list p {
     margin: 0px;
     line-height: 20px;
     padding: 0;
-    font-size: 20px;
+    font-size: 16px;
     padding: 18px;
     border-bottom: solid 1px #cccccc; 
     text-align: center;
   }
   
-  .study_list h3 {
+  .study_list #button {
     font-size: 30px;
     display: inline-block;
     float: right;
     margin-right: 30px;
     margin-top: -45px;
+    border: none;
+    background-color: #fff;
+    cursor: pointer;
   }
-  
+
+  .study_list #button1 {
+    font-size: 30px;
+    display: inline-block;
+    float: right;
+    margin-right: 30px;
+    margin-top: -45px;
+    border: none;
+    background-color: #fff;
+    cursor: pointer;
+  }
+
+  .study_list #button img {
+    width: 18px;
+    height: 18px;
+  }
+
+  .study_list #button1 img {
+    width: 18px;
+    height: 18px;
+  }
+
+  #toggle li:nth-child(1) {
+    font-size: 16px;
+    color: #43b3c1;
+    margin-bottom: 30px;
+  }
+  #toggle li:nth-child(2) {
+    font-size: 16px;
+  }
+
+  #toggle .createbtn {
+    all: unset;
+    font-size: 16px;
+    color: #696969;
+    margin-top: 30px;    
+    cursor: pointer;       
+  }
+
+  #toggle ul {
+    margin: 30px;
+    cursor: pointer;
+  }
+
+  #toggle .subtitle {
+    font-size: 16px;
+    color: #696969;
+  }
+
+  #toggle {
+    display: inline-block;
+    text-align: center;
+    box-shadow: -0.2px 1.4px 3.8px 0.2px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    position: absolute;
+    background-color: white;
+  }
+
   .study_list > ul {
     width: 928px;
     padding: 20px;
@@ -174,13 +235,6 @@ html {
     margin: 20px 60px;
   }
   
-  .study_list li:nth-child(2n+3){
-    margin-top: 100px;
-  }
-  .study_list li:nth-child(2n) {
-    list-style: none;
-    
-  }
   
   .list {
     margin-top: -10px;
