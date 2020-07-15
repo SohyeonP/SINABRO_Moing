@@ -15,7 +15,7 @@
 ![GitHub Logo](/images/logo.png)<br>
 모잉이 만들어진 계기는 집을 나갈수 없는 환경과 장소에 구애 받지 않는 자신 만의 스터디 커뮤니티를 만들어 보는것이 어떨까 하는생각으로 만들어 지게 되었습니다.
 
-![main](/moing main.png)<br>
+![main](moing main.png)<br>
 
 ## Installation
 
