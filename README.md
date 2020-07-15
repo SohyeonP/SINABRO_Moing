@@ -20,7 +20,7 @@ DaelimUniversity 1차 졸업 팀프로젝트 <br>
 
 ## Installation
 
-Use the Node.js&Express 
+Use the Node.js&Express and MariaDB
 
 ```bash
 npm install
